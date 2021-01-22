@@ -1,1 +1,24 @@
+<html>
+  <style>
+    .column {
+    float: left;
+    width: 33.33%;
+}
 
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  </style>
+ <body>
+   
+  <div class="container">
+   <div class="column-center">Column center</div>
+   <div class="column-left">Column left</div>
+   <div class="column-right">Column right</div>
+</div>
+
+  </body>
+</html>
