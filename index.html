@@ -12,7 +12,7 @@
   <tr>
     <th> 
     <form name="submit-to-google-sheet">
-    <button type="submit" style="border:black solid 1px; border-radius:10px;">BUTTON TO SUBMIT</button>
+    <button onclick="cleartextbox()" type="submit" style="border:black solid 1px; border-radius:10px;">BUTTON TO SUBMIT</button>
     <p></p>
   </div>
  </th>
@@ -42,7 +42,11 @@
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
   })
-    function cleartextbox(){
+   
+    }
+</script>
+<script>
+     function cleartextbox(){
         var textequal = document.getElementById("textinput").value
         if (textequal.length > 300){
             document.getElementById("textinput").value = "text is more than 300";
@@ -51,7 +55,7 @@
             document.getElementById("textinput").value = "text is 0";
         } else {
     document.getElementById("textinput").value = "";
-    }
+        }
 </script>
 </body>
 </html>
