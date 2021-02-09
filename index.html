@@ -25,7 +25,7 @@
   </tr>
 </table>
 
-    <textarea maxlength="300" name="Confession" type="Confession" rows="20%" cols="45%" wrap="soft" style="border:black solid 1px; border-radius:15px; width:100%; height:100%;"> </textarea>
+    <textarea maxlength="300" name="Confession" type="Confession" id="textinput" rows="20%" cols="45%" wrap="soft" style="border:black solid 1px; border-radius:15px; width:100%; height:100%;"> </textarea>
       </form>
     <p></p>
   </div>
@@ -42,6 +42,16 @@
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
   })
+    function cleartextbox(){
+        var textequal = document.getElementById("textinput").value
+        if (textequal.length > 300){
+            document.getElementById("textinput").value = "text is more than 300";
+        }
+        else if(textequal.length = 0){
+            document.getElementById("textinput").value = "text is 0";
+        } else {
+    document.getElementById("textinput").value = "";
+    }
 </script>
 </body>
 </html>
