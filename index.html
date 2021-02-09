@@ -26,9 +26,8 @@
   <input name="email" type="email" placeholder="Email" required>
   <button type="submit">Send</button>
 </form>
-
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyW0OVs3pvrYWw9zi6mm3SgpYnA4nN-gAE-AbaXcF9krgOCvBq-DQqQFQ/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxWyaFotDaScB-QVQ897lXMjIIYZXflBGzLcahUvzwwoINVCLt_UeUIig/exec'
   const form = document.forms['submit-to-google-sheet']
 
   form.addEventListener('submit', e => {
@@ -36,7 +35,7 @@
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
-  }
+  })
 </script>
 </body>
 </html>
