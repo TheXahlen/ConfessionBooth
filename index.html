@@ -10,22 +10,19 @@
 <div class="center">
 <div class="row" >
   <div class="column1" style="background-color:#FFF; border:black solid 1px; border-radius:15px; padding-top:5%;">
-    <h2 style="border:black solid 1px; border-radius:10px;">BUTTON TO CYCLE</h2>
+    <button style="border:black solid 1px; border-radius:10px;">BUTTON TO CYCLE</button>
     <h2>---------------</h2>
-    <h2 style="border:black solid 1px; border-radius:10px;">BUTTON TO SUBMIT</h2>
+    <button type="submit" style="border:black solid 1px; border-radius:10px;">BUTTON TO SUBMIT</button>
     <p></p>
   </div>
   <div class="column" style="background-color:#FFF;  display:inline;">
-    <textarea name="text" rows="20%" cols="45%" wrap="soft" style="border:black solid 1px; border-radius:15px;"> </textarea>
+    <textarea name="email" type="email" rows="20%" cols="45%" wrap="soft" style="border:black solid 1px; border-radius:15px;"> </textarea>
     <p></p>
   </div>
   </div>
 </div>
 </div>
-<form name="submit-to-google-sheet">
-  <input name="email" type="email" placeholder="Email" required>
-  <button type="submit">Send</button>
-</form>
+
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxWyaFotDaScB-QVQ897lXMjIIYZXflBGzLcahUvzwwoINVCLt_UeUIig/exec'
   const form = document.forms['submit-to-google-sheet']
