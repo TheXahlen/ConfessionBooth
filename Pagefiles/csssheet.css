@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+
+}
+
+
+.column {
+ margin: auto;
+float:right;
+    width: 75%;
+    word-wrap:break-word;
+    height:35%;
+    
+}
+.column1 {
+ margin: auto;
+    float: left;
+    text-align:center;
+    width: 32.00%;
+    padding: 10px;
+    height: 30%;
+    padding-top:10%;
+    padding-bottom:10%;
+}
+
+
+.row:after {
+
+    content: "";
+    display: table;
+    clear: both;
+}
+.center {
+ margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+ input[type=text] {
+        word-wrap: break-word;
+        word-break: break-all;
+        height: 80px;
+    }
+body {
+  background-image: url("https://xplosivex.github.io/ConfessionBooth/Pagefiles/PageBackground.jpg");
+}
