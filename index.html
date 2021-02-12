@@ -2,24 +2,20 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
+<link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
 </head>
 <body>
-
 <h2 style="text-align:center;">Confession Booth</h2>
-
-  <table style="width:100%">
-  <tr>
-    <th> 
-        <form name="submit-to-google-sheet">
-        <button style="border:black solid 4px; border-radius:133px; text-size: 23pt;" onclick="load()">BUTTON TO CYCLE</button>    
-    <button type="submit" onclick="cleartextbox()" style="text-size: 23pt; border:black solid 4px; border-radius:10px;">BUTTON TO SUBMIT</button>
-    		<div>
-            <textarea maxlength="300" name="confession" type="text" id="textinput" rows="20%" cols="45%" wrap="soft" style="border:black solid 9px; border-radius:15px; font-size: 18pt; opacity: 0.75; width:75%; height:54%;"> </textarea>
-    <div/>
+<table style="width:100%">
+<tr><th> 
+<button style="border:black solid 4px; border-radius:133px; text-size: 23pt;" onclick="load()">BUTTON TO CYCLE</button> 
+    <form name="submit-to-google-sheet">      
+ <button type="submit" onclick="cleartextbox()" style="text-size: 23pt; border:black solid 4px; border-radius:10px;">BUTTON TO SUBMIT</button>
+ <div>
+    <textarea maxlength="300" name="confession" type="text" id="textinput" rows="20%" cols="45%" wrap="soft" style="border:black solid 9px; border-radius:15px; font-size: 18pt; opacity: 0.75; width:75%; height:54%;"> </textarea>
+<div/>
     </form>    
-            </th>
-  </tr>
+</th></tr>
 </table>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/TextHandler.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
