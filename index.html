@@ -14,14 +14,22 @@
         <form action="https://formcarry.com/s/Ugjef-rpId" method="POST" accept-charset="UTF-8" >
         <button style="border:black solid 1px; border-radius:10px;">BUTTON TO CYCLE</button>    
     <button type="submit" style="border:black solid 1px; border-radius:10px;">BUTTON TO SUBMIT</button>
-            <textarea maxlength="300" name="Confession" type="text" id="textinput" rows="20%" cols="45%" wrap="soft" style="border:black solid 1px; font-size: 18pt; border-radius:15px; width:100%; height:100%;"> </textarea>
+            <textarea maxlength="300" name="confession" type="text" id="textinput" rows="20%" cols="45%" wrap="soft" style="border:black solid 1px; font-size: 18pt; border-radius:15px; width:100%; height:100%;"> </textarea>
     </form>    
             </th>
   </tr>
 </table>
 
 <script>
-  
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyhferKoM3lawXmfUHRrnjQC1vEexIbDdcYgLl-xY0tH2cjdKBjLNFExw/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
 </script>
 <!--<script>
      function cleartextbox(){
