@@ -1,4 +1,4 @@
-var confessionlist = []
+
 
 async function apicall(){
     return new Promise(async(resolve,reject)=>{
@@ -10,6 +10,7 @@ async function apicall(){
 }
 
 async function load() {
+	var confessionlist = []
 	var anything = await apicall()
     console.log(anything)
     var textjs = anything.feed.entry
