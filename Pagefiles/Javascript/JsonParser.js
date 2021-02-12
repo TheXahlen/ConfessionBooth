@@ -17,7 +17,7 @@ async function load() {
     var yes = textjs["id"]
     for (let i = 1; i < textjs.length; i++) {
     var confessionentry = textjs[i].content.$t
-    var confessioncomp = "[ENTRY NUMBER: " + i + " " + confessionentry + "]" 
+    var confessioncomp = confessionentry
     confessionlist.push(confessioncomp)
     console.log(confessionlist)    
     
