@@ -1,17 +1,26 @@
 <!doctype html>
-<body> 
+<body onload="load()"> 
   <p id="json">
+  dsfdsf
   </p>
   
 </body>
 <script>
-  async function load() {
+var confessionlist = []
+async function load() {
     let url = 'https://spreadsheets.google.com/feeds/cells/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/1/public/full?alt=json';
     let obj = await (await fetch(url)).json();
-    var jsontext = JSON.parse = obj
-    var entries = jsontext.feed.entry
-    document.getElementById("json").innerHTML = entires;
+    var textjs = obj.feed.entry
+    var yes = textjs["id"]
+    for (let i = 1; i < textjs.length; i++) {
+    var confessionentry = textjs[i].content.$t
+    var confessioncomp = "[ENTRY NUMBER: " + i + " " + confessionentry + "]" 
+    confessionlist.push(confessioncomp)
+    
 }
 
-load();
+console.log(confessionlist)
+document.getElementById("json").innerHTML = confessionlist
+}
+
 </script>
