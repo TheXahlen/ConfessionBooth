@@ -28,5 +28,5 @@ console.log(lengthoflist)
 var listselect = Math.floor(Math.random() * lengthoflist)
 console.log(listselect)
 document.getElementById("textinput").innerHTML = ""
-
+console.log("TRUE")
 }
