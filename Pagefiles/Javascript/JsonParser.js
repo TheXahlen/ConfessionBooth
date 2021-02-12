@@ -30,3 +30,4 @@ console.log(listselect)
 document.getElementById('textinput').value =  ""
 document.getElementById('textinput').value =  confessionlist[listselect]
 console.log("TRUE")
+}
