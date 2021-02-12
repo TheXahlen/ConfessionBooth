@@ -26,6 +26,7 @@ var lengthoflist = confessionlist.length
 console.log(lengthoflist)
 var listselect = Math.floor(Math.random() * lengthoflist)
 console.log(listselect)
-document.getElementById("json").innerHTML = confessionlist[listselect]
+document.getElementById("textinput").innerHTML = ""
+document.getElementById("textinput").innerHTML = confessionlist[listselect]
 
 }
