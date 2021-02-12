@@ -1,1 +1,17 @@
+<!doctype html>
+<body> 
+  <p id="json">
+  </p>
+  
+</body>
+<script>
+  async function load() {
+    let url = 'https://spreadsheets.google.com/feeds/cells/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/1/public/full?alt=json';
+    let obj = await (await fetch(url)).json();
+    var jsontext = JSON.parse = obj
+    var entries = jsontext.feed.entry
+    document.getElementById("json").innerHTML = entires;
+}
 
+load();
+</script>
