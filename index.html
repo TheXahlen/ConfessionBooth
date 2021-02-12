@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/csssheet.css">
+    <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
 </head>
 <body>
 
@@ -21,30 +21,8 @@
             </th>
   </tr>
 </table>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyhferKoM3lawXmfUHRrnjQC1vEexIbDdcYgLl-xY0tH2cjdKBjLNFExw/exec'
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
-<script>
-function cleartextbox(){
-var textequal = document.getElementById("textinput").value
-if (textequal.length > 300){
-document.getElementById("textinput").value = "text is more than 300";
-}
-else if(textequal.length = 0){
-document.getElementById("textinput").value = "text is 0";
-} else {
-document.getElementById("textinput").value = "";
-}
-document.getElementById("textinput").value = ""     
-</script>
+<script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/TextHandler.js"
+<script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
+<script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
 </body>
 </html>
