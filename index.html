@@ -5,20 +5,24 @@
 <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
 </head>
 <body>
-<h2 style="text-align:center;">Confession Booth</h2>
+
+<h2 direction="up" style="text-align:center; background:white; opacity:0.65; font-size:15pt; font:comic-sans; ">|||Confession Booth ||| Confession Booth ||| Confession Booth ||| Confession Booth |||</h2>
 <table style="width:100%">
 <tr><th> 
-<button style="border:black solid 4px; border-radius:133px; text-size: 23pt;" onclick="load()">BUTTON TO CYCLE</button> 
-    <form name="submit-to-google-sheet">      
- <button type="submit" onclick="cleartextbox()" style="text-size: 23pt; border:black solid 4px; border-radius:10px;">BUTTON TO SUBMIT</button>
- <div>
-    <textarea maxlength="300" name="confession" type="text" id="textinput" rows="20%" cols="45%" wrap="soft" style="border:black solid 9px; border-radius:15px; font-size: 18pt; opacity: 0.75; width:75%; height:54%;"> </textarea>
-<div/>
-    </form>    
+<button style="border:black solid 4px; border-radius:10px; width:25%;opacity: 0.75; font-size: 19pt; font-family:Almond;" onclick="load()">BUTTON TO CYCLE</button> 
+<button type="submit" onclick="clickit()" style="width:25%;opacity: 0.75; font-size: 19pt; border:black solid 4px; border-radius:10px;">BUTTON TO SUBMIT</button>  
 </th></tr>
 </table>
+<form name="submit-to-google-sheet"> 
+<button style="display:none;" id="submit"></button>
+<textarea maxlength="300" name="confession" type="text" id="textinput" rows="20%" cols="45%" wrap="soft" style=" display:block; border:black solid 9px; border-radius:15px; font-size: 18pt; opacity: 0.75; width:100%; height:54%;float:middle;">  </textarea>
+</form>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/TextHandler.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
+<script>
+function clickit(){
+document.getElementById("submit").click();
+}
+</script>
 </body>
-</html>
