@@ -43,3 +43,8 @@ float:right;
 body {
   background-image: url("https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/PageBackground.jpg");
 }
+@font-face {
+  font-family: Almond;
+  src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/AlmondCream.ttf);
+}
+@
