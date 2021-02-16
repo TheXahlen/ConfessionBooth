@@ -8,13 +8,17 @@
 <h2 direction="up" style="text-align:center; background:white; opacity:0.65; font-size:20pt; font-family:almond; ">|||Confession Booth ||| Confession Booth ||| Confession Booth ||| Confession Booth |||</h2>
 <table style="width:100%">
 <tr><th> 
-<button style="border:black solid 4px; border-radius:10px; width:25%;opacity: 0.75; font-family:Hero; font-size: 15pt; " onclick="load()">BUTTON TO CYCLE</button> 
-<button type="submit" onclick="clickit()" style="width:25%;opacity: 0.75; font-size: 15pt; border:black solid 4px; font-family:Hero; border-radius:10px;">BUTTON TO SUBMIT</button>  
+<button style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75; font-family:Hero; font-size: 16pt; " onclick="load()">BUTTON TO CYCLE</button> 
+<button type="submit" onclick="clickit()" style="width:35%;opacity: 0.75; font-size: 16pt; border:black solid 4px; font-family:Hero; border-radius:10px;">BUTTON TO SUBMIT</button>  
 </th></tr>
 </table>
 <form name="submit-to-google-sheet"> 
 <button style="display:none;" id="submit"></button>
-<textarea name="confession" rows="10" type="text" id="textinput" maxlength="450" cols="35" style=" display:block; border:black solid 9px;font-family:Ariel; border-radius:15px; font-size: 35pt; opacity: 0.75;  height:54%;float:middle;" wrap="soft">  </textarea></form>
+<textarea name="confession" rows="10" type="text" id="textinput" maxlength="450" cols="35" style=" display:block; border:black solid 9px;font-family:Ariel; border-radius:15px; font-size: 35pt; opacity: 0.75;   position:fixed;
+  top: 55%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);" wrap="soft">  </textarea></form>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/TextHandler.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
@@ -24,4 +28,5 @@ document.getElementById("submit").click();
 }
 </script>
 </body>
+
 
