@@ -47,3 +47,11 @@ body {
   font-family: Almond;
   src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/AlmondCream.ttf);
 }
+@font-face {
+    font-family: Hero;
+    src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Hero.ttf);
+}
+@font-face {
+    font-family: Academy;
+    src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Hero.ttf);
+}
