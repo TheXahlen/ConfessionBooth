@@ -42,7 +42,7 @@ console.log(confessionlist)
   
 
 function genNum() {
-  var x = Math.floor((Math.random() * confessionlist.length) + 1);
+  var x = Math.floor(Math.random() * confessionlist.length);
   if(x == localStorage.getItem("numbergenned")) {
   	genNum();
   }
