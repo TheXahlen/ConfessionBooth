@@ -14,9 +14,8 @@
 </table>
 <form name="submit-to-google-sheet"> 
 <button style="display:none;" id="submit"></button>
-<textarea name="confession" rows="10" type="text" id="textinput" maxlength="450" cols="45%" style=" display:block; border:black solid 9px;font-family:Ariel; border-radius:15px; font-size: 35pt; opacity: 0.75; position:fixed; top: 52%; left: 50%;transform: translate(-50%, -50%);" wrap="soft">  </textarea>
-<input style="display:none;" name="deletedate" type="text" id="deletedate">
-</form>
+<textarea name="confession" rows="10" type="text" id="textinput" minlength="15" maxlength="450" cols="45%" style=" display:block; border:black solid 9px;font-family:Ariel; border-radius:15px; font-size: 35pt; opacity: 0.75; position:fixed; top: 52%; left: 50%;transform: translate(-50%, -50%);" wrap="soft">  </textarea></form>
+<textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/TextHandler.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
