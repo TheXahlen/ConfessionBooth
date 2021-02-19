@@ -1,4 +1,5 @@
 
+localStorage.setItem("numbergenned", 0);
 async function apicall(){
 	return new Promise(async(resolve,reject)=>{
 	let url = 'https://spreadsheets.google.com/feeds/cells/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/1/public/full?alt=json';
@@ -36,24 +37,28 @@ try
   //pass
   }
 console.log(confessionlist)
-let lastNum;
-function getRandNumber() {
-  var gennedran = Math.floor(Math.random() * lengthoflist); // get new random number
 
-  if (gennedran === lastNum) { // compare with last number
-    return getRandNumber() // if they are the same, call the function again to repeat the process
+  
+  
+
+function genNum() {
+  var x = Math.floor((Math.random() * confessionlist.length) + 1);
+  if(x == localStorage.getItem("numbergenned")) {
+  	genNum();
   }
-  return gennnedran; // if they're not the same, return it
+  else {
+    localStorage.setItem("numbergenned", x);
+    document.getElementById('textinput').value =  "";
+		document.getElementById('textinput').value =  confessionlist[x];
+    return x;
+  }
 }
-function getGenned() {
-   const number = getRandNumber()
-   lastNum = number 
-   return number
-}
-console.log(confessionlist[getGenned()])
+  
+  
+
 if(confessionlist.length > 1){ 
-document.getElementById('textinput').value =  ""
-document.getElementById('textinput').value =  confessionlist[getGenned()]
+console.log(genNum())
+console.log("DF")
 }else{
 document.getElementById('textinput').value =  ""
 document.getElementById('textinput').value =  confessionlist[0]
