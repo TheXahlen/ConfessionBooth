@@ -1,7 +1,7 @@
 
 async function apicall(){
 	return new Promise(async(resolve,reject)=>{
-	let url = 'https://spreadsheets.google.com/feeds/cells/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/1/pu	blic/full?alt=json';
+	let url = 'https://spreadsheets.google.com/feeds/cells/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/1/public/full?alt=json';
 	let obj = await fetch(url)
 	resolve(obj.json())
 })}
@@ -21,7 +21,7 @@ for(var i = 0; i < confessionlist.length; i++){
 	try 
 	{ 	
   	var indexed0 = confessionlist.indexOf("deletedate");
-  	var indexed1 = confessionlist.indexOf("Confession");
+  	var indexed1 = confessionlist.indexOf("confession");
   	confessionlist.splice(indexed0,1)
   	confessionlist.splice(indexed1,1)
 	}catch(e){
