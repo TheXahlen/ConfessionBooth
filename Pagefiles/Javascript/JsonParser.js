@@ -30,12 +30,11 @@ if(lengthtest < 3){
 try 
 	{ 	
   	var indexed0 = confessionlist.indexOf("deletedate");
-  	var indexed1 = confessionlist.indexOf("Confession");
+  	//var indexed1 = confessionlist.indexOf("Confession");
   	confessionlist.splice(indexed0,1)
-  	confessionlist.splice(indexed1,1)
-	}catch(e){
-  //pass
-  }
+	//confessionlist.splice(indexed1,1)
+}catch(e){//pass
+}
 console.log(confessionlist)
 
   
