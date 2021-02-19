@@ -1,7 +1,7 @@
 
 async function apicall(){
 	return new Promise(async(resolve,reject)=>{
-	let url = 'https://spreadsheets.google.com/feeds/cells/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/1/pu	blic/full?alt=json';
+	let url = 'https://spreadsheets.google.com/feeds/cells/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/1/public/full?alt=json';
 	let obj = await fetch(url)
 	resolve(obj.json())
 })}
@@ -60,5 +60,5 @@ document.getElementById('textinput').value =  confessionlist[0]
 }
 console.log("Completed")
 }
-load()
+//load()
 
