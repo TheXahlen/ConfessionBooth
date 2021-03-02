@@ -36,7 +36,9 @@ try
 }catch(e){//pass
 }
 console.log(confessionlist)
-
+if(confessionlist.length == 0){
+confessionlist.push("No submissions! Add one or come back later.");
+}
   
   
 function genNum() {
