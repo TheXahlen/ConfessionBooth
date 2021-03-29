@@ -23,7 +23,8 @@ brenderlist.splice(0,3)
 confessionlist.splice(0,3)
 for(var i = 0; i < confessionlist.length; i++){
 	if(confessionlist[i].length < 15){
-	console.log(confessionlist[i],"this is shorter than 15 test")	
+	//console.log(confessionlist[i],"this is shorter than 15 test")	
+	confessionlist.splice(i,i)
 	}
 //debugging purposes
 //console.log(confessionlist, "FOR LOOP")
