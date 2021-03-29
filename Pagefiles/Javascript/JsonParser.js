@@ -29,7 +29,6 @@ confessionlist.splice(0,3)
 //debugging purposes
 //console.log(confessionlist, "FOR LOOP")
 //console.log(confessionlist[i].length, "LENGTH OF ITEMS")
-}}
 try 
 	{ 	
   	var indexed0 = confessionlist.indexOf("deletedate");
