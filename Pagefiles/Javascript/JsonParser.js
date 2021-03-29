@@ -9,6 +9,7 @@ async function apicall(){
     
 async function load() {
 	var confessionlist = []
+	var brenderlist = []
 	var anything = await apicall()
   var textjs = anything.feed.entry
   var yes = textjs["id"]
@@ -16,9 +17,9 @@ async function load() {
    	var confessionentry = textjs[i].content.$t
    	var confessioncomp = confessionentry
    	confessionlist.push(confessioncomp)
-	
+	brenderlist.push(confessioncomp)
     }
-var brenderlist = confessionlist  
+
 for(var i = 0; i < confessionlist.length; i++){
 console.log(confessionlist, "FOR LOOP")
 console.log(confessionlist[i].length, "LENGTH OF ITEMS")
