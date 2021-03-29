@@ -16,6 +16,7 @@ async function load() {
   for (let i = 1; i < textjs.length; i++) {
    	var confessionentry = textjs[i].content.$t
    	var confessioncomp = confessionentry
+	console.log(confessioncomp.length, confessioncomp)
 	if(confessioncomp.length < 15){
 	brenderlist.push(confessioncomp)	
 	}else{
@@ -29,14 +30,17 @@ confessionlist.splice(0,3)
 //debugging purposes
 //console.log(confessionlist, "FOR LOOP")
 //console.log(confessionlist[i].length, "LENGTH OF ITEMS")
-try 
-	{ 	
-  	var indexed0 = confessionlist.indexOf("deletedate");
-  	//var indexed1 = confessionlist.indexOf("Confession");
-  	confessionlist.splice(indexed0,1)
+//try 
+	
+// THIS IS DEPRECIATED IT WAS A METHOD OF REMOVING META DATA FROM THE LIST.	
+	
+//	{ 	
+  //	var indexed0 = confessionlist.indexOf("deletedate");
+  //	//var indexed1 = confessionlist.indexOf("Confession");
+  //	confessionlist.splice(indexed0,1)
 	//confessionlist.splice(indexed1,1)
-}catch(e){//pass
-}
+//}catch(e){//pass
+//}
 console.log(brenderlist,"brender")
 console.log(confessionlist,"total list")
 if(confessionlist.length == 0){
