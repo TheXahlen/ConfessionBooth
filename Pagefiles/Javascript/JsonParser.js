@@ -16,20 +16,16 @@ async function load() {
   for (let i = 1; i < textjs.length; i++) {
    	var confessionentry = textjs[i].content.$t
    	var confessioncomp = confessionentry
-   	confessionlist.push(confessioncomp)
+	if(confessioncomp.length < 15){
+	brenderlist.push(confessioncomp)	
+	}else{
 	brenderlist.push(confessioncomp)
+   	confessionlist.push(confessioncomp)
+	}
     }
 brenderlist.splice(0,3)	
 confessionlist.splice(0,3)
-for(var i = 0; i < confessionlist.length; i++){
-	if(confessionlist[i].length < 15){
-	//console.log(confessionlist[i],"this is shorter than 15 test")	
-	try{
-	confessionlist.splice(i,i + 1)
-	}catch(e){
-	confessionlist.splice(i,i)	
-	}	
-	}
+
 //debugging purposes
 //console.log(confessionlist, "FOR LOOP")
 //console.log(confessionlist[i].length, "LENGTH OF ITEMS")
