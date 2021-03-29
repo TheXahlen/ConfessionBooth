@@ -16,8 +16,9 @@ async function load() {
   for (let i = 1; i < textjs.length; i++) {
    	var confessionentry = textjs[i].content.$t
    	var confessioncomp = confessionentry
-	console.log(confessioncomp.length, confessioncomp)
-	if(confessioncomp.length < 15){
+	//uncomment to debug the size of submissions.
+	//console.log(confessioncomp.length, confessioncomp)
+	if(confessioncomp.length < 14){
 	brenderlist.push(confessioncomp)	
 	}else{
 	brenderlist.push(confessioncomp)
