@@ -24,9 +24,9 @@ for(var i = 0; i < confessionlist.length; i++){
 
   //pass//
   
-if(lengthtest < 3){
+if(confessionlist[i].length < 3){
 
-	confessionlist.splice(i, 1)	
+	confessionlist.splice(i, i + 1)	
 }}
 try 
 	{ 	
