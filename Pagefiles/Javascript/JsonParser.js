@@ -19,8 +19,9 @@ async function load() {
    	confessionlist.push(confessioncomp)
 	brenderlist.push(confessioncomp)
     }
-
+confessionlist.splice(0,2)
 for(var i = 0; i < confessionlist.length; i++){
+
 //debugging purposes
 //console.log(confessionlist, "FOR LOOP")
 //console.log(confessionlist[i].length, "LENGTH OF ITEMS")
