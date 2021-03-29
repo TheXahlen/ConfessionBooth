@@ -21,9 +21,10 @@ async function load() {
     }
 
 for(var i = 0; i < confessionlist.length; i++){
-console.log(confessionlist, "FOR LOOP")
-console.log(confessionlist[i].length, "LENGTH OF ITEMS")
-if(confessionlist[i].length < 25){
+//debugging purposes
+//console.log(confessionlist, "FOR LOOP")
+//console.log(confessionlist[i].length, "LENGTH OF ITEMS")
+if(confessionlist[i].length < 10){
 
 	confessionlist.splice(i, i + 1)	
 }}
