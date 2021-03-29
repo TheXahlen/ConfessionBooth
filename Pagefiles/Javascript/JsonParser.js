@@ -18,7 +18,7 @@ async function load() {
    	var confessioncomp = confessionentry
 	//uncomment to debug the size of submissions.
 	//console.log(confessioncomp.length, confessioncomp)
-	if(confessioncomp.length < 14){
+	if(confessioncomp.length < 20){
 	brenderlist.push(confessioncomp)	
 	}else{
 	brenderlist.push(confessioncomp)
