@@ -25,7 +25,7 @@ async function load() {
 	}
     }
 brenderlist.splice(0,3)	
-confessionlist.splice(0,3)
+
 
 //debugging purposes
 //console.log(confessionlist, "FOR LOOP")
