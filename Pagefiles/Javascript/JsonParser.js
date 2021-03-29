@@ -16,6 +16,7 @@ async function load() {
    	var confessionentry = textjs[i].content.$t
    	var confessioncomp = confessionentry
    	confessionlist.push(confessioncomp)
+	var brenderlist = confessionlist  
     }
 
 for(var i = 0; i < confessionlist.length; i++){
@@ -35,7 +36,8 @@ try
 	//confessionlist.splice(indexed1,1)
 }catch(e){//pass
 }
-console.log(confessionlist)
+console.log(brenderlist,"brender")
+console.log(confessionlist,"total list")
 if(confessionlist.length == 0){
 confessionlist.push("No submissions! Add one or come back later.");
 }
@@ -58,7 +60,7 @@ function genNum() {
 
 if(confessionlist.length > 1){ 
 console.log(genNum())
-console.log("DF")
+console.log("above genned num")
 }else{
 document.getElementById('textinput').value =  ""
 document.getElementById('textinput').value =  confessionlist[0]
