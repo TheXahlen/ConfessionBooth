@@ -24,7 +24,7 @@ confessionlist.splice(0,3)
 for(var i = 0; i < confessionlist.length; i++){
 	if(confessionlist[i].length < 15){
 	//console.log(confessionlist[i],"this is shorter than 15 test")	
-	confessionlist.splice(i,i)
+	confessionlist.splice(i,1)
 	}
 //debugging purposes
 //console.log(confessionlist, "FOR LOOP")
