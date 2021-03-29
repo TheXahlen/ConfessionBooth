@@ -57,6 +57,8 @@ function genNum() {
   else {
     localStorage.setItem("numbergenned", x);
     document.getElementById('textinput').value =  "";
+    var indexinbren = brenderlist.indexOf(confessionlist[x]) 
+	console.log(indexinbren, "THISIS")  
 		document.getElementById('textinput').value =  confessionlist[x];
     return x;
   }
