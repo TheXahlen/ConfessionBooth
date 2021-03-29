@@ -20,10 +20,8 @@ async function load() {
     }
 var brenderlist = confessionlist  
 for(var i = 0; i < confessionlist.length; i++){
-	var lengthtest = confessionlist[i].length;
-
-  //pass//
-  
+console.log(confessionlist, "FOR LOOP")
+console.log(confessionlist[i].length, "LENGTH OF ITEMS")
 if(confessionlist[i].length < 25){
 
 	confessionlist.splice(i, i + 1)	
