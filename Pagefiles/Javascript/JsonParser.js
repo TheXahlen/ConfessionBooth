@@ -61,7 +61,7 @@ function genNum() {
 	console.log(indexinbren, "THISIS")  
 	document.getElementById('textinput').value =  confessionlist[x];  
 	document.getElementById('textinput').style.color =  brenderlist[indexinbren + 2];
-	document.getElementById('textinput').style.fontFamily =  brenderlist[indexinbren + 3]
+	document.getElementById('textinput').style.fontFamily =  brenderlist[indexinbren + 3];
     return x;
   }
 }
