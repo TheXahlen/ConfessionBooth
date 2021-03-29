@@ -19,7 +19,7 @@ async function load() {
    	confessionlist.push(confessioncomp)
 	brenderlist.push(confessioncomp)
     }
-confessionlist.splice(0,2)
+confessionlist.splice(0,3)
 for(var i = 0; i < confessionlist.length; i++){
 
 //debugging purposes
