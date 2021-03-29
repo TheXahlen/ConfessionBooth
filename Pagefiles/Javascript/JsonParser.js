@@ -16,9 +16,9 @@ async function load() {
    	var confessionentry = textjs[i].content.$t
    	var confessioncomp = confessionentry
    	confessionlist.push(confessioncomp)
-	var brenderlist = confessionlist  
+	
     }
-
+var brenderlist = confessionlist  
 for(var i = 0; i < confessionlist.length; i++){
 	var lengthtest = confessionlist[i].length;
 
