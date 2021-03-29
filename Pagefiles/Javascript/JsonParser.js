@@ -24,7 +24,7 @@ for(var i = 0; i < confessionlist.length; i++){
 //debugging purposes
 //console.log(confessionlist, "FOR LOOP")
 //console.log(confessionlist[i].length, "LENGTH OF ITEMS")
-if(confessionlist[i].length < 10){
+if(confessionlist[i].length < 15){
 
 	confessionlist.splice(i, i + 1)	
 }}
