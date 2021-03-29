@@ -21,7 +21,9 @@ async function load() {
     }
 confessionlist.splice(0,3)
 for(var i = 0; i < confessionlist.length; i++){
-
+	if(confessionlist[i].length < 15){
+	console.log(confessionlist[i],"this is shorter than 15 test")	
+	}
 //debugging purposes
 //console.log(confessionlist, "FOR LOOP")
 //console.log(confessionlist[i].length, "LENGTH OF ITEMS")
