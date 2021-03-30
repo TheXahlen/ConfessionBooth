@@ -8,7 +8,7 @@ function Clicked(){
 if(document.getElementById("cycle").display = "none"){
   document.getElementById("cycle").display = "none";
 document.getElementById("selector").display = "initial";
-document.getElementById("submit").opacity = .90;
+document.getElementById("submitun").opacity = .90;
 document.getElementById("cycle").opacity = 0.75;
 document.getElementById("selector").display = "none";
   
@@ -17,7 +17,7 @@ document.getElementById("selector").display = "none";
 else{
 document.getElementById("cycle").display = "inital";
 document.getElementById("selector").display = "none";
-document.getElementById("submit").opacity = 0.75;
+document.getElementById("submitun").opacity = 0.75;
 document.getElementById("cycle").opacity = 0.90; 
 document.getElementById("selector").display =  "initial";
   
