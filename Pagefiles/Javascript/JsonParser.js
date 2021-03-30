@@ -69,11 +69,14 @@ function genNum() {
   
 
 if(confessionlist.length > 1){ 
+//if generated list has more than one object then run a random number generator.
 console.log(genNum())
 console.log("above genned num")
 }else{
 document.getElementById('textinput').value =  ""
 document.getElementById('textinput').value =  confessionlist[0]
+document.getElementById('textinput').style.color =  brenderlist[2];
+document.getElementById('textinput').style.textDecoration =  brenderlist[3];
 }
 console.log("Completed")
 }
