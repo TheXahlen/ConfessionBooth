@@ -6,7 +6,7 @@
 function Clicked(){
 
 if(document.getElementById("cycle").display = "none"){
-  console.log("hello")
+  console.log("enabled")
   document.getElementById("cycle").display = "inital";
 document.getElementById("selector").display = "none";
 document.getElementById("submitun").opacity = .90;
@@ -16,6 +16,7 @@ document.getElementById("selector").display = "none";
 } 
   
 else{
+console.log("disabled")
 document.getElementById("cycle").display = "none";
 document.getElementById("selector").display = "inital";
 document.getElementById("submitun").opacity = 0.75;
