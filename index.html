@@ -11,12 +11,14 @@
 </head>
 <body onload="setdeleteDate(); Mobile(); Loader();">
 <h2 direction="up" style="text-align:center; background:white; opacity:0.65; font-size:20pt; font-family:almond; ">|||Confession Booth ||| Confession Booth ||| Confession Booth ||| Confession Booth |||</h2>
-<table style="width:100%">
+
+ <table style="width:100%">
 <tr><th> 
 <button id="cycle" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75; font-family:Hero; font-size: 16pt; ">BUTTON TO CYCLE</button> 
 <button id="submit" type="submit"  style="width:35%;opacity: 0.75; font-size: 16pt; border:black solid 4px; font-family:Hero; border-radius:10px;">BUTTON TO SUBMIT</button>  
 </th></tr>
 </table>
+ <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" onclick="Clicked()" >Switch Mode</button>
 <form name="submit-to-google-sheet"> 
 <button style="display:none;" id="submit"></button>
 <textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="45%" style=" display:block; border:black solid 9px; border-radius:15px; font-size: 35pt; opacity: 0.75; position:fixed; top: 52%; left: 50%;transform: translate(-50%, -50%);" wrap="soft">  </textarea>
@@ -40,11 +42,11 @@
   </th></tr>
 </table>
  </form>
- <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" onclick="Clicked()" >Switch Mode</button>
+ 
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/TextHandler.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
-<script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/ClickIt.js"></script>
+<script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Clicked.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
  <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
  <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
