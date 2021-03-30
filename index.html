@@ -15,10 +15,13 @@
  <table style="width:100%">
 <tr><th> 
 <button id="cycle" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75; font-family:Hero; font-size: 16pt; ">BUTTON TO CYCLE</button> 
-<button id="submit" type="submit"  style="width:35%;opacity: 0.75; font-size: 16pt; border:black solid 4px; font-family:Hero; border-radius:10px;">BUTTON TO SUBMIT</button>  
+<button id="submit" type="submit"  style="width:35%;opacity: 0.75; font-size: 16pt; border:black solid 4px; font-family:Hero; border-radius:10px;" onclick="Clicked()">BUTTON TO SUBMIT</button>  
 </th></tr>
 </table>
- <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" onclick="Clicked()" >Switch Mode</button>
+ <!--
+unused so far plans to implement later it's a button that switched between submit and cycle functionality.
+ <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
+-->
 <form name="submit-to-google-sheet"> 
 <button style="display:none;" id="submit"></button>
 <textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="45%" style=" display:block; border:black solid 9px; border-radius:15px; font-size: 35pt; opacity: 0.75; position:fixed; top: 52%; left: 50%;transform: translate(-50%, -50%);" wrap="soft">  </textarea>
