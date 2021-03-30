@@ -9,3 +9,4 @@ document.getElementById("textinput").value = "text is 0";
 document.getElementById("textinput").value = "";
 }
 document.getElementById("textinput").value = ""     
+}
