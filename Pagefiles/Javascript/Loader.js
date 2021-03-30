@@ -24,4 +24,4 @@ submitdis.opacity = 0.75;
 cycledis.opacity = 0.90; 
 selector.display =  "initial";
   
-}
+}}
