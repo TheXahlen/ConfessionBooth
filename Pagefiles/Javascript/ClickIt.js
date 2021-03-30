@@ -1,4 +1,4 @@
-function clickit(){
+function clickIt(){
 var cycledis = document.getElementById("cycle")
 var submitdis = document.getElementById("submit")
 var selector = document.getElementById("selector")
