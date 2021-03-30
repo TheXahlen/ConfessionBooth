@@ -1,4 +1,4 @@
-location.reload(); 
+
 localStorage.setItem("numbergenned", 0);
 async function apicall(){
 	return new Promise(async(resolve,reject)=>{
