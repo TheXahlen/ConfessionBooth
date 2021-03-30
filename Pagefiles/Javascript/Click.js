@@ -5,7 +5,7 @@
 //var selector = document.getElementById("selector")
 function Clicked(){
 
-if(cycledis.disabled = true){
+if(document.getElementById("cycle").disabled = true){
 document.getElementById("cycle").disabled = false;
 document.getElementById("submit").disabled = true;
 document.getElementById("submit").opacity = .90;
