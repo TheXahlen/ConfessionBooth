@@ -1,7 +1,8 @@
-function Clicked(){
 var cycledis = document.getElementById("cycle")
 var submitdis = document.getElementById("submit")
 var selector = document.getElementById("selector")
+function Clicked(){
+
 if(cycledis.disabled = true){
 cycledis.disabled = false;
 submitdis.disabled = true;
@@ -11,7 +12,7 @@ selector.display = none;
   
 } 
   
-if (submitdis.disabled = true)   {
+else{
 cycledis.disabled = true;
 submitdis.disabled = false;
 submitdis.opacity = 0.75;
