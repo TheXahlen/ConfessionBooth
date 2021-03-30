@@ -6,6 +6,7 @@
 function Clicked(){
 
 if(document.getElementById("cycle").display = "none"){
+  console.log("hello")
   document.getElementById("cycle").display = "none";
 document.getElementById("selector").display = "initial";
 document.getElementById("submitun").opacity = .90;
