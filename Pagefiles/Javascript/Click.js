@@ -9,7 +9,9 @@ submitdis.opacity = .90;
 cycledis.opacity = 0.75;
 selector.display = "none";
   
-} else{
+} 
+  
+if (cycledis.disabled = false)   {
 cycledis.disabled = true;
 submitdis.disabled = false;
 submitdis.opacity = 0.75;
