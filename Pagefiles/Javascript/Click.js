@@ -10,7 +10,7 @@ document.getElementById("cycle").disabled = false;
 document.getElementById("submit").disabled = true;
 document.getElementById("submit").opacity = .90;
 document.getElementById("cycle").opacity = 0.75;
-selector = document.getElementById("selector").display = none;
+selector = document.getElementById("selector").display = "none";
   
 } 
   
@@ -19,6 +19,6 @@ document.getElementById("cycle").disabled = true;
 document.getElementById("submit").disabled = false;
 document.getElementById("submit").opacity = 0.75;
 document.getElementById("cycle").opacity = 0.90; 
-selector = document.getElementById("selector").display =  initial;
+selector = document.getElementById("selector").display =  "initial";
   
 }}
