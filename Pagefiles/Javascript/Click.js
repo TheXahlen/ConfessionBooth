@@ -11,7 +11,7 @@ selector.display = "none";
   
 } 
   
-if (cycledis.disabled = false)   {
+if (submitdis.disabled = true)   {
 cycledis.disabled = "true";
 submitdis.disabled = "false";
 submitdis.opacity = 0.75;
