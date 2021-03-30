@@ -8,6 +8,6 @@ viewable at:
 
 https://xplosivex.github.io/ConfessionBooth/index.html
 
-Mobile site viewable at:
+Mobile site viewable at(this automatically loads on mobile devices):
 
 https://xplosivex.github.io/ConfessionBooth/mobileindex.html
