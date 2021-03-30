@@ -3,24 +3,4 @@
 //var cycledis = document.getElementById("cycle")
 //var submitdis = document.getElementById("submit")
 //var selector = document.getElementById("selector")
-function Clicked(){
 
-if(document.getElementById("cycle").display = "none"){
-  console.log("enabled")
-  document.getElementById("cycle").display = "block";
-document.getElementById("selector").display = "none";
-document.getElementById("submitun").opacity = .90;
-document.getElementById("cycle").opacity = 0.75;
-document.getElementById("selector").display = "none";
-  
-} 
-  
-else{
-console.log("disabled")
-document.getElementById("cycle").display = "none";
-document.getElementById("selector").display = "block";
-document.getElementById("submitun").opacity = 0.75;
-document.getElementById("cycle").opacity = 0.90; 
-document.getElementById("selector").display =  "block";
-  
-}}
