@@ -5,9 +5,9 @@
 //var selector = document.getElementById("selector")
 function Clicked(){
 
-if(document.getElementById("cycle").disabled = true){
-document.getElementById("cycle").disabled = false;
-document.getElementById("submit").disabled = true;
+if(document.getElementById("cycle").display = "none"){
+  document.getElementById("cycle").display = "none";
+document.getElementById("selector").display = "initial";
 document.getElementById("submit").opacity = .90;
 document.getElementById("cycle").opacity = 0.75;
 document.getElementById("selector").display = "none";
@@ -15,8 +15,8 @@ document.getElementById("selector").display = "none";
 } 
   
 else{
-document.getElementById("cycle").disabled = true;
-document.getElementById("submit").disabled = false;
+document.getElementById("cycle").display = "inital";
+document.getElementById("selector").display = "none";
 document.getElementById("submit").opacity = 0.75;
 document.getElementById("cycle").opacity = 0.90; 
 document.getElementById("selector").display =  "initial";
