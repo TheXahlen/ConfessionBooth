@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Confesion Booth</title>
- <link rel="shortcut icon" type="image/x-icon" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/booth.ico" />
-<meta name="Description" content="Computer Science project that uses google spreadsheets to index data.">
-<meta name="KeyWords" content="cs,computer science,computers,project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
- </head>
- <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
+<title>Confesion Booth</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/booth.ico" />
+   <meta name="Description" content="Computer Science project that uses google spreadsheets to index data.">
+   <meta name="KeyWords" content="cs,computer science,computers,project">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+   <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
 </head>
 <body onload="setdeleteDate(); Mobile(); Loader();">
 <h2 direction="up" style="text-align:center; background:white; opacity:0.65; font-size:20pt; font-family:almond; ">|||Confession Booth ||| Confession Booth ||| Confession Booth ||| Confession Booth |||</h2>
 
- <table style="width:100%">
+<table style="width:100%">
 <tr><th> 
-<button id="cycle" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75; font-family:Hero; font-size: 16pt; " onclick="load()">BUTTON TO CYCLE</button> 
-<button type="submit"  style="width:35%;opacity: 0.75; font-size: 16pt; border:black solid 4px; font-family:Hero; border-radius:10px;" onclick="Clicked()">BUTTON TO SUBMIT</button>  
+   <button id="cycle" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75; font-family:Hero; font-size: 16pt; " onclick="load()">BUTTON TO CYCLE</button> 
+   <button type="submit"  style="width:35%;opacity: 0.75; font-size: 16pt; border:black solid 4px; font-family:Hero; border-radius:10px;" onclick="Clicked()">BUTTON TO SUBMIT</button>  
 </th></tr>
 </table>
  <!--
@@ -23,38 +23,37 @@ unused so far plans to implement later it's a button that switched between submi
  <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
 -->
 <form name="submit-to-google-sheet"> 
-<button style="display:none;" id="submit"></button>
-<textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="45%" style=" display:block; border:black solid 9px; border-radius:15px; font-size: 35pt; opacity: 0.75; position:fixed; top: 52%; left: 50%;transform: translate(-50%, -50%);" wrap="soft">  </textarea>
-<textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
- <table style="width:100%">
-
-  <tr><th> 
-   <div id="selector">
-   <select name="color" id="color" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt; ">
+    <button style="display:none;" id="submit"></button>
+    <textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="45%" style=" display:block; border:black solid 9px; border-radius:15px; font-size: 35pt; opacity: 0.75; position:fixed; top: 52%; left: 50%;transform: translate(-50%, -50%);" wrap="soft">  </textarea>
+    <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
+<table style="width:100%">
+<tr><th> 
+<div id="selector">
+  <select name="color" id="color" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt; ">
     <option value="blue" style="color:blue;">Blue</option>
     <option value="red" style="color:red">Red</option>
     <option value="green" style="color:green;">Green</option>
     <option value="yellow" style="color:yellow;">Yellow</option>
     <option value="black" style="color:black;">Black</option>
   </select>
-    <select name="decoration" id="decoration" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75; font-size: 16pt; "> 
+  <select name="decoration" id="decoration" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75; font-size: 16pt; "> 
     <option value="underline" style="text-decoration:underline;">Underline</option>
     <option value="line-through" style="text-decoration:line-through;">Line-Through</option>
     <option value="underline overline" style="text-decoration:underline overline;">Cover</option>
-     <option value="none" style="text-decoration:;">None</option>
+    <option value="none" style="text-decoration:;">None</option>
   </select>
-   </div>
-  </th></tr>
-</table>
- </form>
- 
+</div>
+</th></tr>
+</table></form>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
- <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
- <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
- <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
- </body>
+<script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
+<script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
+<script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
+<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"> </script>
+</body>
 </html>
 
 
