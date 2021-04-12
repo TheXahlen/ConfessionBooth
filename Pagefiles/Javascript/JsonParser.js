@@ -19,7 +19,7 @@ async function load() {
 	//uncomment to debug the size of submissions.
 	//console.log(confessioncomp.length, confessioncomp)
 	if(confessioncomp == "indentiy"){
-	//pass
+	console.log("removed pesky identity from list <3")
 	} else{
 	if(confessioncomp.length < 25){
 	brenderlist.push(confessioncomp)	
@@ -64,6 +64,7 @@ function genNum() {
 	document.getElementById('textinput').value =  confessionlist[x];  
 	document.getElementById('textinput').style.color =  brenderlist[indexinbren + 2];
 	document.getElementById('textinput').style.textDecoration =  brenderlist[indexinbren + 3];
+	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + ]
     return x;
   }
 }
