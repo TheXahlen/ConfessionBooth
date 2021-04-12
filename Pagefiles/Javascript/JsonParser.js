@@ -18,7 +18,7 @@ async function load() {
    	var confessioncomp = confessionentry
 	//uncomment to debug the size of submissions.
 	//console.log(confessioncomp.length, confessioncomp)
-	if(confessioncomp == "identity){
+	if(confessioncomp == "identity"){
 	 console.log("it was done<3.") 
 	   }else
 	if(confessioncomp.length < 25){
