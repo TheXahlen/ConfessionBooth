@@ -5,4 +5,5 @@ function getIP(json) {
  var identity = b64.substring(0,7);
  console.log("your identifier is" + identity)
  document.getElementById('identity').value =  identity;  
+ document.getElementById('posterid').value =  identity; 
 }
