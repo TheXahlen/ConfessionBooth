@@ -18,13 +18,15 @@ async function load() {
    	var confessioncomp = confessionentry
 	//uncomment to debug the size of submissions.
 	//console.log(confessioncomp.length, confessioncomp)
+	if(confessioncomp == "indentiy"){
+	//pass
+	} else{
 	if(confessioncomp.length < 25){
 	brenderlist.push(confessioncomp)	
 	}else{
 	brenderlist.push(confessioncomp)
    	confessionlist.push(confessioncomp)
-	}
-    }
+	}}}
 brenderlist.splice(0,3)	
 
 
