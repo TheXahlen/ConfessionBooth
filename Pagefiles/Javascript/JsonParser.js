@@ -77,7 +77,7 @@ document.getElementById('textinput').value =  ""
 document.getElementById('textinput').value =  confessionlist[0]
 document.getElementById('textinput').style.color =  brenderlist[3];
 document.getElementById('textinput').style.textDecoration =  brenderlist[4];
-document.getElementById('posterid').value =  brenderlist[brenderlist.length]
+document.getElementById('posterid').value =  brenderlist[11]
 }
 console.log("Completed")
 }
