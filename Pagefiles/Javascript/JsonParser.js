@@ -26,7 +26,7 @@ async function load() {
 	}else{
 	brenderlist.push(confessioncomp)
    	confessionlist.push(confessioncomp)
-	}}}}
+	}}}
 brenderlist.splice(0,3)	
 
 
