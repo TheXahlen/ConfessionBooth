@@ -20,13 +20,13 @@ async function load() {
 	//console.log(confessioncomp.length, confessioncomp)
 	if(confessioncomp == "identity"){
 	 console.log("it was done<3.") 
-	   }else
+	   }else{
 	if(confessioncomp.length < 25){
 	brenderlist.push(confessioncomp)	
 	}else{
 	brenderlist.push(confessioncomp)
    	confessionlist.push(confessioncomp)
-	}}}
+	}}}}
 brenderlist.splice(0,3)	
 
 
