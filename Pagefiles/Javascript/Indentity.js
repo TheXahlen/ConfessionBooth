@@ -1,13 +1,15 @@
 
 function getIP(json) {
  // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
- var blacklist = []
+ //var blacklist = ["NjQ1LjY"]
+ var blacklist = ["NjQ1LjY"]
  // hiIII///
  var ip = json.ip.replace(".", "")
  var iplength = ip.length;
  var b64 = btoa(ip);
  var identity = b64.substring(0,7);
  var testif = blacklist.includes(identity);
+ console.log("if true you are blocked sorry: " + testif)
  if( testif == true){
  document.getElementById('posteridsecond').innerHTML =  identity; 
  document.getElementById('bodyifallowed').style.display = "none"; 
