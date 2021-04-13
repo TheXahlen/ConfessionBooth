@@ -50,13 +50,7 @@ console.log(confessionlist,"total list")
 if(confessionlist.length == 0){
 confessionlist.push("No submissions! Add one or come back later.");
 }
-function getAllIndexes(arr, val) {
-    var indexes = [], i;
-    for(i = 0; i < arr.length; i++)
-        if (arr[i] === val)
-            indexes.push(i);
-    return indexes;
-}
+
   
   
 function genNum() {
