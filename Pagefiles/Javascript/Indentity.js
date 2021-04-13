@@ -1,12 +1,11 @@
 
 function getIP(json) {
  function makeid(length) {
-    var result           = [];
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789:}{[]-=+)(*&^%$#@!.,/?';
+    var result = [];
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789:}{[]-=+)(*&^%$#@!.,/?';
     var charactersLength = characters.length;
     for ( var i = 0; i < length; i++ ) {
-      result.push(characters.charAt(Math.floor(Math.random() * 
- charactersLength)));
+        result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
    }
    return result.join('');
  // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
