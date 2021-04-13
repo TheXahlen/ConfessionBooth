@@ -49,8 +49,11 @@ console.log(brenderlist,"brender")
 console.log(confessionlist,"total list")
 if(confessionlist.length == 0){
 confessionlist.push("No submissions! Add one or come back later.");
-//stores for future refrence
-}
+try{
+document.getElementById('posterid').innerHTML =  localStorage.getItem("browserid");
+}catch{
+document.getElementById('posterid').innerHTML = "NO IDS CAN BE LOADED
+}}
 localStorage.setItem("brenderlist", brenderlist);
 localStorage.setItem("confessions", confessionlist);
   
