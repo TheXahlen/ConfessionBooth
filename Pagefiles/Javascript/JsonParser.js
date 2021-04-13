@@ -52,7 +52,7 @@ confessionlist.push("No submissions! Add one or come back later.");
 //stores for future refrence
 }
 localStorage.setItem("brenderlist", brenderlist);
-localStorage.setItem("confessions", confessioncomp);
+localStorage.setItem("confessions", confessionlist);
   
   
 function genNum() {
