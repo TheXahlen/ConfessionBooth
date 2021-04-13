@@ -2,7 +2,7 @@
 function getIP(json) {
  // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
  //var blacklist = ["NjQ1LjY"]
- var blacklist = ["NjQ1LjY"]
+ var blacklist = [""]
  // hiIII///
  var ip = json.ip.replace(".", "")
  var iplength = ip.length;
