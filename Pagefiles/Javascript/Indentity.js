@@ -13,10 +13,10 @@ function getIP(json) {
  //explample blew of how to black list a user
  //var blacklist = ["sASfdsfgb","dsfsAAAA","DSAFDSAaaaa"]
  var blacklist = [""]
- try{
+ if (localStorage.getItem('browserid') !== null){
  var identity = localStorage.getItem("browserid")
  console.log("ID FOUND AND LOADED: " + identity)
- }catch{
+ }else{
  console.log("YOU HAVE NO USER ID GENERATING")
  var jsonip = JSON.stringify(json.ip)
  var iplength = jsonip.length - 3;
