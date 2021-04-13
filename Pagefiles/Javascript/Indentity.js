@@ -5,10 +5,9 @@ function getIP(json) {
  var blacklist = [""]
  // hiIII///
  var jsonip = JSON.stringify(json.ip)
- var ip = jsonip.replace(".", "")
- var iplength = ip.length;
+ var iplength = jsonip.length - 2;
  var b64 = btoa(ip);
- var identity = b64.substring(0,10).split("").reverse().join("");
+ var identity = b64.substring(0,iplength).split("").reverse().join("");
  var testif = blacklist.includes(identity);
  console.log("if true you are blocked sorry: " + testif)
  if( testif == true){
