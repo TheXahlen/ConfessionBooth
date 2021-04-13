@@ -8,6 +8,7 @@ function getIP(json) {
  var iplength = jsonip.length;
  var b64 = btoa(jsonip);
  var identity = b64.substring(0,iplength).split("").reverse().join("");
+ //future browser based blocking to stop vpn
  localStorage.setItem("browserid", identity);
  var testif = blacklist.includes(identity);
  console.log("if true you are blocked sorry: " + testif)
