@@ -29,6 +29,9 @@ function getIP(json) {
  var testif = blacklist.includes(identity);
  console.log("if true you are blocked sorry: " + testif)
  //
+  
+  
+ // purely a test to see if user is blocked and loads the browserid
  if( testif == true){
  document.getElementById('posteridsecond').innerHTML =  identity; 
  document.getElementById('bodyifallowed').style.display = "none"; 
