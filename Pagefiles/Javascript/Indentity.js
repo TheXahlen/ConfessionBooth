@@ -8,7 +8,8 @@ function getIP(json) {
         result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
    }
    return result.join('');
- // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
+ }
+  // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
  //explample blew of how to black list a user
  //var blacklist = ["sASfdsfgb","dsfsAAAA","DSAFDSAaaaa"]
  var blacklist = [""]
