@@ -80,7 +80,7 @@ document.getElementById('textinput').value =  ""
 document.getElementById('textinput').value =  confessionlist[0]
 document.getElementById('textinput').style.color =  brenderlist[3];
 document.getElementById('textinput').style.textDecoration =  brenderlist[4];
-document.getElementById('posterid').innerHTML =  brenderlist[brenderlist.length]
+document.getElementById('posterid').innerHTML =  brenderlist[5]
 }
 console.log("Completed")
 }
