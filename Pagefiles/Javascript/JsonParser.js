@@ -52,7 +52,7 @@ confessionlist.push("No submissions! Add one or come back later.");
 try{
 document.getElementById('posterid').innerHTML =  localStorage.getItem("browserid");
 }catch{
-document.getElementById('posterid').innerHTML = "NO IDS CAN BE LOADED
+document.getElementById('posterid').innerHTML = "NO ID'S CAN BE LOADED"
 }}
 localStorage.setItem("brenderlist", brenderlist);
 localStorage.setItem("confessions", confessionlist);
