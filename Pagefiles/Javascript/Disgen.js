@@ -9,4 +9,4 @@ function getAllIndexes(arr, val) {
     return "This user identifier has |" + amount + "| posts with an id at the following indexes: {" + indexes + "}";
     
 }
-var submissions = getAllIndexes(brenderparsedvar,browseridvar)
+//getAllIndexes(brenderparsedvar,browseridvar)
