@@ -2,7 +2,7 @@
 function getIP(json) {
  function makeid(length) {
     var result = [];
-    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789:}{[]-=+)(*&^%$#@!.,/?';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789:-=+)(*&^%$#@!.,/?';
     var charactersLength = characters.length;
     for ( var i = 0; i < length; i++ ) {
         result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
@@ -22,7 +22,7 @@ function getIP(json) {
  var iplength = jsonip.length - 3;
  var extensionadd = makeid(5);
  var b64 = btoa(jsonip);
- var identity = "{" + b64.substring(0,iplength).split("").reverse().join("") + "}{" + extensionadd + "}";
+ var identity = "[" + b64.substring(0,iplength).split("").reverse().join("") + "] [" + extensionadd + "]";
  console.log("USER ID GENERATED: " + identity);
  localStorage.setItem("browserid", identity);
  }
