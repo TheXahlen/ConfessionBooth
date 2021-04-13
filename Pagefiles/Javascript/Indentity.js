@@ -9,6 +9,7 @@ function getIP(json) {
  var identity = b64.substring(0,7);
  var testif = blacklist.includes(identity);
  if( testif == true){
+ document.getElementById('posteridsecond').innerHTML =  identity; 
  document.getElementById('bodyifallowed').style.display = "none"; 
  document.getElementById('bodyifnotallowed').style.display = "block";
  }else{
