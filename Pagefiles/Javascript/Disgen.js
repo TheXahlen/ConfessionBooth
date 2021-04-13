@@ -1,10 +1,12 @@
-var brenderparsed = JSON.parse(localStorage.getItem("brenderlist"))
-var browserid = localStorage.getItem("browserid")
+var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist"))
+var browseridvar = localStorage.getItem("browserid")
 function getAllIndexes(arr, val) {
     var indexes = [], i;
     for(i = 0; i < arr.length; i++)
         if (arr[i] === val)
             indexes.push(i);
-    return indexes;
+    var amount = indexes.length();
+    return "usersubmitted " + amount + "posts with an id at the following indexes: " + indexes;
+    
 }
-getAllIndexes(brenderparsed,browserid)
+var submissions = getAllIndexes(brenderparsed,browserid)
