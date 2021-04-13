@@ -61,19 +61,12 @@ unused so far plans to implement later it's a button that switched between submi
     <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
     <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
     <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
+    <!-- this handles the submissons for the spreadsheet-->
+    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SumbitHandler.js"></script>
     <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
     <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"> </script>
-    <!-- this handles the submissons for the spreadsheet-->
-    <script> 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyhferKoM3lawXmfUHRrnjQC1vEexIbDdcYgLl-xY0tH2cjdKBjLNFExw/exec'
-    const form = document.forms['submit-to-google-sheet']
-    form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-    })
-    </script>
+   
+  
 </body>
 </html>
 
