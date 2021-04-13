@@ -22,7 +22,7 @@ function getIP(json) {
  var extensionadd = makeid(5);
  var b64 = btoa(jsonip);
  var identity = "{" + b64.substring(0,iplength).split("").reverse().join("") + "}{" + extensionadd + "}";
- console.log("USER ID GENERATED: " + identity;
+ console.log("USER ID GENERATED: " + identity);
  localStorage.setItem("browserid", identity);
  }
  var testif = blacklist.includes(identity);
