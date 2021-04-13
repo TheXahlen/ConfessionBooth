@@ -9,4 +9,4 @@ function getAllIndexes(arr, val) {
     return "usersubmitted " + amount + "posts with an id at the following indexes: " + indexes;
     
 }
-var submissions = getAllIndexes(brenderparsed,browserid)
+var submissions = getAllIndexes(brenderparsedvar,browseridvar)
