@@ -15,7 +15,7 @@ function getIP(json) {
  var blacklist = [""]
  try{
  var identity = localStorage.getItem("browserid")
- console.log("ID FOUND AND LOADED: " + identity
+ console.log("ID FOUND AND LOADED: " + identity)
  }catch{
  console.log("YOU HAVE NO USER ID GENERATING")
  var jsonip = JSON.stringify(json.ip)
