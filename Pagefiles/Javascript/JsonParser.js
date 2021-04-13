@@ -54,8 +54,8 @@ document.getElementById('posterid').innerHTML =  localStorage.getItem("browserid
 }catch{
 document.getElementById('posterid').innerHTML = "NO ID'S CAN BE LOADED"
 }}
-localStorage.setItem("brenderlist", brenderlist);
-localStorage.setItem("confessions", confessionlist);
+localStorage.setItem("brenderlist", JSON.stringify(brenderlist));
+localStorage.setItem("confessions", JSON.stringify(confessionlist));
   
   
 function genNum() {
