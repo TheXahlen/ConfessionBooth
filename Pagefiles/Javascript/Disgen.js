@@ -6,7 +6,7 @@ function getAllIndexes(arr, val) {
         if (arr[i] === val)
             indexes.push(i);
     var amount = indexes.length;
-    return "This user identifier has |" + amount + "| posts with an id at the following indexes: {" + indexes + "}";
+    return "This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: {" + indexes + "}";
     
 }
 //getAllIndexes(brenderparsedvar,browseridvar)
