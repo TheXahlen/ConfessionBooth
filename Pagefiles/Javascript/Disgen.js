@@ -5,7 +5,7 @@ function getAllIndexes(arr, val) {
     for(i = 0; i < arr.length; i++)
         if (arr[i] === val)
             indexes.push(i);
-    var amount = indexes.length();
+    var amount = indexes.length;
     return "usersubmitted " + amount + "posts with an id at the following indexes: " + indexes;
     
 }
