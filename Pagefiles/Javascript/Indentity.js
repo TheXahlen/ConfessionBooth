@@ -5,7 +5,7 @@ function getIP(json) {
  var blacklist = [""]
  // hiIII///
  var jsonip = JSON.stringify(json.ip)
- var ip = jsonip(".", "")
+ var ip = jsonip.replace(".", "")
  var iplength = ip.length;
  var b64 = btoa(ip);
  var identity = b64.substring(0,10);
