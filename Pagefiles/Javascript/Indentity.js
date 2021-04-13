@@ -17,7 +17,7 @@ function getIP(json) {
  document.getElementById('bodyifnotallowed').style.display = "block";
  }else{
  document.getElementById('identity').value =  identity;
- console.log("your identifier is" + identity)
+ console.log("your identifier is: {" + identity + "}")
  document.getElementById('posterid').innerHTML =  identity; 
  console.log("document has updated the user identity")
 }}
