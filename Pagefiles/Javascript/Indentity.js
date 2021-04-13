@@ -3,7 +3,7 @@ function getIP(json) {
  // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
  //explample blew of how to black list a user
  //var blacklist = ["sASfdsfgb","dsfsAAAA","DSAFDSAaaaa"]
- var blacklist = [""]
+ var blacklist = ["ukDMy4yN34yNwEjI"]
  var jsonip = JSON.stringify(json.ip)
  var iplength = jsonip.length;
  var b64 = btoa(jsonip);
