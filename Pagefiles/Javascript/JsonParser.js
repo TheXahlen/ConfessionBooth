@@ -50,7 +50,7 @@ console.log(confessionlist,"total list")
 if(confessionlist.length == 0){
 confessionlist.push("No submissions! Add one or come back later.");
 //stores for future refrence
-	
+}
 localStorage.setItem("brenderlist", brenderlist);
 localStorage.setItem("confessions", confessioncomp);
   
