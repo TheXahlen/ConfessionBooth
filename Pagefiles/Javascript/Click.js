@@ -18,7 +18,8 @@ var testforsim = stringSimilarity.compareTwoStrings(document.getElementById("tex
 console.log(testforsim + " this is the integer for similarity.");
 testforsim = testforsim.toString();
 testforsim = testforsim.substring(2,4);
-if(testforsim > "60"){
+testforsim = parseInt(testforsim);
+if(testforsim > 60){
 alert("Please don't submit other peoples messages, or things you just cycled through thanks!")
 }else{
 document.getElementById("submit").click();
