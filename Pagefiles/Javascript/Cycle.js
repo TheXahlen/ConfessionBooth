@@ -37,7 +37,7 @@ confessionlist.push("No submissions! Add one or come back later.");
 document.getElementById("currenttext").innerHTML = "No submissions! Add one or come back later.";
 document.getElementById('currentID').innerHTML =  localStorage.getItem("browserid")
 document.getElementById('posterid').innerHTML =  localStorage.getItem("browserid")
-
+}
   
 function genNum() {
   var x = Math.floor(Math.random() * confessionlist.length);
