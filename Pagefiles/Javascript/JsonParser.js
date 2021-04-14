@@ -33,7 +33,7 @@ async function load() {
 localStorage.setItem("brenderlist", JSON.stringify(brenderlist));
 localStorage.setItem("confessions", JSON.stringify(confessionlist));
 console.log("BRENDER META DATA LIST LOADED with {", brenderlist.length, "} Items" )
-console.log("CONFESSIONLIST LOADED with {", confessionlist.length, "}items here it is mutiplied by 8 {", confessionlist.length * 8,"} if this is within an offset of 15 from the BRENDER meta data above everything is in correct index!")
+console.log("CONFESSIONLIST LOADED with {", confessionlist.length, "}items here it is mutiplied by 6 {", confessionlist.length * 6,"} if this is within an offset of 15 from the BRENDER meta data above everything is in correct index!")
 console.log("new list structure loaded with out complaint! this is the {" + parseInt(localStorage.getItem("dataload")) + "} time a new data set has been loaded since page was opened")
 }
 
