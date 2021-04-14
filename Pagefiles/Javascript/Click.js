@@ -26,7 +26,7 @@
 
 
 function Clicked(){
-if(document.getElementById("subdis").style.display == "none"){
+if(document.getElementById("subtry").style.display == "none"){
  console.log("submission was attempted although the submit button is not visible so action was aborted")
 }else{
 document.getElementById("submit").click();
