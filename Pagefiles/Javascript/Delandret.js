@@ -1,7 +1,7 @@
-def onset(){
+function onset(){
 var setit = localStorage.getItem('browserid')
 document.getElementById('browserid').value =  setit;
 }
-def removeData(){
+function removeData(){
 localStorage.removeItem('browserid');
 }
