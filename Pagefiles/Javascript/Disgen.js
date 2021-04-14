@@ -7,7 +7,7 @@
     //var amount = indexes.length;
     //return "This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: {" + indexes + "}";
     
-}
+//}
 function loadPosts(){
 var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist"))
 var browseridvar = localStorage.getItem("browserid")
