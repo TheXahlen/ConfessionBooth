@@ -27,15 +27,7 @@ unused so far plans to implement later it's a button that switched between submi
  <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
 -->
 <form name="submit-to-google-sheet"> 
-    <button style="display:none;" id="submit"></button>
-    <textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="45%" style=" display:block; border:black solid 9px; border-radius:15px; font-size: 35pt; opacity: 0.75; position:fixed; top: 52%; left: 50%;transform: translate(-50%, -50%);" wrap="soft">  </textarea>
-    
-   <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
-   which would be bad, although I doubt it would happen. Also if you are reading this hi <3. -->
-   <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
-   <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
-
-   <table style="width:100%">
+ <table style="width:100%">
 <tr><th> 
 <div id="selector">
   <select name="color" id="color" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt; ">
@@ -54,7 +46,24 @@ unused so far plans to implement later it's a button that switched between submi
   
 </div>
 </th></tr>
-</table></form>
+</table>
+    <button style="display:none;" id="submit"></button>
+    <textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="30%" style="display: block; margin-left: auto; margin-right: auto; border:black solid 9px; border-radius:15px; font-size: 35pt; opacity: 0.75; " >  </textarea>
+    
+   <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
+   which would be bad, although I doubt it would happen. Also if you are reading this hi <3. -->
+   <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
+   <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
+</form>
+<table>
+<th><tr>
+<div style="postion:fixed; left:100%; right:100%; bottom:10%; text-align:center; background:white; opacity:0.65;  font-size:20pt; font-family:Ariel; padding:2%; text-color:black;" >
+<a  style="padding:8%;" href="pornhub.com"> About Site</a>
+<a  style="padding:8%;" href="pornhub.com"> Privacy</a>
+<a  style="padding:8%;" href="pornhub.com"> Progress Log</a>
+</div>
+</tr></th>
+</table>
 
 
     <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
