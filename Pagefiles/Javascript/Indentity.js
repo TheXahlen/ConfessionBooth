@@ -12,6 +12,9 @@ function getIP(json) {
   // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
  //explample blew of how to black list a user
  //var blacklist = ["sASfdsfgb","dsfsAAAA","DSAFDSAaaaa"]
+ if(json.ip == null || json.ip == ""){
+ console.log("somesort of ad block or anti tracking installed.")
+ }
  var blacklist = ["[jNuUjL0YjI] [NjUHE]"]
  if (localStorage.getItem('browserid') !== null){
  var identity = localStorage.getItem("browserid")
