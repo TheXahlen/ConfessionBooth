@@ -19,7 +19,7 @@ async function load() {
 	//uncomment to debug the size of submissions.
 	//console.log(confessioncomp.length, confessioncomp)
 	if(confessioncomp == "identity"){
-	 console.log("it was done<3.") 
+	 console.log("filtered collumn headers.") 
 	   }else{
 	if(confessioncomp.length < 25){
 	brenderlist.push(confessioncomp)	
@@ -56,6 +56,7 @@ if(confessionlist.length == 0){
 document.getElementById('textinput').style.color = "black";
 document.getElementById('textinput').style.textDecoration =  "none";
 confessionlist.push("No submissions! Add one or come back later.");
+document.getElementById("currenttext").innerHTML = "No submissions! Add one or come back later.";
 document.getElementById('currentID').innerHTML =  localStorage.getItem("browserid")
 document.getElementById('posterid').innerHTML =  localStorage.getItem("browserid")
 }
@@ -72,6 +73,7 @@ function genNum() {
     document.getElementById('textinput').value =  "";
     var indexinbren = brenderlist.indexOf(confessionlist[x]) 
 	console.log(indexinbren, "THISIS")  
+	document.getElementById("currenttext").innerHTML = confessionlist[x];  
 	document.getElementById('textinput').value =  confessionlist[x];  
 	document.getElementById('textinput').style.color =  brenderlist[indexinbren + 2];
 	document.getElementById('textinput').style.textDecoration =  brenderlist[indexinbren + 3];
@@ -87,9 +89,9 @@ function genNum() {
 if(confessionlist.length > 1){ 
 //if generated list has more than one object then run a random number generator.
 console.log(genNum())
-console.log("above genned num")
 }else{
 document.getElementById('textinput').value =  ""
+document.getElementById("currenttext").innerHTML =  confessionlist[0]
 document.getElementById('textinput').value =  confessionlist[0]
 document.getElementById('textinput').style.color =  brenderlist[2];
 document.getElementById('textinput').style.textDecoration =  brenderlist[3];
