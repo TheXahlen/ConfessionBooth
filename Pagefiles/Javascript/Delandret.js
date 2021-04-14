@@ -1,5 +1,6 @@
-function onset(){
-try{
+
+function detectPRESENCE(){
+
 var listit = localStorage.getItem('confessions');
 var numbergenned = localStorage.getItem('numbergenned');
 var brenderit = localStorage.getItem('brenderlist');
@@ -7,25 +8,23 @@ var setit = localStorage.getItem('browserid');
 var firstrun = localStorage.getItem('FIRSTRUN');
 var cyclenum = localStorage.getItem('numcycled');
 var dataload = localStorage.getItem('dataload');
-function detectPRESENCE(){
-  if (listit !== null || numbergenned !== null || brenderit !== null || firstrun !== null || dataload !== null || cyclenum !== null){
+
+if (listit !== null || numbergenned !== null || brenderit !== null || firstrun !== null || dataload !== null || cyclenum !== null){
   document.getElementById('listdata').innerHTML =  "TRUE";
   } else{
   document.getElementById('listdata').innerHTML =  "FALSE";
   }
-  if (setit == null){
+if (setit == null){
   document.getElementById('browserid').innerHTML =  "NULL"
   }else{
   document.getElementById('browserid').innerHTML =  setit;
-  }}catch{
-  document.getElementById('browserid').innerHTML =  "NULL";  
-  }}
 }
 
 function removeData(){
 localStorage.removeItem('browserid');
 detectPRESENCE()
 }
+ 
 function removelistData(){
 localStorage.removeItem('brenderlist');
 localStorage.removeItem('confessions');
