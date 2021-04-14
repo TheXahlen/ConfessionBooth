@@ -17,8 +17,8 @@
 
 <table style="width:100%">
 <tr><th> 
-   <button id="cycle" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75; font-family:Hero; font-size: 16pt; " onclick="load()">BUTTON TO CYCLE</button> 
-   <button type="submit"  style="width:35%;opacity: 0.75; font-size: 16pt; border:black solid 4px; font-family:Hero; border-radius:10px;" onclick="Clicked()">BUTTON TO SUBMIT</button>  
+   <button id="cycle" class="buttontry" onclick="load()">BUTTON TO CYCLE</button> 
+   <button type="submit"  class="buttontry" onclick="Clicked()">BUTTON TO SUBMIT</button>  
 </th></tr>
 </table>
  <!--
@@ -29,14 +29,14 @@ unused so far plans to implement later it's a button that switched between submi
  <table style="width:100%">
 <tr><th> 
 <div id="selector">
-  <select name="color" id="color" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt; ">
+  <select name="color" id="color" class="selector">
     <option value="blue" style="color:blue;">Blue</option>
     <option value="red" style="color:red">Red</option>
     <option value="green" style="color:green;">Green</option>
     <option value="yellow" style="color:yellow;">Yellow</option>
     <option value="black" style="color:black;">Black</option>
   </select>
-  <select name="decoration" id="decoration" style="border:black solid 4px; border-radius:10px; width:35%;opacity: 0.75; font-size: 16pt; "> 
+  <select name="decoration" id="decoration" class="selector"> 
     <option value="underline" style="text-decoration:underline;">Underline</option>
     <option value="line-through" style="text-decoration:line-through;">Line-Through</option>
     <option value="underline overline" style="text-decoration:underline overline;">Cover</option>
@@ -47,14 +47,14 @@ unused so far plans to implement later it's a button that switched between submi
 </th></tr>
 </table>
     <button style="display:none;" id="submit"></button>
-    <textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="45%" style="display: block; margin-left: auto; margin-right: auto; border:black solid 9px; border-radius:15px; font-size: 35pt; opacity: 0.75; " >  </textarea>
+    <textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="45%" class="textarea" >  </textarea>
     
    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
    which would be bad, although I doubt it would happen. Also if you are reading this hi <3. -->
    <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
    <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
 </form>
-<div style="postion:fixed; left:100%; right:100%;  text-align:center; border:black solid 9px; border-radius:15px; background-color: white; height:25%;opacity: 0.75; ">
+<div style=" margin: auto; width: 50%; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; height:25%;opacity: 0.75; ">
 <a style="padding:8%; font-size:23px;" href="about.html"> About Site</a>
 <a style="padding:8%; font-size:23px;" href="privacy.html"> Privacy</a>
 <a style="padding:8%; font-size:23px;" href="progress.html"> Progress Log</a>
