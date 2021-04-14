@@ -14,7 +14,7 @@
 
 function Clicked(){
 var currenttextread = document.getElementById("currenttext");
-if(currenttextread == document.getElementById("textinput"){
+if(currenttextread == document.getElementById("textinput")){
 alert("Please don't submit other peoples messages, or things you just cycled through thanks!")
 }else{
 document.getElementById("submit").click();
