@@ -41,7 +41,7 @@ var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 function genNum() {
 	var x = Math.floor(Math.random() * confessionlist.length);
 	if(x == localStorage.getItem("numbergenned")) {
-		genNum();
+	genNum()
 	}
   	else {
 		localStorage.setItem("numbergenned", x);
@@ -63,7 +63,7 @@ return x;}}
 
 if(confessionlist.length > 1){ 
 //if generated list has more than one object then run a random number generator.
-//console.log(genNum())
+genNum()
 }else{
 	document.getElementById('textinput').innerHTML =  ""
 	document.getElementById("currenttext").innerHTML =  confessionlist[0]
@@ -74,7 +74,7 @@ if(confessionlist.length > 1){
 	document.getElementById('textinput').style.fontSize =  brenderlist[5]
 	document.getElementById('posterid').innerHTML =  brenderlist[6];
 	document.getElementById('currentID').innerHTML =  brenderlist[6];
-}}}
+}}
 //function TESTIFSTART(){
 //pass	
 //
