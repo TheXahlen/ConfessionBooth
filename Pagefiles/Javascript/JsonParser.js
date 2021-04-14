@@ -92,7 +92,7 @@ document.getElementById('posterid').innerHTML =  brenderlist[4] + ' <button oncl
 document.getElementById('currentID').innerHTML =  brenderlist[4];
 }
 console.log("Completed")
-}} else{
+} else{
 localStorage.setItem("FIRSTRUN","FALSE")
 //only runs if first time loading page.
 //pass
