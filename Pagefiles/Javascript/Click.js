@@ -14,7 +14,11 @@
 
 function Clicked(){
 var currenttextread = document.getElementById("currenttext");
-if(currenttextread == document.getElementById("textinput")){
+var testforsim = stringSimilarity.compareTwoStrings(document.getElementById("textinput").value, document.getElementById("currenttext").innerHTML)
+console.log(testforsim + " this is the integer for similarity.");
+testforsim = testforsim.toString();
+testforsim = testforsim.substring(2,4);
+if(testforsim > "60"){
 alert("Please don't submit other peoples messages, or things you just cycled through thanks!")
 }else{
 document.getElementById("submit").click();
