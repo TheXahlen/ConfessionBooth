@@ -74,7 +74,7 @@ function genNum() {
     var indexinbren = brenderlist.indexOf(confessionlist[x]) 
 	console.log(indexinbren, "THISIS")  
 	document.getElementById("currenttext").innerHTML = confessionlist[x];  
-	document.getElementById('textinput').value =  confessionlist[x];  
+	document.getElementById('textinput').innerHTML =  confessionlist[x];  
 	document.getElementById('textinput').style.color =  brenderlist[indexinbren + 2];
 	document.getElementById('textinput').style.textDecoration =  brenderlist[indexinbren + 3];
 	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + 4] + ' <button onclick="loadPosts()" class="postid" style="border">|| View This Users Posts </button>'
@@ -90,9 +90,9 @@ if(confessionlist.length > 1){
 //if generated list has more than one object then run a random number generator.
 console.log(genNum())
 }else{
-document.getElementById('textinput').value =  ""
+document.getElementById('textinput').innerHTML =  ""
 document.getElementById("currenttext").innerHTML =  confessionlist[0]
-document.getElementById('textinput').value =  confessionlist[0]
+document.getElementById('textinput')..innerHTML =  confessionlist[0]
 document.getElementById('textinput').style.color =  brenderlist[2];
 document.getElementById('textinput').style.textDecoration =  brenderlist[3];
 document.getElementById('posterid').innerHTML =  brenderlist[4] + ' <button onclick="loadPosts()" class="postid" style="border">|| View This Users Posts </button>'
