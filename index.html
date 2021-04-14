@@ -8,27 +8,27 @@
 </head>
 
 <body id="bodyifallowed" onload="setdeleteDate(); Mobile(); Loader(); load();">
-   <h2 class="postid" id="posterid" style="opacity:0.55;font-size:32px;">[jNuUjL0YjI] [,WLNd] </h2>
-<table style="margin:auto;">
+   <h2 class="postid" id="posterid" style="opacity:0.55;font-size:32px;">[jNuUjL0YjI] [,WLNd]</h2>
+<table id="buttons" style="margin:auto;">
 <tbody><tr>
 <th>
-   <button id="cycle" class="buttontry" onclick="load()" style="display: none; width: 100%; margin: auto;">CYCLE  </button> 
+   <button id="cycle" class="buttontry" onclick="load()" style="display: block; width: 100%; margin: auto;">CYCLE  </button> 
    </th><th>
-   <button type="submit" id="subtry" class="buttontry" onclick="Clicked()" style="display: block; width: 100%; margin: auto;">SUBMIT</button>  
+   <button type="submit" id="subtry" class="buttontry" onclick="Clicked()" style="display: none; width: 100%; margin: auto;">SUBMIT</button>  
   </th><th>
 <button class="buttontry" onclick="switchd()" style="display:block; width:100%;"> switch</button>
 </th></tr>
 
 </tbody></table>
-<button onclick="loadPosts()" id="posterload" class="buttontry" style="display: none;  margin:auto; width:55%;"> View This Users Posts</button>
+<button onclick="loadPosts()" id="posterload" class="buttontry" style="display: block; margin: auto; width: 55%;"> View This Users Posts</button>
  <!--
 unused so far plans to implement later it's a button that switched between submit and cycle functionality.
  <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
 -->
 <form name="submit-to-google-sheet"> 
- <table style="width:100%">
+ <table style="width:100%; margin:auto; text-align:center;">
 <tbody><tr><th> 
-<div id="selector" style="display: block;">
+<div id="selector" style="display: none;">
   <select name="color" id="color" class="selector">
     <option value="blue" style="color:blue;">Blue</option>
     <option value="red" style="color:red">Red</option>
@@ -46,10 +46,19 @@ unused so far plans to implement later it's a button that switched between submi
 </div>
 </th></tr>
 </tbody></table>
-   
-<p style="padding-bottom: 30%; width: 70%; background: white none repeat scroll 0% 0%; border: 9px solid black; border-radius: 15px; font-size: 35pt; opacity: 0.75; margin: auto; display: none; color: black; text-decoration: none;" id="textinput">Post number {0} [  Helllo !! how are you today!!!! ] 
+   <div id="director">
+<table style="width:68%; margin:auto; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; font-size:18px; opacity: 0.75;">
+    <tbody><tr><th>
+          <a href="about.html" style="margin:auto;">About</a>
+          </th><th style="width:100%">
+      <a href="privacy.html"> Privacy</a>
+      </th><th>
+     <a href="progress.html"> Log</a>
+      </th></tr></tbody></table>
+</div>
+<p style="padding-bottom: 30%; width: 70%; background: white none repeat scroll 0% 0%; border: 9px solid black; border-radius: 15px; font-size: 35pt; opacity: 0.75; margin: auto; display: block; color: black; text-decoration: none;" id="textinput">Post number {0} [  Helllo !! how are you today!!!! ] 
 </p>
-<textarea name="confession" id="textsubmit" rows="10" type="text" minlength="20" maxlength="450" cols="45%" class="textarea" style="display: block;">  </textarea>
+<textarea name="confession" id="textsubmit" rows="10" type="text" minlength="20" maxlength="450" cols="45%" class="textarea" style="display: none;">  </textarea>
     
    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
    which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
@@ -64,11 +73,7 @@ unused so far plans to implement later it's a button that switched between submi
 </div>
    
 </form>
-<div style=" margin: auto; width: 70%; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; height:25%;opacity: 0.75; ">
-<a style="padding:8%; font-size:23px;" href="about.html"> About Site</a>
-<a style="padding:8%; font-size:23px;" href="privacy.html"> Privacy</a>
-<a style="padding:8%; font-size:23px;" href="progress.html"> Progress Log</a>
-</div>
+
 
 
 <div id="scripts">
@@ -119,4 +124,5 @@ function switchd(){
    <!-- this is on the bottom so it can refrence all functions! -->
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
 </div>
+
 </body></html>
