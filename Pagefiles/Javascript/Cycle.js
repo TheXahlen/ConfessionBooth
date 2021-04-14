@@ -23,7 +23,7 @@ load()
 localStorage.setItem("numcycled", 0)	
 }else{
 var numcycleft = numcyc - 5;
-console.log( "the cite will allow {", numcycleft  ,"} more cycles before it refreshes the datalist."
+console.log( "the cite will allow {", numcycleft  ,"} more cycles before it refreshes the datalist.")
 localStorage.setItem("numcycled", numcyc + 1)
 }
 
