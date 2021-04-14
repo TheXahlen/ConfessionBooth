@@ -28,5 +28,8 @@ async function load() {
 	}}
   localStorage.setItem("brenderlist", JSON.stringify(brenderlist));
   localStorage.setItem("confessions", JSON.stringify(confessionlist));
+  console.log("new list structure loaded with out complaint!")
+  console.log(JSON.stringify(brenderlist))
+  console.log(JSON.stringify(confessionlist))
   }}
 
