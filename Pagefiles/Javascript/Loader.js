@@ -3,6 +3,7 @@ function Loader(){
 localStorage.setItem("FIRSTRUN","TRUE")
 localStorage.setItem("numbergenned", 0);
 localStorage.setItem("numcycled",0)
+localStorage.setItem("dataload",0)
 //pass
 }
 ////////////
