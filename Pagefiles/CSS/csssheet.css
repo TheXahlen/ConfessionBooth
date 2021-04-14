@@ -16,7 +16,16 @@
   font-size: 16pt;
      
 }
-
+.textarea{
+    
+display: block; 
+margin-left: auto; 
+margin-right: auto; 
+border:black solid 9px; 
+border-radius:15px; 
+font-size: 35pt; 
+opacity: 0.75;    
+}   
 
 .column {
  margin: auto;
