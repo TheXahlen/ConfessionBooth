@@ -82,21 +82,18 @@ unused so far plans to implement later it's a button that switched between submi
    <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
    <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
    <button style="display:none;" id="submit"></button>
-   <p style="display:none;" id="currentID">[jNuUjL0YjI] [,WLNd]</p>
-   <p style="display:none;" id="currenttext">Post number {0} [  Helllo !! how are you today!!!! ] 
-</p>
+   <p style="display:none;" id="currentID"></p>
+   <p style="display:none;" id="currenttext"></p>
 </div>
-   
 </form>
 
-
+ <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
+   which is then used as their identifier. -->
 
 <div id="scripts">
-   <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
-   which is then used as their identifier. -->
    <script>
       
-//file for switching 
+//file for switching between cycle and submit mode
 function switchd(){
    
    
