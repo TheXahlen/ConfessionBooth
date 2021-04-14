@@ -16,10 +16,10 @@ function Clicked(){
 var currenttextread = document.getElementById("currenttext");
 var testforsim = stringSimilarity.compareTwoStrings(document.getElementById("textinput").value, document.getElementById("currenttext").innerHTML);
 testforsim = testforsim.toString();
-testforsim = testforsim.substring(2,4);
+testforsim = testforsim.substring(0,4);
 console.log(testforsim + " this is the integer for similarity.")
 testforsim = parseInt(testforsim);
-if(testforsim > 60){
+if(testforsim > 0.70){
 alert("Please don't submit other peoples messages, or things you just cycled through thanks!")
 }else{
 document.getElementById("submit").click();
