@@ -23,7 +23,7 @@ indexes.push(i);
 var amount = indexes.length;
 var listofposts = []
 for(var b = 0; b < indexes.length; b++){
-listofposts.push("Post number {" + b + "} [" + brenderparsedvar[indexes[b] - 4] + " ] " + "\n")
+listofposts.push("Post number {" + b + "} [" + brenderparsedvar[indexes[b] - 6] + " ] " + "\n")
 }
 if(indexes.length == 0){
 console.log("no posts from id: " + currentuserID)
