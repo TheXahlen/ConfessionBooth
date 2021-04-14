@@ -24,7 +24,13 @@ var amount = indexes.length;
 var listofposts = []
 for(var b = 0; b < indexes.length; b++){
 var postindexed = "[" + brenderparsedvar[indexes[b] - 6] + "]"
-listofposts.push('<p>' + "Post number {" + b + "} " + postindexed + '</p>' + "\n")
+var sizeoffont = brenderparsedvar[indexes[b] - 1] + ';' 
+var fontfamily = brenderparsedvar[indexes[b] - 2] + ';'
+var textdecoration = brenderparsedvar[indexes[b] - 3] + ';'
+var textdecoration = brenderparsedvar[indexes[b] - 4] + ';'
+var postmodifer = '<p ' + 'style="font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '">'  
+ 
+listofposts.push(postmodifer + "Post number {" + b + "} " + postindexed + '</p>' + "\n")
 }
 if(indexes.length == 0){
 console.log("no posts from id: " + currentuserID)
