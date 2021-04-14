@@ -4,8 +4,8 @@ var listit = localStorage.getItem('confessions');
 var numbergenned = localStorage.getItem('numbergenned');
 var brenderit = localStorage.getItem('brenderlist');
 var setit = localStorage.getItem('browserid');
-var FIRSTTRY = localStorage.getItem('FIRSTRUN');
-if (listit !== null || numbergenned !== null || brenderit !== null || FIRSTTRY !== null){
+var firstrun = localStorage.getItem('FIRSTRUN');
+if (listit !== null || numbergenned !== null || brenderit !== null || firstrun !== null){
 document.getElementById('listdata').innerHTML =  "TRUE";
 } else{
 document.getElementById('listdata').innerHTML =  "FALSE";
