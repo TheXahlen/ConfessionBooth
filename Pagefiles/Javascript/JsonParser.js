@@ -78,7 +78,10 @@ function genNum() {
 	document.getElementById('textinput').innerHTML =  confessionlist[x];  
 	document.getElementById('textinput').style.color =  brenderlist[indexinbren + 2];
 	document.getElementById('textinput').style.textDecoration =  brenderlist[indexinbren + 3];
-	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + 4];
+	document.getElementById('textinput').style.fontFamily =  brenderlist[indexinbren + 4]
+	document.getElementById('textinput').style.fontSize =  brenderlist[indexinbren + 5]
+	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + 6];
+	document.getElementById('currentID').innerHTML =  brenderlist[indexinbren + 6];
 	  
 	return x;
   }
