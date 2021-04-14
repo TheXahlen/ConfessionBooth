@@ -4,7 +4,7 @@
 //var submitdis = document.getElementById("submit")
 //var selector = document.getElementById("selector")
 
-///file is not repurposed.
+///file is now repurposed.
 
 function Clicked(){
 document.getElementById("submit").click();
