@@ -9,4 +9,7 @@ function getAllIndexes(arr, val) {
     return "This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: {" + indexes + "}";
     
 }
-//getAllIndexes(brenderparsedvar,browseridvar)
+function loadPosts(){
+var currentuserID = document.getElementById("currentID").innerHTML 
+console.log(getAllIndexes(brenderparsedvar, currentuserID))
+}
