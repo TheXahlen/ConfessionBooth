@@ -10,6 +10,7 @@ async function load() {
 	var loadcount = localStorage.getItem("dataload")
 	var loadcount = parseInt(loadcount)
 	loadcount = loadcount + 1;
+	var loadcount = localStorage.setItem("dataload",loadcount)
 	var confessionlist = []
 	var brenderlist = []
 	var anything = await apicall()
