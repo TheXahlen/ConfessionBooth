@@ -56,6 +56,8 @@ if(confessionlist.length == 0){
 document.getElementById('textinput').style.color = "black";
 document.getElementById('textinput').style.textDecoration =  "none";
 confessionlist.push("No submissions! Add one or come back later.");
+document.getElementById('currentID').innerHTML =  localStorage.getItem("browserid")
+document.getElementById('posterid').innerHTML =  localStorage.getItem("browserid")
 }
 
   
