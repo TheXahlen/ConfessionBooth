@@ -47,8 +47,9 @@ unused so far plans to implement later it's a button that switched between submi
 </div>
 </th></tr>
 </table>
-
-<textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="45%" class="textarea" >  </textarea>
+   
+<p style="padding-bottom:30%; width:70%; background:white; border:black solid 9px; border-radius:15px; font-size: 35pt; opacity: 0.75; margin:auto; display:none" id="textinput" ></p>
+<textarea name="confession" id="textsubmit" rows="10" type="text" minlength="20" maxlength="450" cols="45%" class="textarea" >  </textarea>
     
    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
    which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
@@ -78,11 +79,15 @@ unused so far plans to implement later it's a button that switched between submi
    var subdis = document.getElementById("cycle").style.display
    if (cycledis == "none"){
    document.getElementById("cycle").style.display = "block"
+   document.getElementById("textinput").style.display = "block"
    document.getElementById("subtry").style.display = "none"
    document.getElementById("selector").style.display = "none"
+   document.getElementById("textsubmit").style.display = "none"
    localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:block"> || View This Users Posts </button>')
    }else{
    document.getElementById("cycle").style.display = "none"
+   document.getElementById("textinput").style.display = "none"
+   document.getElementById("textsubmit").style.display = "block"
    document.getElementById("subtry").style.display = "block"
    document.getElementById("selector").style.display = "block"
    localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:none"> || View This Users Posts </button>')
