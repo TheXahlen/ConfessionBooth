@@ -38,7 +38,7 @@ console.log("Congrats you are not on the blacklist and are free to view this sit
  document.getElementById('bodyifallowed').style.display = "none"; 
  document.getElementById('bodyifnotallowed').style.display = "block";
  }else{
- document.getElementById('identity').value =  identity +  ' <button onclick="loadPosts()" class="postid" style="border">|| View This Users Posts </button>';
+ document.getElementById('identity').value =  identity;
  console.log("your identifier is: {" + identity + "}")
  document.getElementById('posterid').innerHTML =  identity + ' <button onclick="loadPosts()" class="postid" style="border">|| View This Users Posts </button>'; 
  console.log("document has updated the user identity")
