@@ -52,7 +52,7 @@ unused so far plans to implement later it's a button that switched between submi
   </select>
   <select name="size" id="size" class="selector">
     <option value="23px" style="font-size:23px;">23PX</option>
-    <option value="26px" style="font-size:26px;">26PX</option>
+    <option value="26px" style="font-size:26px;">26PX</option>d
     <option value="35px" style="font-size:35px;">35PX</option>
     <option value="42px" style="font-size:42px;">42PX</option>
   </select>
@@ -73,7 +73,7 @@ unused so far plans to implement later it's a button that switched between submi
 </div>
    <div id="displayandentry">
 <p style="padding-bottom: 85%; width: 95%; background: white; word-wrap:break-word; border: 9px solid black; border-radius: 15px; font-size: 27.5pt; opacity: 0.75; margin: auto; display: block; color: black; text-decoration: none;" id="textinput"></p>
-<textarea name="confession" id="textsubmit" rows="10" type="text" minlength="20" maxlength="550" class="mobiletextarea" style="width:95%; isplay: none;">  </textarea>
+<textarea name="confession" id="textsubmit" rows="10" type="text" minlength="20" maxlength="550" class="mobiletextarea" style="width:95%; display: none;">  </textarea>
    </div>
    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
    which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
@@ -82,9 +82,8 @@ unused so far plans to implement later it's a button that switched between submi
    <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
    <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
    <button style="display:none;" id="submit"></button>
-   <p style="display:none;" id="currentID">[jNuUjL0YjI] [,WLNd]</p>
-   <p style="display:none;" id="currenttext">Post number {0} [  Helllo !! how are you today!!!! ] 
-</p>
+   <p style="display:none;" id="currentID"></p>
+   <p style="display:none;" id="currenttext"></p>
 </div>
    
 </form>
