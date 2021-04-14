@@ -92,7 +92,7 @@ console.log(genNum())
 }else{
 document.getElementById('textinput').innerHTML =  ""
 document.getElementById("currenttext").innerHTML =  confessionlist[0]
-document.getElementById('textinput')..innerHTML =  confessionlist[0]
+document.getElementById('textinput').innerHTML =  confessionlist[0]
 document.getElementById('textinput').style.color =  brenderlist[2];
 document.getElementById('textinput').style.textDecoration =  brenderlist[3];
 document.getElementById('posterid').innerHTML =  brenderlist[4] + ' <button onclick="loadPosts()" class="postid" style="border">|| View This Users Posts </button>'
