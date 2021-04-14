@@ -8,8 +8,15 @@
  width:35%;opacity: 0.75; 
  font-family:Hero; 
  font-size: 16pt;   
-    
+} 
+ .selector{
+  border:black solid 4px;
+  border-radius:10px; 
+  width:35%;opacity: 0.75;  
+  font-size: 16pt; " 
+     
 }
+
 
 .column {
  margin: auto;
