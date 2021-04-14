@@ -6,7 +6,6 @@ async function apicall(){
 	let obj = await fetch(url)
 	resolve(obj.json())
 })}
-    
 async function load() {
 	var confessionlist = []
 	var brenderlist = []
@@ -29,5 +28,5 @@ async function load() {
 	}}
   localStorage.setItem("brenderlist", JSON.stringify(brenderlist));
   localStorage.setItem("confessions", JSON.stringify(confessionlist));
-  }
+  }}
 
