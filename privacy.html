@@ -8,7 +8,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
 </head>
-<body onload="onset()">
+<body onload="detectPRESENCE()">
 <div style="margin: auto; width: 85%; text-align:center; border:5px black solid; background-color:silver; border-radius:23px; opacity: 0.75;  ">
 
 <h3>Overall privacy</h3>
@@ -43,6 +43,8 @@
       <li>brenderlist "this is a list of every confession followed by it's meta data"</li>
       <li>confessions "this is a complete list of every confession"</li>
       <li>FIRSTRUN "This just inintializes the lists when you load index.html"</li>
+      <li>numcycled "this counts up to five everytime you hit cycle and when it hits five it refreshes the data set and starts at 0"</li>
+      <li>dataload "just a stat for debugging it's how many times the dataset has been reloaded (this gets set to 0 on page load)"</li>
    </ul>
    <button onclick="removelistData()" style="width:45%; height:25%; border-radius:15%; color:white; background-color:black;"> REMOVE LOCAL VARIABLES </button>
 </div>
