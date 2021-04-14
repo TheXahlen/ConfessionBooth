@@ -14,7 +14,8 @@
 <h2 style="font-size:15px;"> THIS ID HAS BEEN BANNED.</h2> 
 </div>
 <body  id="bodyifallowed" onload="setdeleteDate(); Mobile(); Loader();">
-<h2 id="posterid" style="text-align:center; background:white; opacity:0.65; font-size:20pt; font-family:almond; ">LOADING USER ID.</h2>
+<h2 id="posterid" class="postid">LOADING USER ID.<button onclick="loadPosts()" class="postid"> || View This Users Posts </button></h2>
+
 <table style="width:100%">
 <tr><th> 
 <button id="cycle" style="border:black solid 4px; background-color:grey; border-radius:8px; width:45%;opacity: 0.75; font-family:Hero; font-size: 6pt; " onclick="load()">BUTTON TO CYCLE</button> 
@@ -23,9 +24,16 @@
 </table>
     <form name="submit-to-google-sheet"> 
 <button style="display:none;" id="submit"></button>
-<textarea name="confession" type="text" id="textinput" minlength="20" maxlength="450" spellcheck="false" rows="6" style="display: block; border: 9px solid black; border-radius: 15px; font-size: 15pt; opacity: 0.75; position: fixed; top: 60%; left: 50%; transform: translate(-50%, -50%); color: red; text-decoration: none;" cols="25%" wrap="soft">  </textarea>
-<textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
-<textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
+<textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="35%" class="textarea" >  </textarea>
+
+ <div id="silentdata">
+   <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
+   <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
+   <button style="display:none;" id="submit"></button>
+   <p style="display:none;" id="currentID"></p>
+   <p style="display:none;" id="currenttext"></p>
+</div>
+      
  <table style="width:100%">
 
   <tr><th> 
@@ -47,21 +55,29 @@
   </th></tr>
 </table>
  </form>
+<div style=" margin: auto; width: 50%; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; height:25%;opacity: 0.75; ">
+<a style="padding:8%; font-size:23px;" href="about.html"> About Site</a>
+<a style="padding:8%; font-size:23px;" href="privacy.html"> Privacy</a>
+<a style="padding:8%; font-size:23px;" href="progress.html"> Progress Log</a>
+</div>
 
-
-    <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
-    which is then used as their identifier. -->
-    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
-    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
-    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
-    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
-    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
-    <!-- you can black list users within the scipt file of this. -->
-    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
-    <!-- this handles the submissons for the spreadsheet-->
-    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
-    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"> </script>
-   
+<div id="scripts">
+   <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
+   which is then used as their identifier. -->
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Disgen.js"></script>
+   <!-- this handles the submissons for the spreadsheet-->
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
+   <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+   <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"> </script>
+   <script src="//unpkg.com/string-similarity@4.0.1/umd/string-similarity.min.js"></script>
+   <!-- this is on the bottom so it can refrence all functions! -->
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
+</div>
+  
  </body>
 </html>
