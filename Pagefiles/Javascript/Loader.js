@@ -5,12 +5,12 @@ localStorage.setItem("LOADED","FALSE")
 localStorage.setItem("numbergenned", 0);
 localStorage.setItem("numcycled",0)
 localStorage.setItem("dataload",0)
-sleep(1500)
+
 function detect(){
    if(localStorage.getItem("LOADED") == "FALSE"){
    getIP("DEBUG")  
    }}  
-detect()
+setTimeout(detect(), 1500)
 //pass
 }
 ////////////
