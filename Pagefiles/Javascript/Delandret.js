@@ -18,7 +18,7 @@ if (setit == null){
   document.getElementById('browserid').innerHTML =  "NULL"
   }else{
   document.getElementById('browserid').innerHTML =  setit;
-}
+}}
 
 function removeData(){
 localStorage.removeItem('browserid');
