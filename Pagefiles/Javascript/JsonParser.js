@@ -7,6 +7,9 @@ async function apicall(){
 	resolve(obj.json())
 })}
 async function load() {
+	var loadcount = localStorage.getItem("dataload")
+	var loadcount = parseInt(loadcount)
+	loadcount = loadcount + 1;
 	var confessionlist = []
 	var brenderlist = []
 	var anything = await apicall()
@@ -28,8 +31,8 @@ async function load() {
 	}}
   localStorage.setItem("brenderlist", JSON.stringify(brenderlist));
   localStorage.setItem("confessions", JSON.stringify(confessionlist));
-  console.log("BRENDER META DATA LIST LOADED")
-  console.log("CONFESSIONLIST LOADED)
-  console.log("new list structure loaded with out complaint!")
+  console.log("BRENDER META DATA LIST LOADED with {", brenderlist.length, "} Items" )
+  console.log("CONFESSIONLIST LOADED with {", confessionlist.length, "}items here it is mutiplied by 8 {", confessionlist.length * 8 ,"} if this matched the BRENDER meta data above everything is in correct index!")
+  console.log("new list structure loaded with out complaint! this is the {" + loadcount + "} time a new data set has been loaded since page was opened")
   }}
 
