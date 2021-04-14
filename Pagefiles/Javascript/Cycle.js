@@ -16,6 +16,8 @@
 //}catch(e){//pass
 //}
 function cycle(){
+var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
+var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 var numcyc = localStorage.getItem("numcycled")
 var numcyc = parseInt(numcyc)
 if(numcyc > 4){
@@ -25,8 +27,7 @@ localStorage.setItem("numcycled", 0)
 var numcycleft = 5 - numcyc
 console.log( "the cite will allow {", numcycleft  ,"} more cycles before it refreshes the datalist.")
 localStorage.setItem("numcycled", numcyc + 1)
-var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
-var confessionlist = JSON.parse(localStorage.getItem("confessions"))
+}
 //console.log(brenderlist,"brender")
 //console.log(confessionlist,"total list")
 if(confessionlist.length == 0){
@@ -77,7 +78,7 @@ document.getElementById('textinput').style.fontSize =  brenderlist[5]
 document.getElementById('posterid').innerHTML =  brenderlist[6];
 document.getElementById('currentID').innerHTML =  brenderlist[6];
 }
-}}
+}
 //function TESTIFSTART(){
 //pass	
 //
