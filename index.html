@@ -78,6 +78,16 @@ unused so far plans to implement later it's a button that switched between submi
    var subdis = document.getElementById("cycle").style.display
    if (cycledis == "none"){
    document.getElementById("cycle").style.display = "block"
+   document.getElementById("submit").style.display = "none"
+   document.getElementById("decoration").style.display = "none"
+   document.getElementById("color").style.display = "none"
+   localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:block"> || View This Users Posts </button>')
+   }else{
+   document.getElementById("cycle").style.display = "none"
+   document.getElementById("submit").style.display = "block"
+   document.getElementById("decoration").style.display = "block"
+   document.getElementById("color").style.display = "block"
+   localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:none"> || View This Users Posts </button>')
    }}
    </script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
