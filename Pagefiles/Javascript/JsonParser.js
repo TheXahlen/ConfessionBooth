@@ -69,7 +69,7 @@ function genNum() {
 	document.getElementById('textinput').value =  confessionlist[x];  
 	document.getElementById('textinput').style.color =  brenderlist[indexinbren + 2];
 	document.getElementById('textinput').style.textDecoration =  brenderlist[indexinbren + 3];
-	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + 4] + ' <button onclick="loadPosts()">View This Users Posts</button>'
+	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + 4] + ' <button onclick="loadPosts()" class="postid" style="border">|| View This Users Posts </button>'
     return x;
   }
 }
@@ -85,7 +85,7 @@ document.getElementById('textinput').value =  ""
 document.getElementById('textinput').value =  confessionlist[0]
 document.getElementById('textinput').style.color =  brenderlist[2];
 document.getElementById('textinput').style.textDecoration =  brenderlist[3];
-document.getElementById('posterid').innerHTML =  brenderlist[4] + ' <button onclick="loadPosts()">View This Users Posts</button>'
+document.getElementById('posterid').innerHTML =  brenderlist[4] + ' <button onclick="loadPosts()" class="postid" style="border">|| View This Users Posts </button>'
 }
 console.log("Completed")
 }
