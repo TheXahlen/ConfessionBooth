@@ -6,19 +6,38 @@
    <meta name="Description" content="Computer Science project that uses google spreadsheets to index data.">
    <meta name="KeyWords" content="cs,computer science,computers,project">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
+<link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
 </head>
 <body onload="onset()">
-  <div style="margin: auto; width: 85%; text-align:center; border:5px black solid; background-color:silver; border-radius:23px; opacity: 0.75;  ">
+<div style="margin: auto; width: 85%; text-align:center; border:5px black solid; background-color:silver; border-radius:23px; opacity: 0.75;  ">
 
-  <h3>Overall privacy</h3>
-  <p style="font-size:23px;"> This site uses an external api to grab an IP address from your browser and use it to help assign an identifier. It is encoded in base64 then a substring of the base64 is taken so no one can truly know your IP address, but your ip will always have a matching string. Allowing me to index users posts etc. The whole point of this site is to be seemingly anonymous, which is why I do not allow usernames or other fourms of identifing other users. The exact contents of what are submitted can be seen within a google spreadsheet <a style="font-size:28px;" href="https://docs.google.com/spreadsheets/d/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/edit#gid=0" >HERE</a> If for some reason you would like to clear your identifer for a new one or so it cannot be indexed please press the button below. Keep in mind the moment you open the main page index.html it will assign a new identifer. If you have an identifier it will show right below this text. The first {} is the base64 encoded portion of your ip which is also reversed. The second {} is a set of five random identifiers for users who exist on a lan. </p>
- 
- <h2 id="browserid"> NULL </h2>
- <button onclick="removeData()" style="width:45%; height:25%; border-radius:15%; color:white; background-color:black;"> REMOVE MY IDENTIFER </button>
+<h3>Overall privacy</h3>
+<p style="font-size:23px;"> 
+   This site uses an external api to grab an IP address from your browser 
+   and use it to help assign an identifier. It is encoded in base64 then a 
+   substring of the base64 is taken so no one can truly know your IP address, 
+   but your ip will always have a matching string. Allowing me to index users posts etc. 
+   The whole point of this site is to be seemingly anonymous, which is why I do not allow 
+   usernames or other fourms of identifing other users. The exact contents of what are submitted 
+   can be seen within a google spreadsheet <a style="font-size:28px;" href="https://docs.google.com/spreadsheets/d/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/edit#gid=0" >HERE</a> 
+   If for some reason you would like to clear your identifer for a new one or so it cannot be indexed 
+   please press the button below. Keep in mind the moment you open the main page index.html 
+   it will assign a new identifer. If you have an identifier it will show right below this text. 
+   The first {} is the base64 encoded portion of your ip which is also reversed. The second {} 
+   is a set of five random identifiers for users who exist on a lan.
+</p>
 
+<h2 id="browserid"> NULL </h2>
+<button onclick="removeData()" style="width:45%; height:25%; border-radius:15%; color:white; background-color:black;"> REMOVE MY IDENTIFER </button>
+<p style="font-size:23px;"> 
+   If you truly just want me out of your cookies this site also stores a copy of 
+   every entry and it's following meta data within localStorage if the text below 
+   reads as a TRUE boolean this data exists on your browser again there will be a button to remove
+   that as well.
+</p>
+<h2 id="listdata"> ... </h2>
+   <button onclick="removelistData()" style="width:45%; height:25%; border-radius:15%; color:white; background-color:black;"> REMOVE MY IDENTIFER </button>
 </div>
-
 <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Delandret.js"></script>
-   </body>
+</body>
 </html>
