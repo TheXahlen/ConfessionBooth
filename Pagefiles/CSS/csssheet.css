@@ -2,6 +2,13 @@
     box-sizing: border-box;
 
 }
+.postid{   
+text-align:center; 
+background:white; 
+opacity:0.65; 
+font-size:20pt;
+font-family:almond;     
+}
 .buttontry{
  border:black solid 4px; 
  border-radius:10px; 
