@@ -77,8 +77,7 @@ function genNum() {
 	document.getElementById('textinput').innerHTML =  confessionlist[x];  
 	document.getElementById('textinput').style.color =  brenderlist[indexinbren + 2];
 	document.getElementById('textinput').style.textDecoration =  brenderlist[indexinbren + 3];
-	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + 4] + ' <button onclick="loadPosts()" class="postid" style="border">|| View This Users Posts </button>'
-    	document.getElementById('currentID').innerHTML =  brenderlist[indexinbren + 4];
+	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + 4];
 	  
 	return x;
   }
@@ -95,7 +94,7 @@ document.getElementById("currenttext").innerHTML =  confessionlist[0]
 document.getElementById('textinput').innerHTML =  confessionlist[0]
 document.getElementById('textinput').style.color =  brenderlist[2];
 document.getElementById('textinput').style.textDecoration =  brenderlist[3];
-document.getElementById('posterid').innerHTML =  brenderlist[4] + ' <button onclick="loadPosts()" class="postid" style="border">|| View This Users Posts </button>'
+document.getElementById('posterid').innerHTML =  brenderlist[4];
 document.getElementById('currentID').innerHTML =  brenderlist[4];
 }
 console.log("Completed")
