@@ -1,20 +1,4 @@
-//brenderlist.splice(0,3)	
-
-
-//debugging purposes
-//console.log(confessionlist, "FOR LOOP")
-//console.log(confessionlist[i].length, "LENGTH OF ITEMS")
-//try 
-	
-// THIS IS DEPRECIATED IT WAS A METHOD OF REMOVING META DATA FROM THE LIST.	
-	
-//	{ 	
-  //	var indexed0 = confessionlist.indexOf("deletedate");
-  //	//var indexed1 = confessionlist.indexOf("Confession");
-  //	confessionlist.splice(indexed0,1)
-	//confessionlist.splice(indexed1,1)
-//}catch(e){//pass
-//}
+//THIS FUNCTION SHOULD ONLY EVER BE CALLED AFTER RUNNING load() or else it will not have any data to pull from.
 function cycle(){
 
 var numcyc = localStorage.getItem("numcycled")
