@@ -26,7 +26,10 @@ async function load() {
 	}else{
 	brenderlist.push(confessioncomp)
    	confessionlist.push(confessioncomp)
-	}}}
+	}}
+  localStorage.setItem("brenderlist", JSON.stringify(brenderlist));
+  localStorage.setItem("confessions", JSON.stringify(confessionlist));
+  }
 brenderlist.splice(0,3)	
 
 
@@ -94,11 +97,12 @@ document.getElementById('currentID').innerHTML =  brenderlist[4];
 console.log("Completed")
 } else{
 localStorage.setItem("FIRSTRUN","FALSE")
+console.log("The site has started correctly!!!")
 //only runs if first time loading page.
 //pass
-}
-function TESTIFSTART(){
-//pass	
 }}
+//function TESTIFSTART(){
+//pass	
+//
 //load()
 
