@@ -57,8 +57,8 @@ localStorage.setItem("numcycled",0)
 localStorage.setItem("numcycled",numcyc +1)
 }
 
-var brenderlist = JSON.parse(localStorage.getItem("brenderlist")
-var confessionlist = JSON.parse(localStorage.getItem("confessions")
+var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
+var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 console.log(brenderlist,"brender")
 console.log(confessionlist,"total list")
 	
