@@ -4,4 +4,5 @@ document.getElementById('browserid').value =  setit;
 }
 function removeData(){
 localStorage.removeItem('browserid');
+document.getElementById('browserid').value =  "NULL";
 }
