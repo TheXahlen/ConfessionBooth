@@ -10,13 +10,17 @@
 </head>
 
 <body  id="bodyifallowed" onload="setdeleteDate(); Mobile(); Loader(); load();">
-   <h2 id="posterid" class="postid">LOADING USER ID.<button onclick="loadPosts()" class="postid"> || View This Users Posts </button></h2>
-
-<table style="width:100%">
-<tr><th> 
-   <button id="cycle" class="buttontry" onclick="load()">BUTTON TO CYCLE</button> 
-   <button type="submit"  class="buttontry" onclick="Clicked()">BUTTON TO SUBMIT</button>  
-</th></tr>
+   <h2 id="posterid" class="postid">LOADING USER ID.<button onclick="loadPosts()" class="postid" style="display:none"> || View This Users Posts </button></h2>
+<table style="width:100%; margin:auto;">
+<tr>
+<th>
+   <button id="cycle" class="buttontry" onclick="load()" style="display:none;width:100%;margin:auto;">CYCLE</button> 
+   </th><th>
+   <button type="submit"  class="buttontry" onclick="Clicked()" style="display:block;width:100%;margin:auto;">SUBMIT</button>  
+  </th><th>
+<button class="buttontry" style="display:block;width:100%"> switch</button>
+</th>
+</tr>
 </table>
  <!--
 unused so far plans to implement later it's a button that switched between submit and cycle functionality.
@@ -68,6 +72,14 @@ unused so far plans to implement later it's a button that switched between submi
 <div id="scripts">
    <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
    which is then used as their identifier. -->
+   <script>
+   function switchd(){
+   var cycledis = document.getElementById("cycle").style.display
+   var subdis = document.getElementById("cycle").style.display
+   if (cycledis == "none"){
+   document.getElementById("cycle").style.display = "block"
+   }
+   </script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
@@ -82,11 +94,3 @@ unused so far plans to implement later it's a button that switched between submi
    <!-- this is on the bottom so it can refrence all functions! -->
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
 </div>
-
-
-
-   </body>
-   </html>
-
-
-
