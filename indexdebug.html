@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Confesion Booth</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/booth.ico" />
+   <meta name="Description" content="Computer Science project that uses google spreadsheets to index data.">
+   <meta name="KeyWords" content="cs,computer science,computers,project">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
+</head>
+
+<body  id="bodyifallowed" onload="setdeleteDate(); Mobile(); Loader();">
+<h2 id="posterid" class="postid">LOADING USER ID.</h2>
+
+<table style="width:100%">
+<tr><th> 
+   <button id="cycle" class="buttontry" onclick="load()">BUTTON TO CYCLE</button> 
+   <button type="submit"  class="buttontry" onclick="Clicked()">BUTTON TO SUBMIT</button>  
+</th></tr>
+</table>
+ <!--
+unused so far plans to implement later it's a button that switched between submit and cycle functionality.
+ <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
+-->
+<form name="submit-to-google-sheet"> 
+ <table style="width:100%">
+<tr><th> 
+<div id="selector">
+  <select name="color" id="color" class="selector">
+    <option value="blue" style="color:blue;">Blue</option>
+    <option value="red" style="color:red">Red</option>
+    <option value="green" style="color:green;">Green</option>
+    <option value="yellow" style="color:yellow;">Yellow</option>
+    <option value="black" style="color:black;">Black</option>
+  </select>
+  <select name="decoration" id="decoration" class="selector"> 
+    <option value="underline" style="text-decoration:underline;">Underline</option>
+    <option value="line-through" style="text-decoration:line-through;">Line-Through</option>
+    <option value="underline overline" style="text-decoration:underline overline;">Cover</option>
+    <option value="none" style="text-decoration:;">None</option>
+  </select>
+  
+</div>
+</th></tr>
+</table>
+    <button id="submit"></button>
+    <textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="45%" class="textarea" >  </textarea>
+    
+   <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
+   which would be bad, although I doubt it would happen. Also if you are reading this hi <3. -->
+   <textarea name="deletedate" type="text" id="deletedate"></textarea>
+   <textarea name="identity" type="text" id="identity"></textarea>
+</form>
+<div style=" margin: auto; width: 50%; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; height:25%;opacity: 0.75; ">
+<a style="padding:8%; font-size:23px;" href="about.html"> About Site</a>
+<a style="padding:8%; font-size:23px;" href="privacy.html"> Privacy</a>
+<a style="padding:8%; font-size:23px;" href="progress.html"> Progress Log</a>
+</div>
+
+
+
+    <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
+    which is then used as their identifier. -->
+    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
+    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
+    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
+    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
+    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
+    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Disgen.js"></script>
+    <!-- this handles the submissons for the spreadsheet-->
+    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
+    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"> </script>
+   
+  
+</body>
+</html>
