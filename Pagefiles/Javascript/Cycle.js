@@ -1,14 +1,14 @@
 //THIS FUNCTION SHOULD ONLY EVER BE CALLED AFTER RUNNING load() or else it will not have any data to pull from.
 function cycle(){
-
+var maxrefreshes = 4;
 var numcyc = localStorage.getItem("numcycled")
 var numcyc = parseInt(numcyc)
-	if(numcyc > 4){
+	if(numcyc > maxrefreshes){
 		load()
 		localStorage.setItem("numcycled", 0)	
 	}else{
 		var numcycleft = 5 - numcyc
-		console.log( "the cite will allow {", numcycleft  ,"} more cycles before it refreshes the datalist.")
+		console.log( "the site will allow {", numcycleft  ,'} this limit is stored inside the "maxrefreshes variable" more cycles before it refreshes the datalist.')
 		localStorage.setItem("numcycled", numcyc + 1)
 	}
 var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
