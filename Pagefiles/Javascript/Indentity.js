@@ -13,25 +13,32 @@ function getIP(json) {
  //explample blew of how to black list a user
  //var blacklist = ["sASfdsfgb","dsfsAAAA","DSAFDSAaaaa"]
  var testforload = localStorage.getItem("LOADED") 
- if(testforload == "FALSE"){
- console.log("somesort of ad block or anti tracking installed.")
- }
- var blacklist = ["[jNuUjL0YjI] [NjUHE]"]
  if (localStorage.getItem('browserid') !== null){
  var identity = localStorage.getItem("browserid")
  document.getElementById("currentID").innerHTML = identity;
  console.log("ID FOUND AND LOADED: " + identity)
  }else{
  console.log("YOU HAVE NO USER ID GENERATING")
- var jsonip = JSON.stringify(json.ip)
- var iplength = jsonip.length - 3;
- var extensionadd = makeid(5);
- var b64 = btoa(jsonip);
- var identity = "[" + b64.substring(0,iplength).split("").reverse().join("") + "] [" + extensionadd + "]";
- console.log("USER ID GENERATED: " + identity);
- localStorage.setItem("browserid", identity);
  document.getElementById("currentID").innerHTML = identity;
- }
+ if(testforload == "FALSE"){
+ console.log("somesort of ad block or anti tracking installed using propietry method to generate an identifier")
+var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))
+var sediplength = ip.length - 3;
+var sedextensionadd = makeid(5);
+var b64 = btoa(ip);
+var identity = "[" + b64.substring(0,sediplength).split("").reverse().join("") + "] [" + sedextensionadd + "]";
+console.log("USER ID GENERATED: " + identity);
+localStorage.setItem("browserid", identity);
+ }else{
+var jsonip = JSON.stringify(json.ip)
+var iplength = jsonip.length - 3;
+var extensionadd = makeid(5);
+var b64 = btoa(jsonip);
+var identity = "[" + b64.substring(0,iplength).split("").reverse().join("") + "] [" + extensionadd + "]";
+console.log("USER ID GENERATED: " + identity);
+localStorage.setItem("browserid", identity);
+ }}
+ var blacklist = ["[jNuUjL0YjI] [NjUHE]"]
  var testif = blacklist.includes(identity);
 if(testif == true){
 console.log("Sorry your id has been blocked from viewing this page.")
