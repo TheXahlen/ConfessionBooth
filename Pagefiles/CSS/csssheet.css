@@ -18,6 +18,7 @@ font-family:Ariel;
  .selector{
   border:black solid 4px;
   border-radius:10px; 
+  width:38%;
   opacity: 0.75;  
   font-size: 16pt;
      
