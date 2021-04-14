@@ -15,6 +15,13 @@ font-family:Ariel;
  font-family:Hero; 
  font-size: 16pt;   
 } 
+.mobilebuttontry{
+ border:black solid 2px; 
+ border-radius:10px; 
+ opacity: 0.75; 
+ font-family:Hero; 
+ font-size: 13pt;   
+} 
  .selector{
   border:black solid 4px;
   border-radius:10px; 
@@ -31,6 +38,16 @@ margin-right: auto;
 border:black solid 9px; 
 border-radius:15px; 
 font-size: 35pt; 
+opacity: 0.75;    
+}   
+.mobiletextarea{
+    
+display: block; 
+margin-left: auto; 
+margin-right: auto; 
+border:black solid 4px; 
+border-radius:15px; 
+font-size: 20px; 
 opacity: 0.75;    
 }   
 
