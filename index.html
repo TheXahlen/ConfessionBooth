@@ -73,26 +73,7 @@ unused so far plans to implement later it's a button that switched between submi
 <div id="scripts">
    <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
    which is then used as their identifier. -->
-   <script>
-   function switchd(){
-   //var cycledis = document.getElementById("cycle").style.display
-   //var subdis = document.getElementById("subdis").style.display
-   if (cycledis == "none"){
-   document.getElementById("cycle").style.display = "block"
-   document.getElementById("textinput").style.display = "block"
-   document.getElementById("subtry").style.display = "none"
-   document.getElementById("selector").style.display = "none"
-   document.getElementById("textsubmit").style.display = "none"
-   localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:block"> || View This Users Posts </button>')
-   }else{
-   document.getElementById("cycle").style.display = "none"
-   document.getElementById("textinput").style.display = "none"
-   document.getElementById("textsubmit").style.display = "block"
-   document.getElementById("subtry").style.display = "block"
-   document.getElementById("selector").style.display = "block"
-   localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:none"> || View This Users Posts </button>')
-   }}
-   </script>
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Switch.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
