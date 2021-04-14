@@ -17,17 +17,20 @@
 //}
 function cycle(){
 var numcyc = localStorage.getItem("numcycled")
+var numcyc = parseInt(numcyc)
 if(numcyc > 4){
 load()
-localStorage.setItem("numcycled",0)	
+localStorage.setItem("numcycled", 0)	
 }else{
-localStorage.setItem("numcycled",numcyc +1)
+var numcycleft = numcyc - 5;
+console.log( "the cite will allow {", numcycleft  ,"} more cycles before it refreshes the datalist."
+localStorage.setItem("numcycled", numcyc + 1)
 }
 
 var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
 var confessionlist = JSON.parse(localStorage.getItem("confessions"))
-console.log(brenderlist,"brender")
-console.log(confessionlist,"total list")
+//console.log(brenderlist,"brender")
+//console.log(confessionlist,"total list")
 if(confessionlist.length == 0){
 document.getElementById('textinput').style.color = "black";
 document.getElementById('textinput').style.textDecoration =  "none";
@@ -66,7 +69,7 @@ function genNum() {
 
 if(confessionlist.length > 1){ 
 //if generated list has more than one object then run a random number generator.
-console.log(genNum())
+//console.log(genNum())
 }else{
 document.getElementById('textinput').innerHTML =  ""
 document.getElementById("currenttext").innerHTML =  confessionlist[0]
