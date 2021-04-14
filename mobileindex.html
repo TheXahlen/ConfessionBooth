@@ -8,19 +8,19 @@
 </head>
 
 <body id="bodyifallowed" onload="setdeleteDate(); Loader(); load();">
-   <h2 class="postid" id="posterid" style="opacity:0.55;font-size:32px;">[jNuUjL0YjI] [,WLNd]</h2>
+   <h2 class="postid" id="posterid" style="opacity:0.55;font-size:18px;">[jNuUjL0YjI] [,WLNd]</h2>
 <table id="buttons" style="margin:auto;">
 <tbody><tr>
 <th>
-   <button id="cycle" class="buttontry" onclick="cycle()" style="display: block; width: 100%; margin: auto;">CYCLE  </button> 
+   <button id="cycle" class="mobilebuttontry" onclick="cycle()" style="background:white; display: block; width: 100%; margin: auto;">CYCLE  </button> 
    </th><th>
-   <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: none; width: 100%; margin: auto;">SUBMIT</button>  
+   <button type="submit" id="subtry" class="mobilebuttontry" onclick="Clicked();" style="background:white; display: none; width: 100%; margin: auto;">SUBMIT</button>  
   </th><th>
-<button class="buttontry" onclick="switchd(); load();" style="display:block; width:100%;"> switch</button>
+<button class="mobilebuttontry" onclick="switchd(); load();" style="background:white;display:block; width:100%;"> switch</button>
 </th></tr>
 
 </tbody></table>
-<button onclick="loadPosts()" id="posterload" class="buttontry" style="display: block; margin: auto; width: 55%;">See Identifiers Posts</button>
+<button onclick="loadPosts()" id="posterload" class="mobilebuttontry" style="display: block; margin: auto; width:  75%;">See Identifiers Posts</button>
  <!--
 unused so far plans to implement later it's a button that switched between submit and cycle functionality.
  <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
@@ -61,7 +61,7 @@ unused so far plans to implement later it's a button that switched between submi
 </th></tr>
 </tbody></table>
 <div id="director">
-<table style="width:68%; margin:auto; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; font-size:24px; opacity: 0.75;">
+<table style="width:75%; margin:auto; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; font-size:16px; opacity: 0.75;">
    <tbody><tr><th>
          <a href="about.html" style="margin:auto;">About</a>
       </th><th style="width:100%">
@@ -71,9 +71,9 @@ unused so far plans to implement later it's a button that switched between submi
    </th></tr></tbody>
 </table>
 </div>
-<p style="padding-bottom: 30%; width: 70%; background: white; word-wrap:break-word; border: 9px solid black; border-radius: 15px; font-size: 27.5pt; opacity: 0.75; margin: auto; display: block; color: black; text-decoration: none;" id="textinput">
+<p style="padding-bottom: 30%; width: 95%; background: white; word-wrap:break-word; border: 9px solid black; border-radius: 15px; font-size: 27.5pt; opacity: 0.75; margin: auto; display: block; color: black; text-decoration: none;" id="textinput">
 </p>
-<textarea name="confession" id="textsubmit" rows="10" type="text" minlength="20" maxlength="450" cols="45%" class="textarea" style="display: none;">  </textarea>
+<textarea name="confession" id="textsubmit" rows="10" type="text" minlength="20" maxlength="450" cols="25%" class="mobiletextarea" style="display: none;">  </textarea>
     
    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
    which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
