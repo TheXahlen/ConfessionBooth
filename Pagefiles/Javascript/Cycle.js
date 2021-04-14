@@ -25,8 +25,6 @@ localStorage.setItem("numcycled", 0)
 var numcycleft = 5 - numcyc
 console.log( "the cite will allow {", numcycleft  ,"} more cycles before it refreshes the datalist.")
 localStorage.setItem("numcycled", numcyc + 1)
-}
-
 var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
 var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 //console.log(brenderlist,"brender")
@@ -38,9 +36,7 @@ confessionlist.push("No submissions! Add one or come back later.");
 document.getElementById("currenttext").innerHTML = "No submissions! Add one or come back later.";
 document.getElementById('currentID').innerHTML =  localStorage.getItem("browserid")
 document.getElementById('posterid').innerHTML =  localStorage.getItem("browserid")
-}
 
-  
   
 function genNum() {
   var x = Math.floor(Math.random() * confessionlist.length);
@@ -81,7 +77,7 @@ document.getElementById('textinput').style.fontSize =  brenderlist[5]
 document.getElementById('posterid').innerHTML =  brenderlist[6];
 document.getElementById('currentID').innerHTML =  brenderlist[6];
 }
-}
+}}
 //function TESTIFSTART(){
 //pass	
 //
