@@ -12,15 +12,22 @@
 // buttons also if I aligned them within the <form> </form> than cycle also submitted data sadly. So I just made this click an
 //invisible button inside the <form> </form>
 
+
+
+//var currenttextread = document.getElementById("currenttext");
+//var testforsim = stringSimilarity.compareTwoStrings(document.getElementById("textinput").value, document.getElementById("currenttext").innerHTML);
+//testforsim = testforsim.toString();
+//testforsim = testforsim.substring(0,4);
+//console.log(testforsim + " this is the integer for similarity between these two strings {" + document.getElementById("currenttext") + "},{" + document.getElementById("textinput").value + "}" )
+//testforsim = parseInt(testforsim);
+//if(testforsim > 0.70){
+//alert("Please don't submit other peoples messages, or things you just cycled through thanks!")
+
+
+
 function Clicked(){
-var currenttextread = document.getElementById("currenttext");
-var testforsim = stringSimilarity.compareTwoStrings(document.getElementById("textinput").value, document.getElementById("currenttext").innerHTML);
-testforsim = testforsim.toString();
-testforsim = testforsim.substring(0,4);
-console.log(testforsim + " this is the integer for similarity between these two strings {" + document.getElementById("currenttext") + "},{" + document.getElementById("textinput").value + "}" )
-testforsim = parseInt(testforsim);
-if(testforsim > 0.70){
-alert("Please don't submit other peoples messages, or things you just cycled through thanks!")
+if(document.getElementById("subdis").style.display == "none"){
+ console.log("submission was attempted although the submit button is not visible so action was aborted")
 }else{
 document.getElementById("submit").click();
 }}
