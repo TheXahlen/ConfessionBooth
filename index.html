@@ -135,7 +135,7 @@ function switchd(){
    <!-- this handles the submissons for the spreadsheet-->
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
    <script src="https://api.ipify.org?format=jsonp&amp;callback=getIP"></script>
-   <script type="application/javascript" src="https://api.ipify.org?format=jsonp&amp;callback=getIP"> </script>
+   <script type="application/javascript" onload='localStorage.setItem("LOADED","TRUE");' src="https://api.ipify.org?format=jsonp&amp;callback=getIP"> </script>
    <script src="//unpkg.com/string-similarity@4.0.1/umd/string-similarity.min.js"></script>
    <!-- this is on the bottom so it can refrence all functions! -->
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
