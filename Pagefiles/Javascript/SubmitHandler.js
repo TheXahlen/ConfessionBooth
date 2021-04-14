@@ -4,5 +4,5 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbyhferKoM3lawXmfUHRrn
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response) alert("Your post was submitted!"))
-      .catch(error => console.error('Error!', error.message))
+      .catch(error => console.error('Error!', error.message) alert("Something went wrong and your post was discarded!"))
     })
