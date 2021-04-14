@@ -20,6 +20,9 @@ var amount = indexes.length;
 var listofposts = []
 //return "This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: {" + indexes + "}";
 for(var b = 0; b < indexes.length; b++){
-listofposts.push(brenderparsedvar[indexes[b] - 4])
-console.log(listofposts);
-}}
+listofposts.push("Post number {" + b + "} [" brenderparsedvar[indexes[b] - 4] + " ]")
+
+}
+console.log(listofposts + ": COMPLETE LIST! FOR USER WITH ID : {" + currentuserID + "}")
+document.getElementById('textinput').value =  listofposts;
+}
