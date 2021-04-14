@@ -28,10 +28,12 @@ listofposts.push("Post number {" + b + "} [" + brenderparsedvar[indexes[b] - 4] 
 if(indexes.length == 0){
 console.log("no posts from id: " + currentuserID)
 document.getElementById('textinput').value = "This user has not posted yet!"; 
+document.getElementById('currenttext').value = "This user has not posted yet!"; 
 }else{
 return "This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: {" + indexes + "}";
 console.log(listofposts + ": COMPLETE LIST! FOR USER WITH ID : {" + currentuserID + "}")
 document.getElementById('textinput').value =  listofposts;
+document.getElementById('currenttext').value = listofposts;
 document.getElementById('textinput').style.color = "black";
 document.getElementById('textinput').style.textDecoration =  "none";
 }}
