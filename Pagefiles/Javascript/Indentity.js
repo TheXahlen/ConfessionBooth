@@ -12,7 +12,7 @@ function getIP(json) {
   // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
  //explample blew of how to black list a user
  //var blacklist = ["sASfdsfgb","dsfsAAAA","DSAFDSAaaaa"]
- var blacklist = [""]
+ var blacklist = ["[jNuUjL0YjI] [NjUHE]"]
  if (localStorage.getItem('browserid') !== null){
  var identity = localStorage.getItem("browserid")
  console.log("ID FOUND AND LOADED: " + identity)
