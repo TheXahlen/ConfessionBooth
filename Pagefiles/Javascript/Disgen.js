@@ -19,7 +19,7 @@ var currentuserID = document.getElementById("posterid").innerHTML
 var indexes = [], i;
 for(i = 0; i < brenderparsedvar.length; i++)
 if (brenderparsedvar[i] === currentuserID)
-indexes.push(i);
+intPARSE(indexes).push(i);
 var amount = indexes.length;
 var listofposts = []
 for(var b = 0; b < indexes.length; b++){
@@ -37,7 +37,7 @@ console.log("no posts from id: " + currentuserID)
 document.getElementById('textinput').innerHTML = "This user has not posted yet!"; 
 document.getElementById('currenttext').innerHTML = "This user has not posted yet!"; 
 }else{
-console.log("This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: {" + indexes + "}")
+console.log("This user identifier| " + browseridvar + " | has | " + intPARSE(amount) + " | posts with an id at the following indexes: {" + indexes + "}")
 console.log(listofposts + ": COMPLETE LIST! FOR USER WITH ID : {" + currentuserID + "}")
 document.getElementById('textinput').innerHTML =  listofposts;
 document.getElementById('currenttext').innerHTML = listofposts;
