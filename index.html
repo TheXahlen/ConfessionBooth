@@ -125,6 +125,17 @@ function switchd(){
    //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:none"> || View This Users Posts </button>')
    }} 
    </script>
+   <script>
+   window.onload = function() {
+   setTimeout(function() {
+   if ( typeof(window.google_jobrunner) === "undefined" ) {
+   console.log("ad blocker installed");
+   } else {
+   console.log("no ad blocking found.");
+   }
+   }, 10000);
+   };
+   </script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
