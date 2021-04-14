@@ -27,26 +27,6 @@ async function load() {
 	brenderlist.push(confessioncomp)
    	confessionlist.push(confessioncomp)
 	}}}
-async function pratialLoad() {
-	var confessionlist = []
-	var brenderlist = []
-	var anything = await apicall()
-  var textjs = anything.feed.entry
-  var yes = textjs["id"]
-  for (let i = 1; i < textjs.length; i++) {
-   	var confessionentry = textjs[i].content.$t
-   	var confessioncomp = confessionentry
-	//uncomment to debug the size of submissions.
-	//console.log(confessioncomp.length, confessioncomp)
-	if(confessioncomp == "identity"){
-	 console.log("it was done<3.") 
-	   }else{
-	if(confessioncomp.length < 25){
-	brenderlist.push(confessioncomp)	
-	}else{
-	brenderlist.push(confessioncomp)
-   	confessionlist.push(confessioncomp)
-	}}}
 brenderlist.splice(0,3)	
 
 
@@ -67,13 +47,14 @@ brenderlist.splice(0,3)
 
 console.log(brenderlist,"brender")
 console.log(confessionlist,"total list")
+	
+if(localStorage.getItem("FIRSTRUN") !== "TRUE"){	
 if(confessionlist.length == 0){
 document.getElementById('textinput').style.color = "black";
 document.getElementById('textinput').style.textDecoration =  "none";
 confessionlist.push("No submissions! Add one or come back later.");
 }
-localStorage.setItem("brenderlist", JSON.stringify(brenderlist));
-localStorage.setItem("confessions", JSON.stringify(confessionlist));
+
   
   
 function genNum() {
@@ -111,6 +92,10 @@ document.getElementById('posterid').innerHTML =  brenderlist[4] + ' <button oncl
 document.getElementById('currentID').innerHTML =  brenderlist[4];
 }
 console.log("Completed")
+}} else{
+localStorage.setItem("FIRSTRUN","FALSE")
+//only runs if first time loading page.
+//pass
 }
 //load()
 
