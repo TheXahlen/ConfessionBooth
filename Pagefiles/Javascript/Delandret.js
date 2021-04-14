@@ -1,6 +1,14 @@
 function onset(){
 try{
-var setit = localStorage.getItem('browserid')
+var listit = localStorage.getItem('confessions');
+var numbergenned = localStorage.getItem('numbergenned');
+var brenderit = localStorage.getItem('brenderlist');
+var setit = localStorage.getItem('browserid');
+if (listit !== null || numbergenned !== null || brenderit !== null ){
+document.getElementById('listdata').innerHTML =  "TRUE";
+} else{
+document.getElementById('listdata').innerHTML =  "FALSE";
+}
 if (setit == null){
 document.getElementById('browserid').innerHTML =  "NULL"
 }else{
@@ -12,3 +20,10 @@ function removeData(){
 localStorage.removeItem('browserid');
 document.getElementById('browserid').innerHTML =  "NULL";
 }
+function removelistData(){
+localStorage.removeItem('brenderlist');
+localStorage.removeItem('confessions');
+localStorage.removeItem('numbergenned');
+document.getElementById('listdata').innerHTML =  "FALSE";
+}
+
