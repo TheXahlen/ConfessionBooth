@@ -29,8 +29,8 @@ var fontfamily = brenderparsedvar[indexes[b] - 2] + ';'
 var textdecoration = brenderparsedvar[indexes[b] - 3] + ';'
 var textcolor = brenderparsedvar[indexes[b] - 4] + ';'
 var postmodifer = '<p ' + 'style="font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '">'  
-var postnum = "[" + b + "]"
-listofposts.push( postnum + postmodifer + postindexed + '</p> <br>')
+var postnum = '<b style="color:black">[' + b + "]</b>" + postindexed
+listofposts.push(  postmodifer + postnum + '</p> <br>')
 }
 if(indexes.length == 0){
 console.log("no posts from id: " + currentuserID)
