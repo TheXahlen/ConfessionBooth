@@ -18,8 +18,9 @@ async function load() {
    	var confessioncomp = confessionentry
 	//uncomment to debug the size of submissions.
 	//console.log(confessioncomp.length, confessioncomp)
-	if(confessioncomp == "identity"){
-	 console.log("filtered collumn headers.") 
+	var filterwords = ["identity","font","confession",
+	if(confessioncomp == "identity" || confessioncomp == "font" || confessioncomp == "confession" || confessioncomp == "deletedate" || confessioncomp == "color" || confessioncomp == "decoration" || confessioncomp == "size"){
+	 console.log("filtered collumn header: ", confessioncomp)
 	   }else{
 	if(confessioncomp.length < 25){
 	brenderlist.push(confessioncomp)	
@@ -30,7 +31,7 @@ async function load() {
   localStorage.setItem("brenderlist", JSON.stringify(brenderlist));
   localStorage.setItem("confessions", JSON.stringify(confessionlist));
   }
-brenderlist.splice(0,3)	
+//brenderlist.splice(0,3)	
 
 
 //debugging purposes
@@ -94,8 +95,10 @@ document.getElementById("currenttext").innerHTML =  confessionlist[0]
 document.getElementById('textinput').innerHTML =  confessionlist[0]
 document.getElementById('textinput').style.color =  brenderlist[2];
 document.getElementById('textinput').style.textDecoration =  brenderlist[3];
-document.getElementById('posterid').innerHTML =  brenderlist[4];
-document.getElementById('currentID').innerHTML =  brenderlist[4];
+document.getElementById('textinput').style.fontFamily =  brenderlist[4]
+document.getElementById('textinput').style.fontSize =  brenderlist[5]
+document.getElementById('posterid').innerHTML =  brenderlist[6];
+document.getElementById('currentID').innerHTML =  brenderlist[6];
 }
 console.log("Completed")
 } else{
