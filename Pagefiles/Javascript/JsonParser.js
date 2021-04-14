@@ -97,5 +97,8 @@ localStorage.setItem("FIRSTRUN","FALSE")
 //only runs if first time loading page.
 //pass
 }
+function TESTIFSTART(){
+//pass	
+}
 //load()
 
