@@ -1,5 +1,6 @@
 
 localStorage.setItem("numbergenned", 0);
+localStorage.setItem("numcycled",0)
 async function apicall(){
 	return new Promise(async(resolve,reject)=>{
 	let url = 'https://spreadsheets.google.com/feeds/cells/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/1/public/full?alt=json';
@@ -47,7 +48,17 @@ async function load() {
 	//confessionlist.splice(indexed1,1)
 //}catch(e){//pass
 //}
+function cycle(){
+var numcyc = localStorage.getItem("numcycled")
+if(numcyc > 4){
+load()
+localStorage.setItem("numcycled",0)	
+}else{
+localStorage.setItem("numcycled",numcyc +1)
+}
 
+var brenderlist = JSON.parse(localStorage.getItem("brenderlist")
+var confessionlist = JSON.parse(localStorage.getItem("confessions")
 console.log(brenderlist,"brender")
 console.log(confessionlist,"total list")
 	
@@ -108,7 +119,7 @@ localStorage.setItem("FIRSTRUN","FALSE")
 console.log("The site has started correctly!!!")
 //only runs if first time loading page.
 //pass
-}}
+}}}
 //function TESTIFSTART(){
 //pass	
 //
