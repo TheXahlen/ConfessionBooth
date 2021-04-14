@@ -1,83 +1,144 @@
-<!doctype html>
-<link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
-<html>
-  <head>
- <title>Confesion Booth</title>
- <link rel="shortcut icon" type="image/x-icon" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/booth.ico" />
-<meta name="Description" content="Computer Science project that uses google spreadsheets to index data.">
-<meta name="KeyWords" content="cs,computer science,computers,project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
- </head>
-  <div id="bodyifnotallowed" style="display:none">
-<h2 id="posteridsecond" style="text-align:center; background:white; opacity:0.65; font-size:20pt; font-family:almond; "></h2>   
-<h2 style="font-size:15px;"> THIS ID HAS BEEN BANNED.</h2> 
-</div>
-<body  id="bodyifallowed" onload="setdeleteDate(); Loader(); load();">
-<h2 id="posterid" class="postid">LOADING USER ID.<button onclick="loadPosts()" class="postid"> || View This Users Posts </button></h2>
+<html><head>
+<title>Confesion Booth</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/booth.ico">
+   <meta name="Description" content="Computer Science project that uses google spreadsheets to index data.">
+   <meta name="KeyWords" content="cs,computer science,computers,project">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
+</head>
 
-<table style="width:100%">
-<tr><th> 
-<button id="cycle" style="border:black solid 4px; background-color:grey; border-radius:8px; width:45%;opacity: 0.75; font-family:Hero; font-size: 6pt; " onclick="load()">BUTTON TO CYCLE</button> 
-<button type="submit"  style="width:45%;opacity: 0.75; font-size: 6pt; border:black solid 4px; background-color:grey; font-family:Hero; border-radius:8px;" onclick="Clicked()">BUTTON TO SUBMIT</button>  
+<body id="bodyifallowed" onload="setdeleteDate(); Loader(); load();">
+   <h2 class="postid" id="posterid" style="opacity:0.55;font-size:32px;">[jNuUjL0YjI] [,WLNd]</h2>
+<table id="buttons" style="margin:auto;">
+<tbody><tr>
+<th>
+   <button id="cycle" class="buttontry" onclick="cycle()" style="display: block; width: 100%; margin: auto;">CYCLE  </button> 
+   </th><th>
+   <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: none; width: 100%; margin: auto;">SUBMIT</button>  
+  </th><th>
+<button class="buttontry" onclick="switchd(); load();" style="display:block; width:100%;"> switch</button>
 </th></tr>
-</table>
-    <form name="submit-to-google-sheet"> 
-<button style="display:none;" id="submit"></button>
-<textarea name="confession" rows="10" type="text" id="textinput" minlength="20" maxlength="450" cols="35%" class="textarea" >  </textarea>
 
- <div id="silentdata">
-   <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
-   <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
-   <button style="display:none;" id="submit"></button>
-   <p style="display:none;" id="currentID"></p>
-   <p style="display:none;" id="currenttext"></p>
-</div>
-      
- <table style="width:100%">
-
-  <tr><th> 
-   <div id="selector">
-   <select name="color" id="color" style="border:black solid 4px; border-radius:10px; width:45%;opacity: 0.75;  font-size: 6pt; ">
+</tbody></table>
+<button onclick="loadPosts()" id="posterload" class="buttontry" style="display: block; margin: auto; width: 55%;">See Identifiers Posts</button>
+ <!--
+unused so far plans to implement later it's a button that switched between submit and cycle functionality.
+ <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
+-->
+<form name="submit-to-google-sheet"> 
+ <table style="width:100%; margin:auto; text-align:center;">
+<tbody><tr><th> 
+<div id="selector" style="display: none;">
+  <select name="color" id="color" class="selector">
     <option value="blue" style="color:blue;">Blue</option>
     <option value="red" style="color:red">Red</option>
     <option value="green" style="color:green;">Green</option>
     <option value="yellow" style="color:yellow;">Yellow</option>
     <option value="black" style="color:black;">Black</option>
+    <option value="cyan" style="color:cyan;">Cyan</option>
+    <option value="silver" style="color:silver;">Silver</option>
+    <option value="purple" style="color:purple;">purple</option>
   </select>
-    <select name="decoration" id="decoration" style="border:black solid 4px; border-radius:10px; width:45%;opacity: 0.75; font-size: 6pt; "> 
+  <select name="decoration" id="decoration" class="selector">
     <option value="underline" style="text-decoration:underline;">Underline</option>
     <option value="line-through" style="text-decoration:line-through;">Line-Through</option>
     <option value="underline overline" style="text-decoration:underline overline;">Cover</option>
-     <option value="none" style="text-decoration:;">None</option>
+    <option value="none" style="text-decoration:;">None</option>
   </select>
-   </div>
-  </th></tr>
-</table>
- </form>
-<div style=" margin: auto; width: 50%; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; height:25%;opacity: 0.75; ">
-<a style="padding:8%; font-size:23px;" href="about.html"> About Site</a>
-<a style="padding:8%; font-size:23px;" href="privacy.html"> Privacy</a>
-<a style="padding:8%; font-size:23px;" href="progress.html"> Progress Log</a>
+  <select name="font" id="font" class="selector">
+    <option value="Ariel" style="font-family:ariel;">Ariel</option>
+    <option value="Brush Script MT" style="font-family:Brush Script MT;">Brush Script MT</option>
+    <option value="monospace" style="font-family:monospace;">Monospace</option>
+  </select>
+  <select name="size" id="size" class="selector">
+    <option value="23px" style="font-size:23px;">23PX</option>
+    <option value="26px" style="font-size:26px;">26PX</option>
+    <option value="35px" style="font-size:35px;">35PX</option>
+    <option value="42px" style="font-size:42px;">42PX</option>
+  </select>
+  
 </div>
+</th></tr>
+</tbody></table>
+<div id="director">
+<table style="width:68%; margin:auto; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; font-size:24px; opacity: 0.75;">
+   <tbody><tr><th>
+         <a href="about.html" style="margin:auto;">About</a>
+      </th><th style="width:100%">
+         <a href="privacy.html"> Privacy</a>
+      </th><th>
+         <a href="progress.html"> Log</a>
+   </th></tr></tbody>
+</table>
+</div>
+<p style="padding-bottom: 30%; width: 70%; background: white; word-wrap:break-word; border: 9px solid black; border-radius: 15px; font-size: 27.5pt; opacity: 0.75; margin: auto; display: block; color: black; text-decoration: none;" id="textinput">
+</p>
+<textarea name="confession" id="textsubmit" rows="10" type="text" minlength="20" maxlength="450" cols="45%" class="textarea" style="display: none;">  </textarea>
+    
+   <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
+   which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
+   
+<div id="silentdata">
+   <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
+   <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
+   <button style="display:none;" id="submit"></button>
+   <p style="display:none;" id="currentID">[jNuUjL0YjI] [,WLNd]</p>
+   <p style="display:none;" id="currenttext">Post number {0} [  Helllo !! how are you today!!!! ] 
+</p>
+</div>
+   
+</form>
+
+
 
 <div id="scripts">
    <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
    which is then used as their identifier. -->
+   <script>
+      
+//file for switching 
+function switchd(){
+   
+   
+   var cycledis = document.getElementById("cycle").style.display
+   var subdis = document.getElementById("subtry").style.display
+   var textdis = document.getElementById("textinput").style.display
+   var selectdis =  document.getElementById("selector").style.display
+   var textsubdis = document.getElementById("textsubmit").style.display
+   var viewdis = document.getElementById("posterload").style.display
+   
+   if (cycledis == "none"){
+   document.getElementById("posterload").style.display = "block"
+   document.getElementById("cycle").style.display = "block"
+   document.getElementById("textinput").style.display = "block"
+   document.getElementById("subtry").style.display= "none"
+   document.getElementById("selector").style.display = "none"
+   document.getElementById("textsubmit").style.display = "none"
+   //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:block"> || View This Users Posts </button>')
+   }else{
+   document.getElementById("cycle").style.display = "none"
+   document.getElementById("textinput").style.display = "none"
+   document.getElementById("posterload").style.display = "none"
+   document.getElementById("textsubmit").style.display = "block"
+   document.getElementById("subtry").style.display = "block"
+   document.getElementById("selector").style.display= "block"
+   //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:none"> || View This Users Posts </button>')
+   }} 
+   </script>
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
-   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
+    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Disgen.js"></script>
+   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Cycle.js"></script>
    <!-- this handles the submissons for the spreadsheet-->
    <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
-   <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-   <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"> </script>
+   <script src="https://api.ipify.org?format=jsonp&amp;callback=getIP"></script>
+   <script type="application/javascript" onload='localStorage.setItem("LOADED","TRUE");' src="https://api.ipify.org?format=jsonp&amp;callback=getIP"> </script>
    <script src="//unpkg.com/string-similarity@4.0.1/umd/string-similarity.min.js"></script>
    <!-- this is on the bottom so it can refrence all functions! -->
-   <script src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
 </div>
-  
- </body>
-</html>
+
+</body></html>
