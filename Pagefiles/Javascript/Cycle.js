@@ -22,7 +22,7 @@ if(numcyc > 4){
 load()
 localStorage.setItem("numcycled", 0)	
 }else{
-var numcycleft = numcyc - 5;
+var numcycleft = 5 - numcyc
 console.log( "the cite will allow {", numcycleft  ,"} more cycles before it refreshes the datalist.")
 localStorage.setItem("numcycled", numcyc + 1)
 }
