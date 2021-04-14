@@ -1,8 +1,11 @@
 function onset(){
 try{
 var setit = localStorage.getItem('browserid')
+if (setit == null){
+document.getElementById('browserid').innerHTML =  "NULL"
+}else{
 document.getElementById('browserid').innerHTML =  setit;
-}catch{
+}}catch{
 document.getElementById('browserid').innerHTML =  "NULL";  
 }}
 function removeData(){
