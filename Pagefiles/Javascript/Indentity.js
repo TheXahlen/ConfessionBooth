@@ -25,6 +25,7 @@ function getIP(json) {
  var identity = "[" + b64.substring(0,iplength).split("").reverse().join("") + "] [" + extensionadd + "]";
  console.log("USER ID GENERATED: " + identity);
  localStorage.setItem("browserid", identity);
+ document.getElementById("currentID").innerHTML = identity;
  }
  var testif = blacklist.includes(identity);
 if(testif == true){
