@@ -17,8 +17,7 @@ async function load() {
    	var confessionentry = textjs[i].content.$t
    	var confessioncomp = confessionentry
 	//uncomment to debug the size of submissions.
-	//console.log(confessioncomp.length, confessioncomp)
-	var filterwords = ["identity","font","confession",
+	//console.log(confessioncomp.length, confessioncomp
 	if(confessioncomp == "identity" || confessioncomp == "font" || confessioncomp == "confession" || confessioncomp == "deletedate" || confessioncomp == "color" || confessioncomp == "decoration" || confessioncomp == "size"){
 	 console.log("filtered collumn header: ", confessioncomp)
 	   }else{
