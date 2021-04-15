@@ -37,9 +37,6 @@ if(loadedposts.length > 0){
     for(var j = 0; j < amountforj; j++){
     console.log("Comparing similarity of" , loadedposts[j] ,  ":to:" , currenttextinsubmit) 
     var similarity = stringSimilarity.compareTwoStrings(loadedposts[j], currenttextinsubmit);
-    similarity = similarity.toString()
-    similarity = similarity.substring(0, 4)
-    similarity = parseInt(similarity)
     console.log(similarity)
     if("BLANK" == 1){
        alert("This post is too similar to a post you made with this identifier")
