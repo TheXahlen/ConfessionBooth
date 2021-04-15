@@ -17,7 +17,7 @@ var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist"))
 var browseridvar = localStorage.getItem("browserid")
 var currentuserID = document.getElementById("posterid").innerHTML 
 var indexes = [], i;
-for(i = 0; i < brenderparsedvar.length; i++)
+for(i = 0; i < brenderparsedvar.length; i++){
 if (brenderparsedvar[i] === currentuserID)
 indexes.push(i);
 var amount = indexes.length;
