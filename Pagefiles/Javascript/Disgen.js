@@ -34,13 +34,10 @@ var pushable = postmodifer + postindexed + '</p><br>'
 var pushable = pushable.toString()
 listofposts.push(pushable)
 }
-listofposts.push('<div id="postsfromuserid">') 
-var telned = listofposts.toString()
-var telned = telned.replace(",",'')
+listofposts.unshift('<div id="postsfromuserid">') 
+console.log(listofposts)
+var telned = listofposts.join(' ')
 console.log(telned)
- 
-
-
 if(indexes.length == 0){
 console.log("no posts from id: " + currentuserID)
 document.getElementById('textinput').innerHTML = "{" + currentuserID + "} This user Identifer has not posted yet!"; 
