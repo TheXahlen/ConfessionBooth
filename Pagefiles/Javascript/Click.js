@@ -26,7 +26,6 @@
 
 
 function Clicked(){
-var stringSimilarity = require("string-similarity");
 //var idtotest = localStorage.getItem('browserid');
 var loadedposts = loadPosts("TRUE")
 var currenttextinsubmit = document.getElementById("textsubmit").value
