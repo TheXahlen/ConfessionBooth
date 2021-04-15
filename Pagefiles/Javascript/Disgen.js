@@ -29,12 +29,15 @@ var fontfamily = brenderparsedvar[indexes[b] - 2] + '; '
 var textdecoration = brenderparsedvar[indexes[b] - 3] + '; '
 var textcolor = brenderparsedvar[indexes[b] - 4] + '; '
 var postmodifer = '['+ b +  '] <p style="font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '">'  
-listofposts.push(postmodifer + postindexed + '</p>')
-listofposts = listofposts.toString()
-listofposts = listofposts.replace(',',' \n ')
-console.log(listofposts)
- 
+var pushable = postmodifer + postindexed + '</p>'
+var pushable = pushable.toString()
+listofposts.push(pushable)
 }
+var telned = listofposts.toString()
+var telned = telned.replace(',',' \n ')
+console.log(telned)
+ 
+
 
 if(indexes.length == 0){
 console.log("no posts from id: " + currentuserID)
