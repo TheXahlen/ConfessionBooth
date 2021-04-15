@@ -7,6 +7,7 @@ function success(res){
         document.getElementById("textsubmit").value = ""
         console.log(console.log('Success!', res))
         document.getElementById("subtry").disabled = false;
+        document.getElementById("subtry").backgroundColor = "white";
         load()
 }
 
@@ -14,6 +15,7 @@ function failed(res){
         alert("Something went wrong and your post was discarded!")
         console.error('Error!', res)
         document.getElementById("subtry").disabled = false;
+        document.getElementById("subtry").backgroundColor = "white";
 }
 
     const form = document.forms['submit-to-google-sheet']
