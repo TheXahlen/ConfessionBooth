@@ -48,6 +48,7 @@ console.log("submission was attempted although the submit button is not visible 
 }else{
 document.getElementById("submit").click();
 document.getElementById("subtry").disabled = true;
+document.getElementById("subtry").backgroundColor = "grey";
 }}
 
 
