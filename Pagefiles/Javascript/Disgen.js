@@ -34,8 +34,8 @@ var pushable = postmodifer + postindexed + '</p><br>'
 var pushable = pushable.toString()
 listofposts.push(pushable)
 }
-listofposts.unshift('<div style="line-height:5px;" id="postsfromuserid">') 
-listofposts.push('div')
+listofposts.unshift('<div style="line-height:3%;" id="postsfromuserid">') 
+listofposts.push('</div>')
 console.log(listofposts)
 var telned = listofposts.join(' ')
 console.log(telned)
