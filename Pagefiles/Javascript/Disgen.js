@@ -18,11 +18,12 @@ var browseridvar = localStorage.getItem("browserid")
 var currentuserID = document.getElementById("posterid").innerHTML 
 var indexes = [], i;
 for(i = 0; i < brenderparsedvar.length; i++){
-if (brenderparsedvar[i] === currentuserID)
+if (brenderparsedvar[i] === currentuserID){
 indexes.push(i);
+}}
 var amount = indexes.length;
 var listofposts = []
-for(var b = 0; b < indexes.length; b++){
+for(var b = 0; b < amount; b++){
 var postindexed = brenderparsedvar[indexes[b] - 6]
 var sizeoffont = brenderparsedvar[indexes[b] - 1] + '; ' 
 var fontfamily = brenderparsedvar[indexes[b] - 2] + '; '
