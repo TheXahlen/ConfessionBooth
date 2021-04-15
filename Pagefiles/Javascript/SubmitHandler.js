@@ -5,6 +5,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbyhferKoM3lawXmfUHRrn
     alert(sub)
     document.getElementById("textsubmit").value = ""
     console.log(console.log('Success!', res))
+    load()
     }
     function failed(res){
     alert("Something went wrong and your post was discarded!")
