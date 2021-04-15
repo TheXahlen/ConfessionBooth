@@ -48,9 +48,9 @@ document.getElementById('currenttext').innerHTML = "{" + currentuserID + "} This
 }else{
 console.log("This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: [" + indexes + ']')
 console.log(listofposts + ": COMPLETE LIST! FOR USER WITH ID : [" + currentuserID + "]")
-document.getElementById('textinput').innerHTML =  listofposts;
+document.getElementById('textinput').innerHTML =  telned;
 console.log(document.getElementById('textinput').innerHTML)  
-document.getElementById('currenttext').innerHTML = listofposts;
+document.getElementById('currenttext').innerHTML = telned;
 document.getElementById('textinput').style.color = "black";
 document.getElementById('textinput').style.textDecoration =  "none";
 }}
