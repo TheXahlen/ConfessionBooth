@@ -26,13 +26,20 @@
 
 
 function Clicked(){
-var loadedposts = loadPosts("TRUE")
+var stringSimilarity = require("string-similarity");
+var idtotest = localStorage.getItem('browserid');
+var loadedposts = loadPosts(idtotest)
+var currenttextinsubmit = document.getElementById("textsubmit").value
 var amountforj = loadedposts.length;
+    
+if(loadedposts.length > 0){
     for(var j = 0; j < amountforj; j++){
-    console.log("testing paramater", j)
+    var similarity = stringSimilarity.compareTwoStrings(loadedposts[j], currenttextinsubmit).substring(0, 4);;
+    console.log(similarity)
     if("BLANK" == 1){
+       alert("This post is too similar to a post you made with this identifier")
        return "FUNCTION FAILSAFE"}
-    }
+    }}
 
  
  if(document.getElementById("subtry").style.display == "none"){
