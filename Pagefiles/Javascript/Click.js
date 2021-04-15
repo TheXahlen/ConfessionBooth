@@ -26,9 +26,19 @@
 
 
 function Clicked(){
-if(document.getElementById("subtry").style.display == "none"){
- console.log("submission was attempted although the submit button is not visible so action was aborted")
+var loadedposts = loadPosts("TRUE")
+var amountforj = indexes.length;
+    for(var j = 0; j < amountforj; j++){
+    console.log("testing paramater", j)
+    if("BLANK" = 1){
+       return "FUNCTION FAILSAFE"}
+    }
+
+ 
+ if(document.getElementById("subtry").style.display == "none"){
+console.log("submission was attempted although the submit button is not visible so action was aborted")
 }else{
 document.getElementById("submit").click();
 }}
+
 
