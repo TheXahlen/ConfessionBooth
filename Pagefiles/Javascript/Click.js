@@ -30,7 +30,7 @@ var loadedposts = loadPosts("TRUE")
 var amountforj = indexes.length;
     for(var j = 0; j < amountforj; j++){
     console.log("testing paramater", j)
-    if("BLANK" = 1){
+    if("BLANK" == 1){
        return "FUNCTION FAILSAFE"}
     }
 
