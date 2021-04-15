@@ -34,7 +34,11 @@ var pushable = postmodifer + postindexed + '</p><br>'
 var pushable = pushable.toString()
 listofposts.push(pushable)
 }
-listofposts.unshift('<div style="line-height:3%; word-wrap: break-word;" id="postsfromuserid">') 
+if(window.location.href == "https://xplosivex.github.io/ConfessionBooth/mobileindex.html"){
+listofposts.unshift('<div style="word-wrap: break-word;line-height:8px;" id="postsfromuserid">') 
+}else{
+listofposts.unshift('<div style="word-wrap: break-word;line-height:4%;" id="postsfromuserid">')  
+}
 listofposts.push('</div>')
 console.log(listofposts)
 var telned = listofposts.join(' ')
