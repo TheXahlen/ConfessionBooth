@@ -37,7 +37,7 @@ listofposts.push(pushable)
 if(window.location.href == "https://xplosivex.github.io/ConfessionBooth/mobileindex.html"){
 listofposts.unshift('<div style="word-wrap: break-word; line-height:90%;" id="postsfromuserid">') 
 }else{
-listofposts.unshift('<div style="word-wrap: break-word; line-height:15%;" id="postsfromuserid">')  
+listofposts.unshift('<div style="word-wrap: break-word; line-height:5%;" id="postsfromuserid">')  
 }
 listofposts.push('</div>')
 console.log(listofposts)
