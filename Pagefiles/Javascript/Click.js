@@ -27,7 +27,7 @@
 
 function Clicked(){
 var loadedposts = loadPosts("TRUE")
-var amountforj = indexes.length;
+var amountforj = loadedposts.length;
     for(var j = 0; j < amountforj; j++){
     console.log("testing paramater", j)
     if("BLANK" == 1){
