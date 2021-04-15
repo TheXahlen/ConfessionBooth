@@ -12,4 +12,4 @@ if(loadedposts.length > 0){
     if(similarity > 0.75){
        alert(errorreport)
        return "TRUE"}
-    }}}}
+    }}}
