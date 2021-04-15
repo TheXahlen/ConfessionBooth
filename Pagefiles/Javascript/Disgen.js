@@ -29,7 +29,7 @@ var fontfamily = brenderparsedvar[indexes[b] - 2] + '; '
 var textdecoration = brenderparsedvar[indexes[b] - 3] + '; '
 var textcolor = brenderparsedvar[indexes[b] - 4] + '; '
 var numpos = '<b style="color:black;">[' + b +  ']</b>' 
-var postmodifer = '<p style="font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '"> ' + numpos  
+var postmodifer = '<p style="text-height:100%; font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '"> ' + numpos  
 var pushable = postmodifer + postindexed + '</p><br>'
 var pushable = pushable.toString()
 listofposts.push(pushable)
@@ -37,7 +37,7 @@ listofposts.push(pushable)
 if(window.location.href == "https://xplosivex.github.io/ConfessionBooth/mobileindex.html"){
 listofposts.unshift('<div style="word-wrap: break-word; line-height:90%;" id="postsfromuserid">') 
 }else{
-listofposts.unshift('<div style="word-wrap: break-word; line-height:5%;" id="postsfromuserid">')  
+listofposts.unshift('<div style="word-wrap: break-word; line-height:15%;" id="postsfromuserid">')  
 }
 listofposts.push('</div>')
 console.log(listofposts)
