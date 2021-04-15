@@ -35,9 +35,8 @@ var amountforj = loadedposts.length;
 if(loadedposts.length > 0){
 
     for(var j = 0; j < amountforj; j++){
-    console.log("Comparing similarity of" , loadedposts[j] ,  ":to:" , currenttextinsubmit) 
     var similarity = stringSimilarity.compareTwoStrings(loadedposts[j], currenttextinsubmit);
-    console.log(similarity)
+    console.log("Comparing similarity of" , loadedposts[j] ,  ":to:" , currenttextinsubmit , "found a similarity of: {", similarity ,"}") 
     if("BLANK" == 1){
        alert("This post is too similar to a post you made with this identifier")
        return "FUNCTION FAILSAFE"}
