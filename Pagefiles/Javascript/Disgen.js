@@ -37,9 +37,11 @@ var pushable = pushable.toString()
 listofposts.push(pushable)
 completelist.push(brenderparsedvar[indexes[b] - 6])
 }
+
 if(returnif == "TRUE"){
-return completelist 
+return completelist  
 }
+
 if(window.location.href == "https://xplosivex.github.io/ConfessionBooth/mobileindex.html"){
 listofposts.unshift('<div style="word-wrap: break-word; line-height:90%;" id="postsfromuserid">') 
 }else{
