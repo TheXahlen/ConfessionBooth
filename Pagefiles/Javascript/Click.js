@@ -37,9 +37,9 @@ if(loadedposts.length > 0){
     for(var j = 0; j < amountforj; j++){
     var similarity = stringSimilarity.compareTwoStrings(loadedposts[j], currenttextinsubmit);
     console.log("Comparing similarity of" , loadedposts[j] ,  ":to:" , currenttextinsubmit , "found a similarity of: {", similarity ,"}") 
-    if("BLANK" == 1){
-       alert("This post is too similar to a post you made with this identifier")
-       return "FUNCTION FAILSAFE"}
+    if(similarity > 0.75{
+       alert("This post was too similar to a previous post made with your identifer. Give it another go!")
+       return }
     }}
 
  
