@@ -35,7 +35,10 @@ var postmodifer = '<p style="line-height:100%; font-size:' +  sizeoffont + 'font
 var pushable = postmodifer + postindexed + '</p><br>'
 var pushable = pushable.toString()
 listofposts.push(pushable)
-completelist.push(postindexed)
+completelist.push(brenderparsedvar[indexes[b] - 6])
+}
+if(returnif == "TRUE"){
+return completelist 
 }
 if(window.location.href == "https://xplosivex.github.io/ConfessionBooth/mobileindex.html"){
 listofposts.unshift('<div style="word-wrap: break-word; line-height:90%;" id="postsfromuserid">') 
@@ -58,8 +61,4 @@ console.log(document.getElementById('textinput').innerHTML)
 document.getElementById('currenttext').innerHTML = telned;
 document.getElementById('textinput').style.color = "black";
 document.getElementById('textinput').style.textDecoration =  "none";
-}
-if(returnif == "TRUE"){
-return completelist 
-}
-}
+}}
