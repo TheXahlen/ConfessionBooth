@@ -11,7 +11,6 @@
        //     indexes.push(i);
     //var amount = indexes.length;
     //return "This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: {" + indexes + "}";
-//}
 function loadPosts(){
 var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist"))
 var browseridvar = localStorage.getItem("browserid")
@@ -29,7 +28,7 @@ var sizeoffont = brenderparsedvar[indexes[b] - 1] + '; '
 var fontfamily = brenderparsedvar[indexes[b] - 2] + '; '
 var textdecoration = brenderparsedvar[indexes[b] - 3] + '; '
 var textcolor = brenderparsedvar[indexes[b] - 4] + '; '
-var postmodifer = "{" + b +  '} <p style="font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '">'  
+var postmodifer = '['+ b +  '] <p style="font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '">'  
 listofposts.push(postmodifer + postindexed + '</p>')
 listofposts = listofposts.toString()
 listofposts = listofposts.replace(',',' \n ')
@@ -42,8 +41,8 @@ console.log("no posts from id: " + currentuserID)
 document.getElementById('textinput').innerHTML = "{" + currentuserID + "} This user Identifer has not posted yet!"; 
 document.getElementById('currenttext').innerHTML = "{" + currentuserID + "} This user Identifer has not posted yet!"; 
 }else{
-console.log("This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: {" + indexes + "}")
-console.log(listofposts + ": COMPLETE LIST! FOR USER WITH ID : {" + currentuserID + "}")
+console.log("This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: [" + indexes + ']')
+console.log(listofposts + ": COMPLETE LIST! FOR USER WITH ID : [" + currentuserID + "]")
 document.getElementById('textinput').innerHTML =  listofposts;
 console.log(document.getElementById('textinput').innerHTML)  
 document.getElementById('currenttext').innerHTML = listofposts;
