@@ -21,7 +21,7 @@ if (brenderparsedvar[i] === currentuserID){
 indexes.push(i);
 }}
 var amount = indexes.length;
-var listofposts = []
+var listofposts = ["</div>"]
 for(var b = 0; b < amount; b++){
 var postindexed = brenderparsedvar[indexes[b] - 6]
 var sizeoffont = brenderparsedvar[indexes[b] - 1] + '; ' 
@@ -34,6 +34,7 @@ var pushable = postmodifer + postindexed + '</p><br>'
 var pushable = pushable.toString()
 listofposts.push(pushable)
 }
+listofposts.push('<div id="postsfromuserid">') 
 var telned = listofposts.toString()
 var telned = telned.replace(",",'')
 console.log(telned)
