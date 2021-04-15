@@ -11,7 +11,7 @@
        //     indexes.push(i);
     //var amount = indexes.length;
     //return "This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: {" + indexes + "}";
-function loadPosts(){
+function loadPosts(returnif){
 var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist"))
 var browseridvar = localStorage.getItem("browserid")
 var currentuserID = document.getElementById("posterid").innerHTML 
@@ -21,7 +21,9 @@ if (brenderparsedvar[i] === currentuserID){
 indexes.push(i);
 }}
 var amount = indexes.length;
+var postindexed
 var listofposts = []
+var completelist = []
 for(var b = 0; b < amount; b++){
 var postindexed = brenderparsedvar[indexes[b] - 6]
 var sizeoffont = brenderparsedvar[indexes[b] - 1] + '; ' 
@@ -33,6 +35,7 @@ var postmodifer = '<p style="line-height:100%; font-size:' +  sizeoffont + 'font
 var pushable = postmodifer + postindexed + '</p><br>'
 var pushable = pushable.toString()
 listofposts.push(pushable)
+completelist.push(postindexed)
 }
 if(window.location.href == "https://xplosivex.github.io/ConfessionBooth/mobileindex.html"){
 listofposts.unshift('<div style="word-wrap: break-word; line-height:90%;" id="postsfromuserid">') 
@@ -55,4 +58,8 @@ console.log(document.getElementById('textinput').innerHTML)
 document.getElementById('currenttext').innerHTML = telned;
 document.getElementById('textinput').style.color = "black";
 document.getElementById('textinput').style.textDecoration =  "none";
-}}
+}
+if(returnif == "TRUE"){
+return completelist 
+}
+}
