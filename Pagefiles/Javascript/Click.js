@@ -47,6 +47,7 @@ if(loadedposts.length > 0){
 console.log("submission was attempted although the submit button is not visible so action was aborted")
 }else{
 document.getElementById("submit").click();
+document.getElementById("submit").disabled = true;
 }}
 
 
