@@ -11,10 +11,17 @@
        //     indexes.push(i);
     //var amount = indexes.length;
     //return "This user identifier| " + browseridvar + " | has | " + amount + " | posts with an id at the following indexes: {" + indexes + "}";
-function loadPosts(returnif){
+function loadPosts(testspecific){
+if(testspecific == "TRUE"){
 var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist"))
-var browseridvar = localStorage.getItem("browserid")
+var currentuserID = localStorage.getItem("browserid")
+}else{
+
+var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist"))
+//var browseridvar = localStorage.getItem("browserid")
 var currentuserID = document.getElementById("posterid").innerHTML 
+}
+
 var indexes = [], i;
 for(i = 0; i < brenderparsedvar.length; i++){
 if (brenderparsedvar[i] === currentuserID){
@@ -38,7 +45,7 @@ listofposts.push(pushable)
 completelist.push(brenderparsedvar[indexes[b] - 6])
 }
 
-if(returnif == "TRUE"){
+if(testspecific == "TRUE"){
 console.log(completelist,"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||", listofposts)
 return completelist  
 }
