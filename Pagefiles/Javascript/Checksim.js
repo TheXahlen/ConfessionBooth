@@ -1,4 +1,4 @@
-function checksim(){
+function checkSim(){
 var loadedposts = loadPosts("TRUE")
 var currenttextinsubmit = document.getElementById("textsubmit").value
 var amountforj = loadedposts.length;
