@@ -28,13 +28,14 @@ var sizeoffont = brenderparsedvar[indexes[b] - 1] + '; '
 var fontfamily = brenderparsedvar[indexes[b] - 2] + '; '
 var textdecoration = brenderparsedvar[indexes[b] - 3] + '; '
 var textcolor = brenderparsedvar[indexes[b] - 4] + '; '
-var postmodifer = '['+ b +  '] <p style="font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '">'  
-var pushable = postmodifer + postindexed + '</p>'
+var numpos = '<b style="color:black;">[' + b +  ']</b>' 
+var postmodifer = '<p style="font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '"> ' + numpos  
+var pushable = postmodifer + postindexed + '</p><br>'
 var pushable = pushable.toString()
 listofposts.push(pushable)
 }
 var telned = listofposts.toString()
-var telned = telned.replace(',',' \n ')
+var telned = telned.replace(",",'')
 console.log(telned)
  
 
