@@ -29,7 +29,7 @@ var fontfamily = brenderparsedvar[indexes[b] - 2] + '; '
 var textdecoration = brenderparsedvar[indexes[b] - 3] + '; '
 var textcolor = brenderparsedvar[indexes[b] - 4] + '; '
 var numpos = '<b style="color:black;">[' + b +  ']</b>' 
-var postmodifer = '<p style="text-height:100%; font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '"> ' + numpos  
+var postmodifer = '<p style="line-height:100%; font-size:' +  sizeoffont + 'font-family:' + fontfamily + 'text-decoration:' + textdecoration + 'color:' + textcolor + '"> ' + numpos  
 var pushable = postmodifer + postindexed + '</p><br>'
 var pushable = pushable.toString()
 listofposts.push(pushable)
