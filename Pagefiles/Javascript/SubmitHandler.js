@@ -1,6 +1,8 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyhferKoM3lawXmfUHRrnjQC1vEexIbDdcYgLl-xY0tH2cjdKBjLNFExw/exec'
     function success(res){
-    alert("Your post was submitted!")
+    var cursubmission = document.getElementById("textsubmit").value
+    alert("Your post {" , cursubmission , "} was submitted!")
+    document.getElementById("textsubmit").value = ""
     console.log(console.log('Success!', res))
     }
     function failed(res){
