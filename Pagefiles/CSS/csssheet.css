@@ -87,6 +87,15 @@ float:right;
         word-break: break-all;
         height: 80px;
     }
+ border:black solid 4px; 
+ border-radius:10px; 
+ opacity: 0.75; 
+background:white;
+color:black;
+ font-size: 16pt;   
+}
+
+
 body {
   background-image: url("https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/PageBackground.jpg");
 }
