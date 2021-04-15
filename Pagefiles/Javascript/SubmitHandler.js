@@ -6,14 +6,14 @@ function success(res){
         alert(sub)
         document.getElementById("textsubmit").value = ""
         console.log(console.log('Success!', res))
-        document.getElementById("submit").disabled = false;
+        document.getElementById("subtry").disabled = false;
         load()
 }
 
 function failed(res){
         alert("Something went wrong and your post was discarded!")
         console.error('Error!', res)
-        document.getElementById("submit").disabled = false;
+        document.getElementById("subtry").disabled = false;
 }
 
     const form = document.forms['submit-to-google-sheet']
