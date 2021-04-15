@@ -39,6 +39,7 @@ completelist.push(brenderparsedvar[indexes[b] - 6])
 }
 
 if(returnif == "TRUE"){
+console.log(completelist,"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||", listofposts)
 return completelist  
 }
 
