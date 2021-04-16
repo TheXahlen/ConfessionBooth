@@ -11,7 +11,7 @@ var listofint = ["1","2","3","4","5","6","7","8","9","0"]
 var idlength = idtocheck.length;
 var idiptocheck = idtocheck.substring(1,8);
 idiptocheck = atob(idiptocheck);
-var idiplength = idiptocheck.length;
+var idiplength = idtocheck.length;
  //these test if an id is actually legit.
  for (var b = 0; b < idiplength; b++) {
    var indextocheck = idiptocheck.substring(0,b);
