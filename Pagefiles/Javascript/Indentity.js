@@ -60,13 +60,13 @@ if(passed == "TRUE"){
      generateIP()
      }
  }
- var blacklist = [""]
- var testif = blacklist.includes(identity);
-if(testif == true){
-console.log("Sorry your id has been blocked from viewing this page.")
-}else{
-console.log("Congrats you are not on the blacklist and are free to view this site!")
-}
+ //var blacklist = [""]
+// var testif = blacklist.includes(identity);
+//if(testif == true){
+//console.log("Sorry your id has been blocked from viewing this page.")
+//}else{
+//console.log("Congrats you are not on the blacklist and are free to view this site!")
+//}
  // purely a test to see if user is blocked and loads the browserid
  if( testif == true){
  document.getElementById('posteridsecond').innerHTML =  identity; 
