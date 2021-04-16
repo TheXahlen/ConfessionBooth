@@ -37,7 +37,7 @@ return null
 }
     
 var lengthofcurrentsub = document.getElementById("textsubmit").value
-lengthofcurrentsub = lengthofcurrentsub.length
+lengthofcurrentsub = lengthofcurrentsub.replaceAll(" ","").length
 
 if (lengthofcurrentsub < 30){
 var lengthleft = 30 - lengthofcurrentsub;
