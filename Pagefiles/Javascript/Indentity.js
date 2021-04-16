@@ -18,7 +18,7 @@ if(passed == "TRUE"){
    var b64 = btoa(ip); 
    console.log(b64)
    b64 = b64.toString()
-   b64 = b64.replace(".",""
+   b64 = b64.replace(".","")
    console.log(b64)
    b64 = b64.substring(0,5)
    console.log(b64)
