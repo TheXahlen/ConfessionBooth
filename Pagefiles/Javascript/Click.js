@@ -36,8 +36,8 @@ if (returned == "TRUE"){
 return null    
 }
     
-var lengthofcurrentsub = document.getElementById("currenttext").value
-lengthofcurrentsub = lengthofcurrentsub.length  
+var lengthofcurrentsub = document.getElementById("textsubmit").value
+lengthofcurrentsub = lengthofcurrentsub 
 
 if (lengthofcurrentsub < 30){
 var lengthleft = 30 - lengthofcurrentsub;
