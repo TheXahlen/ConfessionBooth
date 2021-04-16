@@ -12,10 +12,13 @@ function getIP(json) {
 function generateIP(passed,ip){
 if(passed == "TRUE"){
    var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))
-   var sediplength = ip.length - 3;
-   var sedextensionadd = makeid(5);
+   //var sediplength = ip.length - 3;
+   var extensionadd = makeid(5);
+   console.log(ip)
    var b64 = btoa(ip); 
+   console.log(b64)
    var b64 = b64.substring(0,5)
+   console.log(b64)
    var identfirst = "[" + b64 + "]"
    var identlast = "[" + extensionadd + "]"
    var identity = identfirst + identlast
@@ -23,9 +26,11 @@ if(passed == "TRUE"){
    localStorage.setItem("browserid", identity);
 }else{
      var jsonip = JSON.stringify(json.ip)
-     var iplength = jsonip.length - 3;
+     //var iplength = jsonip.length - 3;
+     console.log(jsonip)
      var extensionadd = makeid(5);
      var b64 = btoa(jsonip);
+     console.log(b64)
      var b64 = b64.substring(0,5)
      var identfirst = "[" + b64 + "]"
      var identlast = "[" + extensionadd + "]"
