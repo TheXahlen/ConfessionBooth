@@ -15,11 +15,11 @@ if(passed == "TRUE"){
    //var sediplength = ip.length - 3;
    var extensionadd = makeid(6);
    console.log(ip)
+   ip = ip.toString()
+   ip = ip.replace(".","")
+   console.log(ip, ".replace")
    var b64 = btoa(ip); 
    console.log(b64)
-   b64 = b64.toString()
-   b64 = b64.replace(".","")
-   console.log(b64, ".replace")
    b64 = b64.substring(0,5)
    console.log(b64)
    var identfirst = "[" + b64 + "]"
@@ -32,11 +32,12 @@ if(passed == "TRUE"){
      //var iplength = jsonip.length - 3;
      console.log(jsonip)
      var extensionadd = makeid(6);
-     var b64 = btoa(jsonip);
+     
      console.log(b64)
-     b64 = b64.toString()
-     b64 = b64.replace(".","")
-     console.log(b64)
+     jsonip = jsonip.toString()
+     jsonip = jsonip.replace(".","")
+     var b64 = btoa(jsonip); 
+     console.log(jsonip)
      b64 = b64.substring(0,5)
      console.log(b64)
      var identfirst = "[" + b64 + "]"
