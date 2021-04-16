@@ -22,9 +22,16 @@ var idtocheck = localStorage.getItem('browserid')
 if (idtocheck == null){
  failCheck("code 4: User does not have id")
 }
+
 var listofint = ["1","2","3","4","5","6","7","8","9","0"]
 var idlength = idtocheck.length;
-var idiptocheck = idtocheck.substring(0,10);
+  if(idlength !== 18){
+      failCheck("code 3: Does not index properly")
+      return null
+
+    
+      }
+var idiptocheck = idtocheck.substring(1,8);
 try{
 idiptocheck = atob(idiptocheck);
 }catch{
@@ -43,12 +50,6 @@ var idiplength = idtocheck.length;
        return null
     }
  }
-   if(idiplength !== 18){
-      failCheck("code 3: Does not index properly")
-      return null
-
-    
-      }
 
 
       
