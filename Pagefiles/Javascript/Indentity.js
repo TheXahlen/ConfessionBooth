@@ -13,14 +13,14 @@ function generateIP(passed,ip){
 if(passed == "TRUE"){
    var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))
    //var sediplength = ip.length - 3;
-   var extensionadd = makeid(6);
+   var extensionadd = makeid(8);
    console.log(ip)
    ip = ip.toString()
    ip = ip.split(".").join("")
    console.log(ip, ".replace")
    var b64 = btoa(ip); 
    console.log(b64)
-   b64 = b64.substring(0,5)
+   b64 = b64.substring(0,7)
    console.log(b64)
    var identfirst = "[" + b64 + "]"
    var identlast = "[" + extensionadd + "]"
@@ -31,14 +31,14 @@ if(passed == "TRUE"){
      var jsonip = JSON.stringify(json.ip)
      //var iplength = jsonip.length - 3;
      console.log(jsonip)
-     var extensionadd = makeid(6);
+     var extensionadd = makeid(8);
      
      console.log(b64)
      jsonip = jsonip.toString()
      jsonip = jsonip.split(".").join("")
      var b64 = btoa(jsonip); 
      console.log(jsonip)
-     b64 = b64.substring(0,5)
+     b64 = b64.substring(0,7)
      console.log(b64)
      var identfirst = "[" + b64 + "]"
      var identlast = "[" + extensionadd + "]"
