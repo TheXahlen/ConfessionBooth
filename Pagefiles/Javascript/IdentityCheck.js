@@ -3,19 +3,23 @@ function checkID(){
 
 var idtocheck = localStorage.getItem('browserid')
  function failCheck(errormessage){
-   console.log("The ID {" + idtocheck + "} is invalid due to : " + errormessage + " : //GENERATING  NEW ID//")
+   var errormes = "The ID {" + idtocheck + "} is invalid due to : " + errormessage + " : //GENERATING  NEW ID//"
+   alert(errormes)
    localStorage.removeItem('browserid')
    if(localStorage.getItem("LOADED") == "FALSE"){
-   getIP("DEBUG")  
+   getIP("DEBUG") 
+    var identity = localStorage.getItem('browserid');
+    document.getElementById("currentID").innerHTML = identity;
+    document.getElementById('posterid').innerHTML =  identity;
    }else{
     getIP()
+    var identity = localStorage.getItem('browserid');
+    document.getElementById("currentID").innerHTML = identity;
+    document.getElementById('posterid').innerHTML =  identity;
    }}
-  //if (idtocheck !== null){
-   //  var identity = localStorage.getItem("browserid")
-   //  } else {
-    //  getIP()
-    //  return null
-    // }
+if (idtocheck == null){
+ failCheck("code 4: User does not have id")
+}
 var listofint = ["1","2","3","4","5","6","7","8","9","0"]
 var idlength = idtocheck.length;
 var idiptocheck = idtocheck.substring(0,10);
@@ -36,6 +40,7 @@ var idiplength = idtocheck.length;
     }}
    if(idiplength !== 18){
       failCheck("code 3: Does not index properly")
+
     
       }
 
