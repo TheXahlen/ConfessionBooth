@@ -26,7 +26,7 @@ var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 2
 var sediplength = ip.length - 3;
 var sedextensionadd = makeid(5);
 var b64 = btoa(ip);
-var identity = "[" + b64.substring(0,sediplength).split("").reverse().join("") + "] [" + sedextensionadd + "]";
+var identity = "[" + b64.substring(0,sediplength).split("").reverse().join("") + "][" + sedextensionadd + "]";
 console.log("USER ID GENERATED: " + identity);
 localStorage.setItem("browserid", identity);
  }else{
