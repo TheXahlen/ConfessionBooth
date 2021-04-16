@@ -68,13 +68,18 @@ if(passed == "TRUE"){
 //console.log("Congrats you are not on the blacklist and are free to view this site!")
 //}
  // purely a test to see if user is blocked and loads the browserid
- if( testif == true){
- document.getElementById('posteridsecond').innerHTML =  identity; 
- document.getElementById('bodyifallowed').style.display = "none"; 
- document.getElementById('bodyifnotallowed').style.display = "block";
- }else{
- document.getElementById('identity').value =  identity;
+/ if( testif == true){
+/ document.getElementById('posteridsecond').innerHTML =  identity; 
+/ document.getElementById('bodyifallowed').style.display = "none"; 
+/ document.getElementById('bodyifnotallowed').style.display = "block";
+/ }else{
+/ document.getElementById('identity').value =  identity;
+/ console.log("your identifier is: {" + identity + "}")
+/ document.getElementById('posterid').innerHTML =  identity;
+/ console.log("document has updated the user identity")
+/}
+document.getElementById('identity').value =  identity;
  console.log("your identifier is: {" + identity + "}")
  document.getElementById('posterid').innerHTML =  identity;
  console.log("document has updated the user identity")
-}}
+}
