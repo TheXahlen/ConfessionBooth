@@ -3,10 +3,13 @@ function checkID(){
 
 var idtocheck = localStorage.getItem('browserid')
  function failCheck(errormessage){
-    console.log("The ID {" + idtocheck + "} is invalid due to : " + errormessage + " : //GENERATING  NEW ID//")
-    localStorage.removeItem('browserid')
-    getIP() 
- }
+   console.log("The ID {" + idtocheck + "} is invalid due to : " + errormessage + " : //GENERATING  NEW ID//")
+   localStorage.removeItem('browserid')
+   if(localStorage.getItem("LOADED") == "FALSE"){
+   getIP("DEBUG")  
+   }else{
+    getIP()
+   }}
   //if (idtocheck !== null){
    //  var identity = localStorage.getItem("browserid")
    //  } else {
