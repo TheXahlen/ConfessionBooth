@@ -16,7 +16,7 @@ if(passed == "TRUE"){
    var extensionadd = makeid(6);
    console.log(ip)
    ip = ip.toString()
-   ip = ip.replaceAll(".","")
+   ip = ip.split(".").join("")
    console.log(ip, ".replace")
    var b64 = btoa(ip); 
    console.log(b64)
@@ -35,7 +35,7 @@ if(passed == "TRUE"){
      
      console.log(b64)
      jsonip = jsonip.toString()
-     jsonip = jsonip.replaceAll(".","")
+     jsonip = jsonip.split(".").join("")
      var b64 = btoa(jsonip); 
      console.log(jsonip)
      b64 = b64.substring(0,5)
