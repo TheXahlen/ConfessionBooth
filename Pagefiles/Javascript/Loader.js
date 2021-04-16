@@ -1,5 +1,6 @@
 // anything that needs to happen on load happens in here
 function Loader(){
+   
 localStorage.setItem("FIRSTRUN","TRUE")
 localStorage.setItem("LOADED","FALSE")
 localStorage.setItem("numbergenned", 0);
@@ -11,6 +12,7 @@ function detect(){
    getIP("DEBUG")  
    }}  
 setTimeout(detect(), 1500)
+checkID()
 //pass
 }
 ////////////
