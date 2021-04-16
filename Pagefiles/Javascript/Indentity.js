@@ -28,7 +28,7 @@ if(passed == "TRUE"){
      var jsonip = JSON.stringify(json.ip)
      //var iplength = jsonip.length - 3;
      console.log(jsonip)
-     var extensionadd = makeid(6;
+     var extensionadd = makeid(6);
      var b64 = btoa(jsonip);
      console.log(b64)
      var b64 = b64.substring(0,5)
