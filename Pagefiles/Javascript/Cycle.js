@@ -16,10 +16,11 @@ var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 	if(confessionlist.length == 0){
 		document.getElementById('textinput').style.color = "black";
 		document.getElementById('textinput').style.textDecoration =  "none";
-		confessionlist.push("No submissions! Add one or come back later.");
-		document.getElementById("currenttext").innerHTML = "No submissions! Add one or come back later.";
-		document.getElementById('currentID').innerHTML =  localStorage.getItem("browserid")
+		document.getElementById("textinput").innerHTML = "No submissions! Add one or come back later.";
 		document.getElementById('posterid').innerHTML =  localStorage.getItem("browserid")
+		document.getElementById('currentID').value =  localStorage.getItem("browserid")
+		
+		return null
 	}
   
 function genNum() {
@@ -58,6 +59,7 @@ genNum()
 	document.getElementById('textinput').style.fontSize =  brenderlist[5]
 	document.getElementById('posterid').innerHTML =  brenderlist[6];
 	document.getElementById('currentID').innerHTML =  brenderlist[6];
+	return null
 }}
 //function TESTIFSTART(){
 //pass	
