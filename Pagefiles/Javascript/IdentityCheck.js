@@ -1,6 +1,12 @@
 
 function checkID(){
+
 var idtocheck = localStorage.getItem('browserid')
+ function FailCheck(errormessage){
+    console.log("The ID {" + idtocheck + "} is invalid due to : " + errormessage + " : //GENERATING  NEW ID//")
+    localStorage.removeItem('browserid')
+    getIP() 
+ }
   //if (idtocheck !== null){
    //  var identity = localStorage.getItem("browserid")
    //  } else {
@@ -10,26 +16,26 @@ var idtocheck = localStorage.getItem('browserid')
 var listofint = ["1","2","3","4","5","6","7","8","9","0"]
 var idlength = idtocheck.length;
 var idiptocheck = idtocheck.substring(1,8);
+try{
 idiptocheck = atob(idiptocheck);
-  console.log(idiptocheck)
+}catch{
+ FailCheck("code 1: Not base64")
+ return null
+}
+ console.log(idiptocheck)
 var ipsplit = idiptocheck.split("");
 var ipsplitlength = ipsplit.length;
 var idiplength = idtocheck.length;
  //these test if an id is actually legit.
  for (var b = 0; b < ipsplitlength; b++) {
    var indextocheck = ipsplit[b];
-    if(listofint.includes(indextocheck) == false){
-     console.log(indextocheck)
-     console.log("The ID {" + idtocheck + "} is invalid due to tampering: GENERATING  NEW ID :")
-     localStorage.removeItem('browserid')
-     getIP()
-     return null
+      if(listofint.includes(indextocheck) == false){
+      FailCheck("code 2: Not base64 does not convert to a valid id")
+      return null
     }}
    if(idiplength !== 18){
-     console.log("The ID {" + idtocheck + "} is invalid due to an invalid index: GENERATING  NEW ID :" )
-     localStorage.removeItem('browserid')
-     getIP()
-     return null
+      FailCheck("code 3: Does not index properly")
+      return null
       }
 
 
