@@ -19,7 +19,7 @@ if(passed == "TRUE"){
    console.log(b64)
    b64 = b64.toString()
    b64 = b64.replace(".","")
-   console.log(b64)
+   console.log(b64, ".replace")
    b64 = b64.substring(0,5)
    console.log(b64)
    var identfirst = "[" + b64 + "]"
