@@ -19,14 +19,14 @@ var idtocheck = localStorage.getItem('browserid')
     document.getElementById('posterid').innerHTML =  identity;
     return null
    }}
-if (idtocheck == null){
- failCheck("code 4: User does not have id")
-}
+///if (idtocheck == null){
+ //failCheck("code 4: User does not have id")
+//}
 
 var listofint = ["1","2","3","4","5","6","7","8","9","0"]
 var idlength = idtocheck.length;
   if(idlength !== 18){
-      failCheck("code 3: Does not index properly")
+      failCheck("code 1: Does not index properly")
       return null
 
     
@@ -35,7 +35,7 @@ var idiptocheck = idtocheck.substring(1,8);
 try{
 idiptocheck = atob(idiptocheck);
 }catch{
- failCheck("code 1: Not base64")
+ failCheck("code 2: Not base64")
  return null
 }
  console.log(idiptocheck)
@@ -46,7 +46,7 @@ var idiplength = idtocheck.length;
  for (var b = 0; b < ipsplitlength; b++) {
    var indextocheck = ipsplit[b];
       if(listofint.includes(indextocheck) == false){
-      failCheck("code 2: Not base64 does not convert to a valid id")
+      failCheck("code 3: Not base64 does not convert to a valid id")
        return null
     }
  }
