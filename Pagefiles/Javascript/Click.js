@@ -35,6 +35,15 @@ var returned = checkSim()
 if (returned == "TRUE"){
 return null    
 }
+    
+var lengthofcurrentsub = document.getElementById("currenttext").innerHTML.length   
+
+if (lengthofcurrentsub < 30){
+var lengthleft = 30 - lengthofcurrentsub;
+var aler = "This post doesn't meet the minium amount of characters it has {" + lengthofcurrentsub + "} you need {" + lengthleft + "} the minimum is 30"
+alert(aler) 
+return null    
+}
 
  
  if(document.getElementById("subtry").style.display == "none"){
