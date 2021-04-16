@@ -2,33 +2,23 @@
 function checkID(){
 
 var idtocheck = localStorage.getItem('browserid')
-if (idtocheck !== null){
-    getIP()
-    var identity = localStorage.getItem('browserid');
-    document.getElementById("currentID").innerHTML = identity;
-    document.getElementById('posterid').innerHTML =  identity;
-    return null
-     }
  function failCheck(errormessage){
-   var errorstring = "The ID {" + idtocheck + "} is invalid due to : " + errormessage + " : //GENERATING  NEW ID//"
-   alert(errorstring)
+   console.log("The ID {" + idtocheck + "} is invalid due to : " + errormessage + " : //GENERATING  NEW ID//")
    localStorage.removeItem('browserid')
    if(localStorage.getItem("LOADED") == "FALSE"){
    getIP("DEBUG")  
-   var identity = localStorage.getItem('browserid');
-   document.getElementById("currentID").innerHTML = identity;
-   document.getElementById('posterid').innerHTML =  identity;
    }else{
     getIP()
-    var identity = localStorage.getItem('browserid');
-    document.getElementById("currentID").innerHTML = identity;
-    document.getElementById('posterid').innerHTML =  identity;
-   }
- return null
- }
+   }}
+  //if (idtocheck !== null){
+   //  var identity = localStorage.getItem("browserid")
+   //  } else {
+    //  getIP()
+    //  return null
+    // }
 var listofint = ["1","2","3","4","5","6","7","8","9","0"]
 var idlength = idtocheck.length;
-var idiptocheck = idtocheck.substring(1,8);
+var idiptocheck = idtocheck.substring(0,10);
 try{
 idiptocheck = atob(idiptocheck);
 }catch{
