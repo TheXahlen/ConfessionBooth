@@ -16,8 +16,10 @@ if(passed == "TRUE"){
    var extensionadd = makeid(6);
    console.log(ip)
    var b64 = btoa(ip); 
+   b64 = b64.toString()
+   b64 = b64.replace(".","")
    console.log(b64)
-   var b64 = b64.substring(0,5)
+   b64 = b64.substring(0,5)
    console.log(b64)
    var identfirst = "[" + b64 + "]"
    var identlast = "[" + extensionadd + "]"
@@ -31,7 +33,9 @@ if(passed == "TRUE"){
      var extensionadd = makeid(6);
      var b64 = btoa(jsonip);
      console.log(b64)
-     var b64 = b64.substring(0,5)
+     b64 = b64.toString()
+     b64 = b64.replace(".","")
+     b64 = b64.substring(0,5)
      var identfirst = "[" + b64 + "]"
      var identlast = "[" + extensionadd + "]"
      var identity = identfirst + identlast
