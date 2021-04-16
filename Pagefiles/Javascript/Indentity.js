@@ -27,6 +27,8 @@ if(passed == "TRUE"){
    var identity = identfirst + identlast
    console.log("USER ID GENERATED: " + identity)
    localStorage.setItem("browserid", identity);
+   document.getElementById("currentID").innerHTML = identity;
+   document.getElementById('posterid').innerHTML =  identity;
 }else{
      var jsonip = JSON.stringify(json.ip)
      //var iplength = jsonip.length - 3;
@@ -53,15 +55,16 @@ if(passed == "TRUE"){
  if (localStorage.getItem('browserid') !== null){
      var identity = localStorage.getItem("browserid")
      document.getElementById("currentID").innerHTML = identity;
+     document.getElementById('posterid').innerHTML =  identity;
      console.log("ID FOUND AND LOADED: " + identity)
+     
  }else{
      console.log("YOU HAVE NO USER ID GENERATING")
-     document.getElementById("currentID").innerHTML = identity;
      if(testforload == "FALSE"){
      console.log("somesort of ad block or anti tracking installed using propietry method to generate an identifier")
      generateIP("TRUE")
      }else{
-    generateIP()
+     generateIP()
      }
  }
  var blacklist = ["[jNuUjL0YjI] [NjUHE]"]
