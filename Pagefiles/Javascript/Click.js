@@ -36,7 +36,8 @@ if (returned == "TRUE"){
 return null    
 }
     
-var lengthofcurrentsub = document.getElementById("currenttext").innerHTML.length   
+var lengthofcurrentsub = document.getElementById("currenttext").value
+lengthofcurrentsub = lengthofcurrentsub.length  
 
 if (lengthofcurrentsub < 30){
 var lengthleft = 30 - lengthofcurrentsub;
