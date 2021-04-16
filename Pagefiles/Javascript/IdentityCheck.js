@@ -12,10 +12,12 @@ var idlength = idtocheck.length;
 var idiptocheck = idtocheck.substring(1,8);
 idiptocheck = atob(idiptocheck);
   console.log(idiptocheck)
+var ipsplit = idiptocheck.split("");
+var ipsplitlength = ipsplit.length;
 var idiplength = idtocheck.length;
  //these test if an id is actually legit.
- for (var b = 0; b < idiplength; b++) {
-   var indextocheck = idiptocheck.substring(0,b);
+ for (var b = 0; b < ipsplitlength; b++) {
+   var indextocheck = ipsplit[b];
     if(listofint.includes(indextocheck) == false){
      console.log(indextocheck)
      console.log("The ID {" + idtocheck + "} is invalid due to tampering: GENERATING  NEW ID :")
