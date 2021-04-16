@@ -34,7 +34,10 @@ var jsonip = JSON.stringify(json.ip)
 var iplength = jsonip.length - 3;
 var extensionadd = makeid(5);
 var b64 = btoa(jsonip);
-var identity = "[" + b64.substring(0,4).split("").reverse().join("") + "] [" + extensionadd + "]";
+var b64 = b64.substring(0,5)
+var identfirst = "[" + b64 + "]"
+var identlast = "[" + extensionadd + "]"
+var identity = identfirst + identlast
 console.log("USER ID GENERATED: " + identity);
 localStorage.setItem("browserid", identity);
  }}
