@@ -75,7 +75,7 @@ if(passed == "TRUE"){
 // }else{
 // document.getElementById('identity').value =  identity;
 // console.log("your identifier is: {" + identity + "}")
-/ document.getElementById('posterid').innerHTML =  identity;
+//document.getElementById('posterid').innerHTML =  identity;
 // console.log("document has updated the user identity")
 //}
 document.getElementById('identity').value =  identity;
