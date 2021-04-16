@@ -23,7 +23,6 @@ try{
 idiptocheck = atob(idiptocheck);
 }catch{
  failCheck("code 1: Not base64")
- return null
 }
  console.log(idiptocheck)
 var ipsplit = idiptocheck.split("");
@@ -34,11 +33,10 @@ var idiplength = idtocheck.length;
    var indextocheck = ipsplit[b];
       if(listofint.includes(indextocheck) == false){
       failCheck("code 2: Not base64 does not convert to a valid id")
-      return null
     }}
    if(idiplength !== 18){
       failCheck("code 3: Does not index properly")
-      return null
+    
       }
 
 
