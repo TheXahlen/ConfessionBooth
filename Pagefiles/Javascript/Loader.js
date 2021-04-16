@@ -37,6 +37,6 @@ document.getElementById("switcher").backgroundColor = "white";
 document.getElementById("subtry").disabled = false;
 document.getElementById("subtry").backgroundColor = "white";  
 //pass
-}}
+}
 ////////////
 
