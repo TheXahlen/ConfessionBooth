@@ -2,7 +2,7 @@
 function checkID(){
 
 var idtocheck = localStorage.getItem('browserid')
- function FailCheck(errormessage){
+ function failCheck(errormessage){
     console.log("The ID {" + idtocheck + "} is invalid due to : " + errormessage + " : //GENERATING  NEW ID//")
     localStorage.removeItem('browserid')
     getIP() 
