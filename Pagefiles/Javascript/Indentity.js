@@ -13,7 +13,7 @@ function generateIP(passed,ip){
 if(passed == "TRUE"){
    var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))
    //var sediplength = ip.length - 3;
-   var extensionadd = makeid(8);
+   var extensionadd = makeid(7);
    console.log(ip)
    ip = ip.toString()
    ip = ip.split(".").join("")
@@ -31,7 +31,7 @@ if(passed == "TRUE"){
      var jsonip = JSON.stringify(json.ip)
      //var iplength = jsonip.length - 3;
      console.log(jsonip)
-     var extensionadd = makeid(8);
+     var extensionadd = makeid(7);
      
      console.log(b64)
      jsonip = jsonip.toString()
