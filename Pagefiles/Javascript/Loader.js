@@ -13,6 +13,9 @@ function detect(){
    }}  
 setTimeout(detect(), 1500)
 checkID()
+localStorage.setItem("browserid", identity);
+document.getElementById("currentID").innerHTML = identity;
+document.getElementById('posterid').innerHTML =  identity;
 //pass
 }
 ////////////
