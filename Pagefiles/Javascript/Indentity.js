@@ -10,13 +10,13 @@ function getIP(json) {
     var symbolLength = symbols.length;
     total
     for ( var i = 0; i < total; i++ ) {
-    if(i < 7){
+    if(i < 3){
         result.push(letters.charAt(Math.floor(Math.random() * letterLength)));
     }
-     if(i < 7){
+     if(i < 3){
         result.push(lettercapitals.charAt(Math.floor(Math.random() * lettercapitalLength)));
      } 
-      if(i < 7){
+      if(i < 4){
       result.push(symbols.charAt(Math.floor(Math.random() * symbolLength)));
     }
     console.log("Identity char: " + i + " :added to your identifier, [" + result +"]") 
