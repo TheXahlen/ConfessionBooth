@@ -32,13 +32,36 @@ var idlength = idtocheck.length;
     
       }
 var idiptocheck = idtocheck.substring(1,8);
+var idextracheck = idtocheck.substring(10,17);
 try{
 idiptocheck = atob(idiptocheck);
 }catch{
  failCheck("code 2: Not base64")
  return null
 }
+var idextracheck = idiptocheck.split("");
+var lengthofextra = idextracheck.length;
+var idiplength = idtocheck.length;
+ //these test if an id is actually legit.
+ //lA-N#&$
+ var letters = 'abcdefghijklmnopqrstuvwxy'
+ var lettercapitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+ var symbols = ':-=+)(*&^%$#@!.,/?';
+ var zerotrue = letters.includes(idextracheck[0])
+ var onetrue = lettercapitals.includes(idextracheck[1])
+ var twotrue = symbols.includes(idextracheck[2])
+ var threetrue = lettercapitals.includes(idextracheck[3])
+ var fourtrue = symbols.includes(idextracheck[4])
+ var fivetrue = symbols.includes(idextracheck[5])
+ var sixtrue = symbols.includes(idextracheck[6])
+ if(zerotrue == true && onetrue == true && twotrue == true && threetrue == true && fourtrue == true && fivetrue == true && sixtrue == true){
+ //pass   
+ } else{
+      failCheck("code 3: Second identifier has been tampered with")
+       return null
+ }
  console.log(idiptocheck)
+
 var ipsplit = idiptocheck.split("");
 var ipsplitlength = ipsplit.length;
 var idiplength = idtocheck.length;
@@ -46,7 +69,7 @@ var idiplength = idtocheck.length;
  for (var b = 0; b < ipsplitlength; b++) {
    var indextocheck = ipsplit[b];
       if(listofint.includes(indextocheck) == false){
-      failCheck("code 3: Not base64 does not convert to a valid id")
+      failCheck("code 4: Not base64 does not convert to a valid id")
        return null
     }
  }
