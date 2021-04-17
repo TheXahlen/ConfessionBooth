@@ -1,14 +1,27 @@
 
 function getIP(json) {
- function makeid(length) {
+ function makeid(total) {
     var result = [];
-    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789:-=+)(*&^%$#@!.,/?';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-        result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
-   }
+    var letters = 'abcdefghijklmnopqrstuvwxy'
+    var lettercapitals= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var symbols = ':-=+)(*&^%$#@!.,/?';
+    var letterLength = letterLength.length;
+    var lettercapitalLength = lettercapitalLength.length;
+    var symbolLength = symbolLength.length;
+    total
+    for ( var i = 0; i < total; i++ ) {
+    if(i < 7){
+        result.push(letters.charAt(Math.floor(Math.random() * letterLength)));
+    }
+     if(i < 7){
+        result.push(letterLength.charAt(Math.floor(Math.random() * lettercapitalLength)));
+     } 
+      if(i < 7){
+      result.push(symbols.charAt(Math.floor(Math.random() * symbolLength)));
+    }}
    return result.join('');
  }
+
 function generateIP(passed,ip){
 if(passed == "TRUE"){
    var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))
