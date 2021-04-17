@@ -10,10 +10,10 @@ function getIP(json) {
     var symbolLength = symbols.length;
     total
     for ( var i = 0; i < total; i++ ) {
-    if(i < 3){
+    if(i < 1){
         result.push(letters.charAt(Math.floor(Math.random() * letterLength)));
     }
-     if(i < 3){
+     if(i < 2){
         result.push(lettercapitals.charAt(Math.floor(Math.random() * lettercapitalLength)));
      } 
       if(i < 4){
