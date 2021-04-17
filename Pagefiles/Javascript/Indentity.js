@@ -3,7 +3,7 @@ function getIP(json) {
  function makeid(total) {
     var result = [];
     var letters = 'abcdefghijklmnopqrstuvwxy'
-    var lettercapitals= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var lettercapitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var symbols = ':-=+)(*&^%$#@!.,/?';
     var letterLength = letters.length;
     var lettercapitalLength = lettercapitals.length;
@@ -14,7 +14,7 @@ function getIP(json) {
         result.push(letters.charAt(Math.floor(Math.random() * letterLength)));
     }
      if(i < 7){
-        result.push(letterLength.charAt(Math.floor(Math.random() * lettercapitalLength)));
+        result.push(lettercapitals.charAt(Math.floor(Math.random() * lettercapitalLength)));
      } 
       if(i < 7){
       result.push(symbols.charAt(Math.floor(Math.random() * symbolLength)));
