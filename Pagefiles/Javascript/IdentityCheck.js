@@ -31,6 +31,7 @@ var idlength = idtocheck.length;
 
     
       }
+
 var idiptocheck = idtocheck.substring(1,8);
 var idextracheck = idtocheck.substring(10,17);
 try{
@@ -39,6 +40,13 @@ idiptocheck = atob(idiptocheck);
  failCheck("code 2: Not base64")
  return null
 }
+ 
+var testbrackets = idtocheck.substring(0,1) + idtocheck.substring(8,9) + idtocheck.substring(9,10) + idtocheck.substring(17,18)
+if(testbrackets == "[][]"){
+      failCheck("code 3: Containers for identifiers are not exact")
+       return null
+ }
+ 
 idextracheck = idextracheck.split("");
 var lengthofextra = idextracheck.length;
 var idiplength = idtocheck.length;
@@ -64,7 +72,7 @@ var idiplength = idtocheck.length;
  if(zerotrue == true && onetrue == true && twotrue == true && threetrue == true && fourtrue == true && fivetrue == true && sixtrue == true){
  //pass   
  } else{
-      failCheck("code 3: Second identifier has been tampered with")
+      failCheck("code 4: Second identifier has been tampered with")
        return null
  }
  console.log(idiptocheck)
@@ -76,7 +84,7 @@ var idiplength = idtocheck.length;
  for (var b = 0; b < ipsplitlength; b++) {
    var indextocheck = ipsplit[b];
       if(listofint.includes(indextocheck) == false){
-      failCheck("code 4: Not base64 does not convert to a valid id")
+      failCheck("code 5: Not base64 does not convert to a valid id")
        return null
     }
  }
