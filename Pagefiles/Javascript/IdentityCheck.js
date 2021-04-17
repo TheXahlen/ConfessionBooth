@@ -39,7 +39,7 @@ idiptocheck = atob(idiptocheck);
  failCheck("code 2: Not base64")
  return null
 }
-var idextracheck = idiptocheck.split("");
+idextracheck = idextracheck.split("");
 var lengthofextra = idextracheck.length;
 var idiplength = idtocheck.length;
  //these test if an id is actually legit.
