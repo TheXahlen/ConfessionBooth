@@ -18,7 +18,9 @@ function getIP(json) {
      } 
       if(i < 7){
       result.push(symbols.charAt(Math.floor(Math.random() * symbolLength)));
-    }}
+    }
+    console.log("Identity char: " + i + " :added to your identifier, [" + result +"]") 
+    } 
    return result.join('');
  }
 
