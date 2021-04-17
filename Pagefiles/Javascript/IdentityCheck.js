@@ -42,10 +42,11 @@ idiptocheck = atob(idiptocheck);
 }
  
 var testbrackets = idtocheck.substring(0,1) + idtocheck.substring(8,9) + idtocheck.substring(9,10) + idtocheck.substring(17,18)
-if(testbrackets == "[][]"){
+if(testbrackets !== "[][]"){
       failCheck("code 3: Containers for identifiers are not exact")
        return null
- }
+}
+ 
  
 idextracheck = idextracheck.split("");
 var lengthofextra = idextracheck.length;
