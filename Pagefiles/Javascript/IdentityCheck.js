@@ -48,19 +48,19 @@ var idiplength = idtocheck.length;
  var lettercapitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
  var symbols = ':-=+)(*&^%$#@!.,/?';
  var zerotrue = letters.includes(idextracheck[0])
- console.log(zerotrue)
+ //console.log(zerotrue)
  var onetrue = lettercapitals.includes(idextracheck[1])
-  console.log(onetrue)
+  //console.log(onetrue)
  var twotrue = symbols.includes(idextracheck[2])
-  console.log(twotrue)
+  //console.log(twotrue)
  var threetrue = lettercapitals.includes(idextracheck[3])
-  console.log(threetrue)
+ // console.log(threetrue)
  var fourtrue = symbols.includes(idextracheck[4])
-  console.log(fourtrue)
+ // console.log(fourtrue)
  var fivetrue = symbols.includes(idextracheck[5])
-  console.log(fivetrue)
+ // console.log(fivetrue)
  var sixtrue = symbols.includes(idextracheck[6])
-  console.log(sixtrue)
+ //console.log(sixtrue)
  if(zerotrue == true && onetrue == true && twotrue == true && threetrue == true && fourtrue == true && fivetrue == true && sixtrue == true){
  //pass   
  } else{
