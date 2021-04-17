@@ -1,5 +1,4 @@
 
-
 async function apicall(){
 	return new Promise(async(resolve,reject)=>{
 	let url = 'https://spreadsheets.google.com/feeds/cells/1arXjPy5iUERug2miLIPZKs0equJKxcT-QMqika16gm0/1/public/full?alt=json';
@@ -7,7 +6,7 @@ async function apicall(){
 	resolve(obj.json())
 })}
 async function load() {
-	var loadcount = localStorage.getItem(dataload")
+	var loadcount = localStorage.getItem("dataload")
 	var loadcount = parseInt(loadcount)
 	loadcount = loadcount + 1;
 	var loadcount = localStorage.setItem("dataload",loadcount)
