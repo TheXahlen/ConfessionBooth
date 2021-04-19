@@ -57,7 +57,9 @@ genNum()
 	document.getElementById('textinput').style.textDecoration =  brenderlist[3];
 	document.getElementById('textinput').style.fontFamily =  brenderlist[4]
 	document.getElementById('textinput').style.fontSize =  brenderlist[5]
+	console.log(brenderlist[5])
 	document.getElementById('textinput').style.paddingBottom =  parseInt(confessionlist[5]) / 2 + "%"
+	console.log(parseInt(confessionlist[5]) / 2 + "%" + " YEP") 
 	document.getElementById('posterid').innerHTML =  brenderlist[6];
 	document.getElementById('currentID').innerHTML =  brenderlist[6];
 	return null
