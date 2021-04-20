@@ -79,9 +79,12 @@ unused so far plans to implement later it's a button that switched between submi
          <a href="progress.html"> Log</a>
    </th></tr></tbody>
 </table>
+   </div>
 </div>
-</div>
-</div>
+   <p id="Display" style="border:solid 3px black; text-align:center; margin: auto; background:white; border-radius:15%;  font-size:35px; width:45%; opacity:0.6;">
+      PreviewText
+   </p>
+   </div>
    <div id="displayandentry">
 <p style="width: 90%; padding-bottom:30%; text-alight:center; background: grey; word-wrap:break-word; border: 9px solid black; border-radius: 2.5%; font-size: 27.5pt; opacity: 0.82; margin: auto; display: block; color: black; text-decoration: none;" id="textinput"></p>
 <textarea name="confession" id="textsubmit" rows="10" type="text" class="textarea" style="width:70%; opacity: 0.82; background:grey; height:45%; display: none;">  </textarea>
@@ -139,6 +142,7 @@ unused so far plans to implement later it's a button that switched between submi
    document.getElementById("cycle").style.display = "block"
    document.getElementById("textinput").style.display = "block"
    document.getElementById("subtry").style.display= "none"
+   document.getElementById("Display").style.display= "none"
    document.getElementById("selector").style.display = "none"
    document.getElementById("textsubmit").style.display = "none"
    //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:block"> || View This Users Posts </button>')
@@ -146,6 +150,7 @@ unused so far plans to implement later it's a button that switched between submi
    document.getElementById("cycle").style.display = "none"
    document.getElementById("textinput").style.display = "none"
    document.getElementById("posterload").style.display = "none"
+   document.getElementById("Display").style.display= "block"
    document.getElementById("textsubmit").style.display = "block"
    document.getElementById("subtry").style.display = "block"
    document.getElementById("selector").style.display= "block"
