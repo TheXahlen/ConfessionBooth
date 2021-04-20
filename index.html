@@ -37,7 +37,7 @@ unused so far plans to implement later it's a button that switched between submi
 <form name="submit-to-google-sheet"> 
  <table style="width:100%; margin:auto; text-align:center;">
 <tbody><tr><th> 
-<div id="selector" style="display: none;">
+<div id="selector" style="display: none;" onchange="SelectedColor();">
   <select name="color" id="color" class="selector">
     <option value="blue" style="color:blue;">Blue</option>
     <option value="red" style="color:red">Red</option>
@@ -48,18 +48,18 @@ unused so far plans to implement later it's a button that switched between submi
     <option value="silver" style="color:silver;">Silver</option>
     <option value="purple" style="color:purple;">purple</option>
   </select>
-  <select name="decoration" id="decoration" class="selector">
+  <select name="decoration" id="decoration" class="selector" onchange="SelectedDecoration();">
     <option value="underline" style="text-decoration:underline;">Underline</option>
     <option value="line-through" style="text-decoration:line-through;">Line-Through</option>
     <option value="underline overline" style="text-decoration:underline overline;">Cover</option>
     <option value="none" style="text-decoration:;">None</option>
   </select>
-  <select name="font" id="font" class="selector">
+  <select name="font" id="font" class="selector" onchange="SelectedFont();">
     <option value="Ariel" style="font-family:ariel;">Ariel</option>
     <option value="Brush Script MT" style="font-family:Brush Script MT;">Brush Script MT</option>
     <option value="monospace" style="font-family:monospace;">Monospace</option>
   </select>
-  <select name="size" id="size" class="selector">
+  <select name="size" id="size" class="selector" onchange="SelectedSize();">
     <option value="34px" style="font-size:34px;">23PX</option>
     <option value="37px" style="font-size:37px;">26PX</option>
     <option value="43px" style="font-size:43px;">35PX</option>
