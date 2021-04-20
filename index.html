@@ -38,23 +38,25 @@ unused so far plans to implement later it's a button that switched between submi
  <table style="width:100%; margin:auto; text-align:center;">
 <tbody><tr><th> 
 <div id="selector" style="display: none;">
+  
   <select name="color" id="color" class="selector" onchange="SelectedColor();">
+     <option value="black" style="color:black;">Black</option>
     <option value="blue" style="color:blue;">Blue</option>
     <option value="red" style="color:red">Red</option>
     <option value="green" style="color:green;">Green</option>
     <option value="yellow" style="color:yellow;">Yellow</option>
-    <option value="black" style="color:black;">Black</option>
     <option value="cyan" style="color:cyan;">Cyan</option>
     <option value="silver" style="color:silver;">Silver</option>
     <option value="purple" style="color:purple;">purple</option>
   </select>
   <select name="decoration" id="decoration" class="selector" onchange="SelectedDecoration();">
+    <option value="none" style="text-decoration:;">None</option>
     <option value="underline" style="text-decoration:underline;">Underline</option>
     <option value="line-through" style="text-decoration:line-through;">Line-Through</option>
     <option value="underline overline" style="text-decoration:underline overline;">Underline Overline</option>
-    <option value="none" style="text-decoration:;">None</option>
   </select>
   <select name="font" id="font" class="selector" onchange="SelectedFont();">
+     
     <option value="Ariel" style="font-family:ariel;">Ariel</option>
     <option value="Brush Script MT" style="font-family:Brush Script MT;">Brush Script MT</option>
     <option value="monospace" style="font-family:monospace;">Monospace</option>
