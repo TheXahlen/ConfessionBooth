@@ -21,7 +21,7 @@ var testfordata = retPARAM()
 var numtestlist = [1,2,3,4,5,6,7,8,9,0]
 var parsedint = parseInt(testfordata[0])
 try{
-if(testfordata[0][0] == "h"){
+if(testfordata[0].charAt(0) == "h"){
 console.log("THERE IS AN ATTEMPT TO LOAD A DISGEN OF A USERS POSTS")
 }else if(numtestlist.includes(parsedint) == true;)
 console.log("THERE IS AN ATTEMPT TO LOAD A POST OF A USERS POSTS")
