@@ -60,12 +60,12 @@ console.log(listofposts)
 var telned = listofposts.join(' ')
 console.log(telned)
 if(indexes.length == 0){
-editURL("identity","|||")
+editURL("identity","","")
 console.log("no posts from id: " + currentuserID)
 document.getElementById('textinput').innerHTML = "{" + currentuserID + "} This user Identifer has not posted yet!"; 
 document.getElementById('currenttext').innerHTML = "{" + currentuserID + "} This user Identifer has not posted yet!"; 
 }else{
-editURL("identity","loadPosts(" + currentuserID + ")")
+editURL("identity","loadPosts(" + currentuserID + ")","")
 console.log("This user identifier| " + currentuserID + " | has | " + amount + " | posts with an id at the following indexes: [" + indexes + ']')
 console.log(listofposts + ": COMPLETE LIST! FOR USER WITH ID : [" + currentuserID + "]")
 document.getElementById('textinput').innerHTML =  telned;
