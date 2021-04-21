@@ -1,6 +1,6 @@
 // anything that needs to happen on load happens in here
+var testfordata = retPARAM()
 function Loader(){
-   
 document.getElementById("cycle").disabled = true;
 document.getElementById("cycle").backgroundColor = "grey";
    
@@ -35,7 +35,6 @@ document.getElementById("subtry").backgroundColor = "white";
 localStorage.setItem("FIRSTRUN","FALSE")
 
 }
-var testfordata = retPARAM()
 var numtestlist = [1,2,3,4,5,6,7,8,9,0]
 var parsedint = parseInt(testfordata[0])
 try{
