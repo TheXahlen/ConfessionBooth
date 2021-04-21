@@ -1,17 +1,16 @@
 function retPARAM(){
-curURL = window.location.href
-urlSET = curURL.search("=") + 1
-try{
-secondValueSET = curURL.search("/>") + 1 
-identityforsecondvalue = curURL.substring(secondValueSET,curURL.length)
-indentityforsecondlen = identityforsecondvalue.length
-identityforSEARCH = curURL.substring(urlSET,curURL.length - indentityforsecondlen)
-console.log("TRIED AND DID IT")
-}catch{
-console.log("CAUGHT AN ERROR")
-identityforSEARCH = curURL.substring(urlSET,curURL.length)
-}
+var curURL = window.location.href
+curURL = curURL.replaceAll("#","") 
+var urlSecond = curURL.replace(/%.*%/, '%%')
+var urlSecondFormat = urlSecond.replaceAll("%","")
 console.log(curURL)
+var urlSET = urlSecondFormat.search("=") + 1;
+var identityforSEARCH = curURL.substring(urlSET,urlSecondFormat.length)
+var percentind = curURL.search("%");
+var suboftotal = curURL.substring(percentind, curURL.length)
+suboftotal = suboftotal.replaceAll("%","")
+//console.log(curURL)
+console.log(suboftotal)
 console.log(identityforSEARCH)
 }
 
