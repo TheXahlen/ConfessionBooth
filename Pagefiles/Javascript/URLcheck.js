@@ -2,7 +2,7 @@ function retPARAM(){
 var curURL = window.location.href
 var urlSecond = curURL.replace(/H.*S/, '%%')
 var urlSecondFormat = urlSecond.replaceAll("%","")
-console.log(urlSecondFormat)
+console.log(curURL)
 var urlSET = urlSecondFormat.search("=") + 1;
 var identityforSEARCH = curURL.substring(urlSET,urlSecondFormat.length)
 var percentind = curURL.search("%") + 1;
