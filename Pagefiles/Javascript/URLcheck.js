@@ -8,5 +8,5 @@ console.log(identityforSEARCH)
 
 function editURL(name,value){
 window.location.href = window.location.href + "?" + name + "=" + value;
-RetrievePARAM()
+RetPARAM()
 }
