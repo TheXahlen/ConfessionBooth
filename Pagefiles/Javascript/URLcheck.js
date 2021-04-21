@@ -9,5 +9,5 @@ console.log(identityforSEARCH)
 function editURL(name,value){
 currentURL = "https://xplosivex.github.io/ConfessionBooth/index.html"
 window.location.href = currentURL + "?" + name + "=" + value;
-RetPARAM()
+retPARAM()
 }
