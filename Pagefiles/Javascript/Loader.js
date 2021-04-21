@@ -1,5 +1,7 @@
 // anything that needs to happen on load happens in here
 var testfordata = retPARAM()
+var testfordata1 = testfordata[0]
+var testfordata2 = testfordata[1]
 function Loader(){
 document.getElementById("cycle").disabled = true;
 document.getElementById("cycle").backgroundColor = "grey";
@@ -42,11 +44,11 @@ function detect(){
 var numtestlist = [1,2,3,4,5,6,7,8,9,0,"1","2","3","4","5","6","7","8","9","0"]
 var parsedint = parseInt(testfordata[0])
 try{
-if(testfordata[0].charAt(0) == "h"){
-console.log(testfordata[1],"YEP THIS IS IT")
-loadPosts( testfordata[1]);
+if(testfordata1 .charAt(0) == "h"){
+console.log(testfordata[1], "FFF",  testfordata2 "YEP THIS IS IT")
+loadPosts(  testfordata2 );
 }
-if(numtestlist.includes(parsedint) == true || numtestlist.includes(testfordata[0]) == true){
+if(numtestlist.includes(parsedint) == true || numtestlist.includes( testfordata1 ) == true){
 	var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
 	var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 	document.getElementById('textinput').value =  "";
