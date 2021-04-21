@@ -15,8 +15,10 @@ function loadPosts(testspecific){
 if(testspecific == "TRUE"){
 var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist"))
 var currentuserID = localStorage.getItem("browserid")
+}else if(testspecific !== undefined){
+var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist")) 
+var currentuserID = testspecific
 }else{
-
 var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist"))
 //var browseridvar = localStorage.getItem("browserid")
 var currentuserID = document.getElementById("posterid").innerHTML 
