@@ -1,6 +1,6 @@
 function retPARAM(){
 var curURL = window.location.href
-var urlSecond = curURL.replace(/H.*S/, '%%')
+var urlSecond = curURL.replace(/%.*%/, '%%')
 var urlSecondFormat = urlSecond.replaceAll("%","")
 console.log(curURL)
 var urlSET = urlSecondFormat.search("=") + 1;
