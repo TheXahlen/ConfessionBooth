@@ -9,9 +9,13 @@ var identityforSEARCH = curURL.substring(urlSET,urlSecondFormat.length)
 var percentind = curURL.search("%");
 var suboftotal = curURL.substring(percentind, curURL.length)
 suboftotal = suboftotal.replaceAll("%","")
-//console.log(curURL)
-console.log(suboftotal)
-console.log(identityforSEARCH)
+if(suboftotal == "https://xplosivex.github.io/ConfessionBooth/index.html" || identityforSEARCH ==  "https://xplosivex.github.io/ConfessionBooth/index.html"){
+return null
+}else{  
+return suboftotal + "|" + identityforSEARCH 
+}
+//console.log(suboftotal)
+//console.log(identityforSEARCH)
 }
 
 function editURL(name,value,secondvalue){
@@ -20,5 +24,4 @@ parent.location.hash  =  "?" + name + "=" + value;
 if(secondvalue !== ""){
 parent.location.hash = "?" + name + "=" + value + "%" + secondvalue + "%"; 
 }
-retPARAM()
 }
