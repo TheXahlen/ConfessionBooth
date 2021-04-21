@@ -1,5 +1,6 @@
 function retPARAM(){
 var curURL = window.location.href
+curURL = curURL.replaceAll("#","") 
 var urlSecond = curURL.replace(/%.*%/, '%%')
 var urlSecondFormat = urlSecond.replaceAll("%","")
 console.log(curURL)
@@ -14,10 +15,10 @@ console.log(identityforSEARCH)
 }
 
 function editURL(name,value,secondvalue){
-currentURL = "https://xplosivex.github.io/ConfessionBooth/index.html"
-window.location.href = currentURL + "?" + name + "=" + value;
+
+parent.location.hash = currentURL + "?" + name + "=" + value;
 if(secondvalue !== ""){
-window.location.href = currentURL + "?" + name + "=" + value + "%" + secondvalue + "%"; 
+praent.location.hash = currentURL + "?" + name + "=" + value + "%" + secondvalue + "%"; 
 }
 retPARAM()
 }
