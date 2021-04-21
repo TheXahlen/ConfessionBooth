@@ -26,6 +26,8 @@ var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 	
 	
 function preloaded(fetchednumber) {
+	var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
+	var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 	document.getElementById('textinput').value =  "";
 	var indexinbren = brenderlist.indexOf(confessionlist[fetchednumber]) 
 	document.getElementById("currenttext").innerHTML = confessionlist[fetchednumber];  
