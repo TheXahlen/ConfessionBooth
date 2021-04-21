@@ -17,9 +17,9 @@ console.log(identityforSEARCH)
 
 function editURL(name,value,secondvalue){
 //var currentURL = "https://xplosivex.github.io/ConfessionBooth/index.html"
-window.location.href =  "?" + name + "=" + value;
+parent.location.hash  =  "?" + name + "=" + value;
 if(secondvalue !== ""){
-window.location.href = "?" + name + "=" + value + "%" + secondvalue + "%"; 
+parent.location.hash = "?" + name + "=" + value + "%" + secondvalue + "%"; 
 }
 retPARAM()
 }
