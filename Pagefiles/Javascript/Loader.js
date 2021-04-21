@@ -17,7 +17,15 @@ localStorage.setItem("numbergenned", 0);
 localStorage.setItem("numcycled",0)
 localStorage.setItem("dataload",0)
 setdeleteDate();
+var testfordata = retPARAM()
+try{
+if(testfordata[0][0] == "h"{
+console.log("THERE IS AN ATTEMPT TO LOAD A DISGEN OF A USERS POSTS")
+}else if(testfordata[0])
 
+}
+}catch{//pass
+}
 function detect(){
    if(localStorage.getItem("LOADED") == "FALSE"){
    getIP("DEBUG")  
@@ -37,6 +45,7 @@ document.getElementById("switcher").backgroundColor = "white";
 document.getElementById("subtry").disabled = false;
 document.getElementById("subtry").backgroundColor = "white";  
 //pass
+localStorage.setItem("FIRSTRUN","FALSE")
 }
 ////////////
 
