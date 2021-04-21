@@ -43,7 +43,7 @@ function detect(){
    }}  
 var numtestlist = [1,2,3,4,5,6,7,8,9,0]
 var parsedint = parseInt(testfordata[0])
-try{
+
 if(testfordata1.charAt(0) == "h"){
 console.log(testfordata[1] +  "FFF" +  testfordata2 + "YEP THIS IS IT")
 loadPosts(  testfordata2 );
@@ -65,8 +65,8 @@ else if(numtestlist.includes(praseInt(retPARAM()[0])) == true){
 	document.getElementById('currentID').innerHTML =  brenderlist[indexinbren + 6];
 }else{
 //pass
-}}catch{//pass
 }
+
 
 ////////////
 
