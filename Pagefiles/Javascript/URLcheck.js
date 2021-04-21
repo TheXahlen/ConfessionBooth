@@ -16,7 +16,7 @@ function editURL(name,value,secondvalue){
 currentURL = "https://xplosivex.github.io/ConfessionBooth/index.html"
 window.location.href = currentURL + "?" + name + "=" + value;
 if(secondvalue !== ""){
-window.location.href = currentURL + "?" + name + "=" + value + "::" + secondvalue + "::"; 
+window.location.href = currentURL + "?" + name + "=" + value + "%" + secondvalue + "%"; 
 }
 retPARAM()
 }
