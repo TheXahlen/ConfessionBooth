@@ -23,7 +23,24 @@ var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 		
 		return null
 	}
-  
+	
+	
+function preloaded(fetchednumber) {
+	document.getElementById('textinput').value =  "";
+	var indexinbren = brenderlist.indexOf(confessionlist[fetchednumber]) 
+	document.getElementById("currenttext").innerHTML = confessionlist[fetchednumber];  
+	document.getElementById('textinput').innerHTML =  confessionlist[fetchednumber];  
+	document.getElementById('textinput').style.color =  brenderlist[indexinbren + 2];
+	document.getElementById('textinput').style.textDecoration =  brenderlist[indexinbren + 3];
+	document.getElementById('textinput').style.fontFamily =  brenderlist[indexinbren + 4]
+	document.getElementById('textinput').style.fontSize =  brenderlist[indexinbren + 5]
+	document.getElementById('textinput').style.paddingBottom =  parseInt(brenderlist[indexinbren + 5].replace("px","")) / 2 + "%"
+	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + 6];
+	document.getElementById('currentID').innerHTML =  brenderlist[indexinbren + 6];
+	
+}
+	
+	
 function genNum() {
 	var x = Math.floor(Math.random() * confessionlist.length);
 	if(x == localStorage.getItem("numbergenned")) {
