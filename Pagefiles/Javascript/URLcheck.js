@@ -10,7 +10,7 @@ var percentind = curURL.search("%");
 var suboftotal = curURL.substring(percentind, curURL.length)
 suboftotal = suboftotal.replaceAll("%","")
 if(identityforSEARCH ==  "https://xplosivex.github.io/ConfessionBooth/index.html"){
-return null
+return ["",""]
 }else{  
 return [suboftotal,identityforSEARCH] 
 }
