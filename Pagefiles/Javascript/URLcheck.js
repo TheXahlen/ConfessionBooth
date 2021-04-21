@@ -9,7 +9,7 @@ var identityforSEARCH = curURL.substring(urlSET,urlSecondFormat.length)
 var percentind = curURL.search("%");
 var suboftotal = curURL.substring(percentind, curURL.length)
 suboftotal = suboftotal.replaceAll("%","")
-if(suboftotal == "https://xplosivex.github.io/ConfessionBooth/index.html" || identityforSEARCH ==  "https://xplosivex.github.io/ConfessionBooth/index.html"){
+if(identityforSEARCH ==  "https://xplosivex.github.io/ConfessionBooth/index.html"){
 return null
 }else{  
 return [suboftotal,identityforSEARCH] 
