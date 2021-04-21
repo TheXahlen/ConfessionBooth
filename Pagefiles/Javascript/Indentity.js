@@ -4,7 +4,7 @@ function getIP(json) {
     var result = [];
     var letters = 'abcdefghijklmnopqrstuvwxy'
     var lettercapitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var symbols = ':-=+)(*&^%$#@!.,/?';
+    var symbols = ':-+)(*^$@!.,/';
     var letterLength = letters.length;
     var lettercapitalLength = lettercapitals.length;
     var symbolLength = symbols.length;
