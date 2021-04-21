@@ -45,7 +45,7 @@ try{
 if(testfordata[0].charAt(0) == "h"){
 loadPosts( testfordata[1]);
 }
-if(numtestlist.includes(parsedint) == true || numtestlist.includes(testfordata[0])){
+if(numtestlist.includes(parsedint) == true || numtestlist.includes(testfordata[0]) == true){
 	var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
 	var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 	document.getElementById('textinput').value =  "";
