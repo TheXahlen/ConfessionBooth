@@ -17,21 +17,6 @@ localStorage.setItem("numbergenned", 0);
 localStorage.setItem("numcycled",0)
 localStorage.setItem("dataload",0)
 setdeleteDate();
-var testfordata = retPARAM()
-var numtestlist = [1,2,3,4,5,6,7,8,9,0]
-var parsedint = parseInt(testfordata[0])
-try{
-if(testfordata[0].charAt(0) == "h"){
-loadPosts( testfordata[1])
-}else if(numtestlist.includes(parsedint) == true){
-console.log("THERE IS AN ATTEMPT TO LOAD A POST OF A USERS POSTS")
-}
-}catch{//pass
-}
-function detect(){
-   if(localStorage.getItem("LOADED") == "FALSE"){
-   getIP("DEBUG")  
-   }}  
 setTimeout(detect(), 1500)
 checkID()
 var identity = localStorage.getItem('browserid');
@@ -48,6 +33,22 @@ document.getElementById("subtry").disabled = false;
 document.getElementById("subtry").backgroundColor = "white";  
 //pass
 localStorage.setItem("FIRSTRUN","FALSE")
+
 }
+var testfordata = retPARAM()
+var numtestlist = [1,2,3,4,5,6,7,8,9,0]
+var parsedint = parseInt(testfordata[0])
+try{
+if(testfordata[0].charAt(0) == "h"){
+loadPosts( testfordata[1])
+}else if(numtestlist.includes(parsedint) == true){
+console.log("THERE IS AN ATTEMPT TO LOAD A POST OF A USERS POSTS")
+}
+}catch{//pass
+}
+function detect(){
+   if(localStorage.getItem("LOADED") == "FALSE"){
+   getIP("DEBUG")  
+   }}  
 ////////////
 
