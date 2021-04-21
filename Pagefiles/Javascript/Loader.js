@@ -43,6 +43,7 @@ var numtestlist = [1,2,3,4,5,6,7,8,9,0,"1","2","3","4","5","6","7","8","9","0"]
 var parsedint = parseInt(testfordata[0])
 try{
 if(testfordata[0].charAt(0) == "h"){
+console.log(testfordata[1],"YEP THIS IS IT")
 loadPosts( testfordata[1]);
 }
 if(numtestlist.includes(parsedint) == true || numtestlist.includes(testfordata[0]) == true){
