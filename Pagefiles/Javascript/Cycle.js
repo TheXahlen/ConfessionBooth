@@ -26,7 +26,6 @@ var confessionlist = JSON.parse(localStorage.getItem("confessions"))
   
 function genNum() {
 	var x = Math.floor(Math.random() * confessionlist.length);
-	}
 	if(x == localStorage.getItem("numbergenned")) {
 	genNum()
 	}
