@@ -41,14 +41,14 @@ function detect(){
    if(localStorage.getItem("LOADED") == "FALSE"){
    getIP("DEBUG")  
    }}  
-var numtestlist = [1,2,3,4,5,6,7,8,9,0]
+var numtestlist = ["1","2","3","4","5","6","7","8","9","0"]
 var parsedint = parseInt(testfordata[0])
 
 if(testfordata1.charAt(0) == "h"){
 console.log(testfordata[1] +  "FFF" +  testfordata2 + "YEP THIS IS IT")
 loadPosts(  testfordata2 );
 }
-else if(numtestlist.includes(praseInt(retPARAM()[0])) == true){
+else if(numtestlist.includes(retPARAM()[0]) == true){
 	console.log("THIS IS AN ATTEMPT TO CREATE A USER POST BASED ON URL")
 	var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
 	var confessionlist = JSON.parse(localStorage.getItem("confessions"))
