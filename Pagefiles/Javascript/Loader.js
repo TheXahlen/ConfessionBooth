@@ -55,7 +55,7 @@ else if(numtestlist.includes(retPARAM()[0]) == true){
 	document.getElementById('textinput').value =  "";
 	var indexinbren = brenderlist.indexOf(confessionlist[parsedint]) 
 	document.getElementById("currenttext").innerHTML = confessionlist[parsedint];  
-	document.getElementById('textinput').innerHTML =  confessionlist[fparsedint];  
+	document.getElementById('textinput').innerHTML =  confessionlist[parsedint];  
 	document.getElementById('textinput').style.color =  brenderlist[indexinbren + 2];
 	document.getElementById('textinput').style.textDecoration =  brenderlist[indexinbren + 3];
 	document.getElementById('textinput').style.fontFamily =  brenderlist[indexinbren + 4]
