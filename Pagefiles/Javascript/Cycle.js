@@ -24,8 +24,25 @@ var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 		return null
 	}
   
-function genNum() {
+function genNum(goodnum) {
+	if(goodnum !== ""){
+	localStorage.setItem("numbergenned", goodnum);
+	document.getElementById('textinput').value =  "";
+	var indexinbren = brenderlist.indexOf(confessionlist[goodnum]) 
+	editURL("identity",brenderlist[indexinbren + 6],goodnum)
+	document.getElementById("currenttext").innerHTML = confessionlist[goodnum];  
+	document.getElementById('textinput').innerHTML =  confessionlist[goodnum];  
+	document.getElementById('textinput').style.color =  brenderlist[indexinbren + 2];
+	document.getElementById('textinput').style.textDecoration =  brenderlist[indexinbren + 3];
+	document.getElementById('textinput').style.fontFamily =  brenderlist[indexinbren + 4]
+	document.getElementById('textinput').style.fontSize =  brenderlist[indexinbren + 5]
+	document.getElementById('textinput').style.paddingBottom =  parseInt(brenderlist[indexinbren + 5].replace("px","")) / 2 + "%"
+	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + 6];
+	document.getElementById('currentID').innerHTML =  brenderlist[indexinbren + 6];
+
+	}else{
 	var x = Math.floor(Math.random() * confessionlist.length);
+	}
 	if(x == localStorage.getItem("numbergenned")) {
 	genNum()
 	}
