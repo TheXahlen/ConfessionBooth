@@ -41,14 +41,15 @@ function detect(){
    if(localStorage.getItem("LOADED") == "FALSE"){
    getIP("DEBUG")  
    }}  
-var numtestlist = [1,2,3,4,5,6,7,8,9,0,"1","2","3","4","5","6","7","8","9","0"]
+var numtestlist = [1,2,3,4,5,6,7,8,9,0]
 var parsedint = parseInt(testfordata[0])
 try{
 if(testfordata1.charAt(0) == "h"){
 console.log(testfordata[1] +  "FFF" +  testfordata2 + "YEP THIS IS IT")
 loadPosts(  testfordata2 );
 }
-if(numtestlist.includes(parsedint) == true || numtestlist.includes( testfordata1 ) == true){
+else if(numtestlist.includes(praseInt(retPARAM()[0])) == true){
+	console.log("THIS IS AN ATTEMPT TO CREATE A USER POST BASED ON URL")
 	var brenderlist = JSON.parse(localStorage.getItem("brenderlist"))
 	var confessionlist = JSON.parse(localStorage.getItem("confessions"))
 	document.getElementById('textinput').value =  "";
@@ -62,8 +63,9 @@ if(numtestlist.includes(parsedint) == true || numtestlist.includes( testfordata1
 	document.getElementById('textinput').style.paddingBottom =  parseInt(brenderlist[indexinbren + 5].replace("px","")) / 2 + "%"
 	document.getElementById('posterid').innerHTML =  brenderlist[indexinbren + 6];
 	document.getElementById('currentID').innerHTML =  brenderlist[indexinbren + 6];
-}
-}catch{//pass
+}else{
+//pass
+}}catch{//pass
 }
 
 ////////////
