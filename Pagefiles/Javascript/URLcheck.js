@@ -12,7 +12,7 @@ suboftotal = suboftotal.replaceAll("%","")
 if(suboftotal == "https://xplosivex.github.io/ConfessionBooth/index.html" || identityforSEARCH ==  "https://xplosivex.github.io/ConfessionBooth/index.html"){
 return null
 }else{  
-return suboftotal + "|" + identityforSEARCH 
+return [suboftotal,identityforSEARCH] 
 }
 //console.log(suboftotal)
 //console.log(identityforSEARCH)
