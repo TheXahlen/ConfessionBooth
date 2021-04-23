@@ -25,8 +25,8 @@
 
 
 function Clicked() {
-    var transfer = document.getElementById("textsubmit").value;
-    document.getElementById("confession").value = transfer;
+    //var transfer = document.getElementById("textsubmit").value;
+    //document.getElementById("confession").value = transfer;
     checkID();
     load();
 
@@ -40,8 +40,8 @@ function Clicked() {
     lengthofcurrentsub = lengthofcurrentsub.replaceAll(" ", "").length;
 
     if (lengthofcurrentsub < 30) {
-       // var lengthleft = 30 - lengthofcurrentsub;
-        //var aler = "This post doesn't meet the minium amount of characters it has {" + lengthofcurrentsub + "} you need {" + lengthleft + "} the minimum is 30";
+        var lengthleft = 30 - lengthofcurrentsub;
+        var aler = "This post doesn't meet the minium amount of characters it has {" + lengthofcurrentsub + "} you need {" + lengthleft + "} the minimum is 30";
         alert(aler);
         return null;
     }
