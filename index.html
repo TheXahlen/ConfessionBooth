@@ -1,195 +1,190 @@
-<html>
-  <head>
-    <title>Confesion Booth</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/booth.ico">
-    <meta name="Description" content="Computer Science project that uses google spreadsheets to index data.">
-    <meta name="KeyWords" content="cs,computer science,computers,project">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
-  </head>
-  <body id="bodyifallowed" onload="Mobile(); Loader();">
-    <div style="padding-bottom:5%; padding-left:15.5%; padding-right:15.5%;">
-      <div style="border:black solid 8px;  opacity:0.8; background:grey; border-radius:15%;">
-        <h2 class="postid" id="posterid" style="opacity:0.55;font-size:32px; border:black solid 3px; background:black; color:silver; border-radius:5%;">LOADING USER IDENTIFIER</h2>
-        <table id="buttons" style="margin:auto;">
-          <tbody>
-            <tr>
-              <th>
-                <button id="cycle" class="buttontry" onclick="cycle()" style="display: block; width: 100%; margin: auto;">CYCLE  </button> 
-              </th>
-              <th>
-                <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: none; width: 100%; margin: auto;">SUBMIT</button>  
-              </th>
-              <th>
-                <button id="switcher" class="buttontry" onclick="switchd(); load(); checkID();" style="display:block; width:100%;"> SWITCH MODES</button>
-              </th>
-            </tr>
-            <!--
-              //
-              possible dark mode not sure if I want to implement this button yet 
-              //
-              </th><th>
-              <button id="switcher" class="buttontry" onclick="nightMode()" style="display:block; width:15px;">[]</button>-->
-          </tbody>
-        </table>
-        <button onclick="loadPosts()" id="posterload" class="buttontry" style="display: block; margin:auto; width: 55%;">See Identifiers Posts</button>
-        <!--
-          unused so far plans to implement later it's a button that switched between submit and cycle functionality.
-           <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
-          -->
-        <form name="submit-to-google-sheet">
-          <table style="width:100%; margin:auto; text-align:center;">
-            <tbody>
-              <tr>
-                <th>
-                  <div id="selector" style="display: none;">
-                    <select name="color" id="color" class="selector" onchange="SelectedColor();">
-                      <option value="black" style="color:black;">Black</option>
-                      <option value="blue" style="color:blue;">Blue</option>
-                      <option value="red" style="color:red">Red</option>
-                      <option value="green" style="color:green;">Green</option>
-                      <option value="yellow" style="color:yellow;">Yellow</option>
-                      <option value="cyan" style="color:cyan;">Cyan</option>
-                      <option value="silver" style="color:silver;">Silver</option>
-                      <option value="purple" style="color:purple;">purple</option>
-                    </select>
-                    <select name="decoration" id="decoration" class="selector" onchange="SelectedDecoration();">
-                      <option value="none" style="text-decoration:;">None</option>
-                      <option value="underline" style="text-decoration:underline;">Underline</option>
-                      <option value="line-through" style="text-decoration:line-through;">Line-Through</option>
-                      <option value="underline overline" style="text-decoration:underline overline;">Underline Overline</option>
-                    </select>
-                    <select name="font" id="font" class="selector" onchange="SelectedFont();">
-                      <option value="Ariel" style="font-family:ariel;">Ariel</option>
-                      <option value="Brush Script MT" style="font-family:Brush Script MT;">Brush Script MT</option>
-                      <option value="monospace" style="font-family:monospace;">Monospace</option>
-                    </select>
-                    <select name="size" id="size" class="selector" onchange="SelectedSize();">
-                      <option value="35px" style="font-size:34px;">35PX</option>
-                      <option value="37px" style="font-size:38px;">38PX</option>
-                      <option value="43px" style="font-size:43px;">43PX</option>
-                      <option value="49px" style="font-size:49px;">49PX</option>
-                    </select>
-                  </div>
-                </th>
-              </tr>
-            </tbody>
-          </table>
-          <div id="director">
-            <table style="width:68%; margin:auto; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; font-size:24px; opacity: 0.75;">
-              <tbody>
-                <tr>
-                  <th>
-                    <a href="about.html" style="margin:auto;">About</a>
-                  </th>
-                  <th style="width:100%">
-                    <a href="privacy.html"> Privacy</a>
-                  </th>
-                  <th>
-                    <a href="progress.html"> Log</a>
-                  </th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p id="Display" style="border:solid 3px black;display:none; text-align:center; margin: auto; background:white; border-radius:15%;  font-size:35px; width:45%; opacity:0.6;">
-            PreviewText
-          </p>
-          <div id="silentdata">
-            <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
-            <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
-            <button style="display:none;" id="submit"></button>
-            <p style="display:none;" id="currentID"></p>
-            <p style="display:none;"  id="currenttext"></p>
-            <textarea style="display:none;" name="confession" type="text" id="confession"></textarea>
-          </div>
-        </form>
-      </div>
-      <div id="displayandentry">
-        <p style="width: 90%; font-weight:bold; padding-bottom:30%; text-alight:center; background: grey; word-wrap:break-word; border: 9px solid black; border-radius: 2.5%; font-size: 27.5pt; opacity: 0.82; margin: auto; display: block; color: black; text-decoration: none;" id="textinput"></p>
-        <textarea name="confession" id="textsubmit" rows="10" type="text" class="textarea" style="width:70%; opacity: 0.82; background:grey; height:45%; display: none;">  </textarea>
-      </div>
-    </div>
-    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
-      which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
-    <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
-      which is then used as their identifier. -->
-    <div id="scripts">
-      <script type="application/javascript" src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/URLcheck.js"></script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/IdentityCheck.js"></script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Checksim.js"></script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
-      <script type="application/javascript" onload='localStorage.setItem("LOADED","TRUE");' src="https://api.ipify.org?format=jsonp&amp;callback=getIP"> </script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Disgen.js"></script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Cycle.js"></script>
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
-      <!-- this handles the submissons for the spreadsheet-->
-      <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
-      <script>
-        function SelectedColor() {
-        var e = document.getElementById("color");
-        var strUser = e.options[e.selectedIndex].text;
-        document.getElementById("Display").style.color = strUser;
-        }
-        function SelectedDecoration(){
-        var e = document.getElementById("decoration");
-        var strUser = e.options[e.selectedIndex].text;
-        document.getElementById("Display").style.textDecoration = strUser;
-        }
-        function SelectedSize(){
-        var e = document.getElementById("size");
-        var strUser = e.options[e.selectedIndex].text;
-        document.getElementById("Display").style.fontSize = strUser;
-        }
-        function SelectedFont(){
-        var e = document.getElementById("font");
-        var strUser = e.options[e.selectedIndex].text;
-        document.getElementById("Display").style.fontFamily = strUser;
-        }
-      </script>
-      <script>
-        function switchd(){
-        load()
-        checkID()
-        var identity = localStorage.getItem('browserid');
-        document.getElementById("currentID").innerHTML = identity;
-        document.getElementById('posterid').innerHTML =  identity;
-        
-        
-        var cycledis = document.getElementById("cycle").style.display
-        var subdis = document.getElementById("subtry").style.display
-        var textdis = document.getElementById("textinput").style.display
-        var selectdis =  document.getElementById("selector").style.display
-        var textsubdis = document.getElementById("textsubmit").style.display
-        var viewdis = document.getElementById("posterload").style.display
-        
-        if (cycledis == "none"){
-        document.getElementById("posterload").style.display = "block"
-        document.getElementById("cycle").style.display = "block"
-        document.getElementById("textinput").style.display = "block"
-        document.getElementById("subtry").style.display= "none"
-        document.getElementById("Display").style.display= "none"
-        document.getElementById("selector").style.display = "none"
-        document.getElementById("textsubmit").style.display = "none"
-        //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:block"> || View This Users Posts </button>')
-        }else{
-        location.hash = ""
-        
-        document.getElementById("cycle").style.display = "none"
-        document.getElementById("textinput").style.display = "none"
-        document.getElementById("posterload").style.display = "none"
-        document.getElementById("Display").style.display= "block"
-        document.getElementById("textsubmit").style.display = "block"
-        document.getElementById("subtry").style.display = "block"
-        document.getElementById("selector").style.display= "block"
-        //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:none"> || View This Users Posts </button>')
-        }} 
-      </script>
-    </div>
-  </body>
-</html>
+<html><head>
+<title>Confesion Booth</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/booth.ico">
+   <meta name="Description" content="Computer Science project that uses google spreadsheets to index data.">
+   <meta name="KeyWords" content="cs,computer science,computers,project">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
+</head>
+
+<body id="bodyifallowed" onload="Mobile(); Loader();">
+<div style="padding-bottom:5%; padding-left:25.5%; padding-right:25.5%;">
+<div style="border:black solid 8px;  opacity:0.8; background:grey; border-radius:15%;">
+   <h2 class="postid" id="posterid" style="opacity:0.55;font-size:32px; border:black solid 3px; background:black; color:silver; border-radius:5%;">LOADING USER IDENTIFIER</h2>
+<table id="buttons" style="margin:auto;">
+<tbody><tr>
+<th>
+   <button id="cycle" class="buttontry" onclick="cycle()" style="display: block; width: 100%; margin: auto;">CYCLE  </button> 
+   </th><th>
+   <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: none; width: 100%; margin: auto;">SUBMIT</button>  
+  </th><th>
+<button id="switcher" class="buttontry" onclick="switchd(); load(); checkID();" style="display:block; width:100%;"> SWITCH MODES</button>
+</th></tr>
+   
+<!--
+//
+possible dark mode not sure if I want to implement this button yet 
+//
+</th><th>
+<button id="switcher" class="buttontry" onclick="nightMode()" style="display:block; width:15px;">[]</button>-->
+   
+</tbody></table>
+<button onclick="loadPosts()" id="posterload" class="buttontry" style="display: block; margin:auto; width: 55%;">See Identifiers Posts</button>
+ <!--
+unused so far plans to implement later it's a button that switched between submit and cycle functionality.
+ <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
+-->
+<form name="submit-to-google-sheet"> 
+ <table style="width:100%; margin:auto; text-align:center;">
+<tbody><tr><th> 
+<div id="selector" style="display: none;">
+  
+  <select name="color" id="color" class="selector" onchange="SelectedColor();">
+     <option value="black" style="color:black;">Black</option>
+    <option value="blue" style="color:blue;">Blue</option>
+    <option value="red" style="color:red">Red</option>
+    <option value="green" style="color:green;">Green</option>
+    <option value="yellow" style="color:yellow;">Yellow</option>
+    <option value="cyan" style="color:cyan;">Cyan</option>
+    <option value="silver" style="color:silver;">Silver</option>
+    <option value="purple" style="color:purple;">purple</option>
+  </select>
+  <select name="decoration" id="decoration" class="selector" onchange="SelectedDecoration();">
+    <option value="none" style="text-decoration:;">None</option>
+    <option value="underline" style="text-decoration:underline;">Underline</option>
+    <option value="line-through" style="text-decoration:line-through;">Line-Through</option>
+    <option value="underline overline" style="text-decoration:underline overline;">Underline Overline</option>
+  </select>
+  <select name="font" id="font" class="selector" onchange="SelectedFont();">
+     
+    <option value="Ariel" style="font-family:ariel;">Ariel</option>
+    <option value="Brush Script MT" style="font-family:Brush Script MT;">Brush Script MT</option>
+    <option value="monospace" style="font-family:monospace;">Monospace</option>
+  </select>
+  <select name="size" id="size" class="selector" onchange="SelectedSize();">
+    <option value="35px" style="font-size:34px;">35PX</option>
+    <option value="37px" style="font-size:38px;">38PX</option>
+    <option value="43px" style="font-size:43px;">43PX</option>
+    <option value="49px" style="font-size:49px;">49PX</option>
+  </select>
+  
+</div>
+</th></tr>
+</tbody></table>
+<div id="director">
+<table style="width:68%; margin:auto; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; font-size:24px; opacity: 0.75;">
+   <tbody><tr><th>
+         <a href="about.html" style="margin:auto;">About</a>
+      </th><th style="width:100%">
+         <a href="privacy.html"> Privacy</a>
+      </th><th>
+         <a href="progress.html"> Log</a>
+   </th></tr></tbody>
+</table>
+   </div>
+</div>
+   <p id="Display" style="border:solid 3px black;display:none; text-align:center; margin: auto; background:white; border-radius:15%;  font-size:35px; width:45%; opacity:0.6;">
+      PreviewText
+   </p>
+   </div>
+   <div id="displayandentry">
+<p style="width: 90%; font-weight:bold; padding-bottom:30%; text-alight:center; background: grey; word-wrap:break-word; border: 9px solid black; border-radius: 2.5%; font-size: 27.5pt; opacity: 0.82; margin: auto; display: block; color: black; text-decoration: none;" id="textinput"></p>
+<textarea name="confession" id="textsubmit" rows="10" type="text" class="textarea" style="width:70%; opacity: 0.82; background:grey; height:45%; display: none;">  </textarea>
+   </div>
+   <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
+   which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
+   
+<div id="silentdata">
+   <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
+   <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
+   <button style="display:none;" id="submit"></button>
+   <p style="display:none;" id="currentID"></p>
+   <p style="display:none;" id="currenttext"></p>
+</form>
+
+ <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
+   which is then used as their identifier. -->
+
+<div id="scripts">
+      
+
+   <script type="application/javascript" src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script>
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/URLcheck.js"></script>
+   
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/IdentityCheck.js"></script>
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Checksim.js"></script>
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
+   <script type="application/javascript" onload='localStorage.setItem("LOADED","TRUE");' src="https://api.ipify.org?format=jsonp&amp;callback=getIP"> </script>
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Disgen.js"></script>
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Cycle.js"></script>
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
+   
+   <!-- this handles the submissons for the spreadsheet-->
+   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
+   <script>
+      function SelectedColor() {
+var e = document.getElementById("color");
+var strUser = e.options[e.selectedIndex].text;
+document.getElementById("Display").style.color = strUser;
+}
+function SelectedDecoration(){
+var e = document.getElementById("decoration");
+var strUser = e.options[e.selectedIndex].text;
+document.getElementById("Display").style.textDecoration = strUser;
+}
+function SelectedSize(){
+var e = document.getElementById("size");
+var strUser = e.options[e.selectedIndex].text;
+document.getElementById("Display").style.fontSize = strUser;
+}
+function SelectedFont(){
+var e = document.getElementById("font");
+var strUser = e.options[e.selectedIndex].text;
+document.getElementById("Display").style.fontFamily = strUser;
+}
+   </script>
+   <script>
+   function switchd(){
+   load()
+   checkID()
+   var identity = localStorage.getItem('browserid');
+   document.getElementById("currentID").innerHTML = identity;
+   document.getElementById('posterid').innerHTML =  identity;
+   
+   
+   var cycledis = document.getElementById("cycle").style.display
+   var subdis = document.getElementById("subtry").style.display
+   var textdis = document.getElementById("textinput").style.display
+   var selectdis =  document.getElementById("selector").style.display
+   var textsubdis = document.getElementById("textsubmit").style.display
+   var viewdis = document.getElementById("posterload").style.display
+   
+   if (cycledis == "none"){
+   document.getElementById("posterload").style.display = "block"
+   document.getElementById("cycle").style.display = "block"
+   document.getElementById("textinput").style.display = "block"
+   document.getElementById("subtry").style.display= "none"
+   document.getElementById("Display").style.display= "none"
+   document.getElementById("selector").style.display = "none"
+   document.getElementById("textsubmit").style.display = "none"
+   //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:block"> || View This Users Posts </button>')
+   }else{
+   location.hash = ""
+   
+   document.getElementById("cycle").style.display = "none"
+   document.getElementById("textinput").style.display = "none"
+   document.getElementById("posterload").style.display = "none"
+   document.getElementById("Display").style.display= "block"
+   document.getElementById("textsubmit").style.display = "block"
+   document.getElementById("subtry").style.display = "block"
+   document.getElementById("selector").style.display= "block"
+   //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:none"> || View This Users Posts </button>')
+   }} 
+   </script>
+</div>
+
+</body></html>
