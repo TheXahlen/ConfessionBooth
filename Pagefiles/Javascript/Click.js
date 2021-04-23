@@ -25,6 +25,8 @@
 
 
 function Clicked() {
+    var transfer = document.getElementById("textsubmit").value;
+    document.getElementById("confession").value = transfer;
     checkID();
     load();
 
@@ -47,9 +49,7 @@ function Clicked() {
     if (document.getElementById("subtry").style.display == "none") {
         console.log("submission was attempted although the submit button is not visible so action was aborted");
     } else {
-        var transfer = document.getElementById("textsubmit").value;
-        document.getElementById("currenttext").value = transfer;
-        document.getElementById("submit").click();
+ 
         document.getElementById("subtry").disabled = true;
         document.getElementById("subtry").backgroundColor = "grey";
     }
