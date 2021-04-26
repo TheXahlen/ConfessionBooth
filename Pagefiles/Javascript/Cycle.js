@@ -54,16 +54,16 @@ function cycle() {
     } else {
         editURL("identity", brenderlist[8], 0);
         document.getElementById("textinput").innerHTML = "";
-        document.getElementById("currenttext").innerHTML = confessionlist[1];
-        document.getElementById("textinput").innerHTML = confessionlist[2];
-        document.getElementById("textinput").style.color = brenderlist[3];
-        document.getElementById("textinput").style.textDecoration = brenderlist[4];
-        document.getElementById("textinput").style.fontFamily = brenderlist[5];
-        document.getElementById("textinput").style.fontSize = brenderlist[6];
+        document.getElementById("currenttext").innerHTML = confessionlist[0];
+        document.getElementById("textinput").innerHTML = confessionlist[0];
+        document.getElementById("textinput").style.color = brenderlist[2];
+        document.getElementById("textinput").style.textDecoration = brenderlist[3];
+        document.getElementById("textinput").style.fontFamily = brenderlist[3];
+        document.getElementById("textinput").style.fontSize = brenderlist[5];
         //document.getElementById("textinput").style.paddingBottom = parseInt(brenderlist[5].replace("px", "")) / 2 + "%";
         console.log(brenderlist[7])
-        document.getElementById("posterid").innerHTML = brenderlist[8];
-        document.getElementById("currentID").innerHTML = brenderlist[8];
+        document.getElementById("posterid").innerHTML = brenderlist[7];
+        document.getElementById("currentID").innerHTML = brenderlist[7];
         return null;
     }
 }
