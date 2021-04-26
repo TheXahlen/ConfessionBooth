@@ -39,7 +39,7 @@ function loadPosts(testspecific) {
     var completelist = [];
     for (var b = 0; b < amount; b++) {
         var postindexed = brenderparsedvar[indexes[b] - 7];
-        var dateforpost = brenderparsedvar[indexes[b] - 6];
+        var dateforpost = brenderparsedvar[indexes[b] - 1];
         var sizeoffont = brenderparsedvar[indexes[b] - 2] + "; ";
         var fontfamily = brenderparsedvar[indexes[b] - 3] + "; ";
         var textdecoration = brenderparsedvar[indexes[b] - 4] + "; ";
