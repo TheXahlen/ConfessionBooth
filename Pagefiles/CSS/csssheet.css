@@ -1,6 +1,19 @@
 * {
     box-sizing: border-box;
 }
+
+.topdivmobile {
+    padding-bottom: 1.8%;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.seconddivmobile {
+    border: black solid 8px;
+    opacity: 0.8;
+    background: grey;
+    border-radius: 15%;
+}
 .postid {
     text-align: center;
     background: white;
@@ -16,9 +29,80 @@
     color: silver;
     border-radius: 5%;
 }
+.postender {
+    font-size: 95.5%;
+    background: white;
+    color: black;
+    border-radius: 12px;
+}
+.buttontrythree {
+    background: white;
+    opacity: 0.65;
+    width: 100%;
+    margin: auto;
+    font-size: 9.5px;
+}
+
+.buttontrythreeend {
+    display: none;
+    margin: auto;
+    width: 75%;
+    background: white none repeat scroll 0% 0%;
+    opacity: 0.65;
+    font-size: 9.5px;
+}
+.directorclass {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    border: black solid 3px;
+    border-radius: 15px;
+    background-color: white;
+    font-size: 16px;
+    opacity: 0.75;
+}
+
+.pelemformobile {
+    display: none;
+    padding-bottom: 85%;
+    width: 95%;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    border: 9px solid black;
+    opacity: 0.82;
+    overflow: auto;
+    background: grey none repeat scroll 0% 0%;
+    border-radius: 15px;
+    font-size: 27.5pt;
+    margin: auto;
+    color: black;
+    text-decoration: none;
+}
+
+.tareamob {
+    width: 95%;
+    opacity: 0.82;
+    padding-bottom: 23.5%;
+    background: grey none repeat scroll 0% 0%;
+    height: auto;
+    display: block;
+}
+
 .topdiv {
     padding-left: 20.5%;
     padding-right: 20.5%;
+}
+
+.displayclassmobile {
+    border: 3px solid black;
+    display: block;
+    text-align: center;
+    margin: auto;
+    background: white none repeat scroll 0% 0%;
+    border-radius: 13px;
+    font-size: 25px;
+    width: 55.5%;
+    opacity: 0.6;
 }
 
 .seconddiv {
@@ -27,8 +111,6 @@
     background: grey;
     border-radius: 15%;
 }
-
-
 
 .displayelem {
     border: 3px solid black;
@@ -43,13 +125,13 @@
 }
 
 .silentdata {
-    top:-1000000000000000000000000000000000px;
-    opacity:0;
-    display:none;
-    font-size:0.1px;
-    background:white;
-    color:white;   
-} 
+    top: -1000000000000000000000000000000000px;
+    opacity: 0;
+    display: none;
+    font-size: 0.1px;
+    background: white;
+    color: white;
+}
 
 .buttontry {
     border: black solid 4px;
@@ -59,11 +141,11 @@
     font-size: 16pt;
 }
 .textaream {
-    width: 70%; 
-    opacity: 0.82; 
+    width: 70%;
+    opacity: 0.82;
     background: grey none repeat scroll 0% 0%;
-    height: 45%; 
-    overflow: auto;   
+    height: 45%;
+    overflow: auto;
 }
 .pelemtext {
     width: 75%;
@@ -198,5 +280,3 @@ body {
     font-family: Mandor;
     src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Mandor.otf);
 }
-
-
