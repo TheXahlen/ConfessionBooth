@@ -7,16 +7,16 @@
    <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
 </head>
 <body id="bodyifallowed" onload="Loader();">
-<div style="padding-bottom:1.8%; padding-left:6.0%; padding-right:6.0%;"> 
-<div style="border:black solid 8px;  opacity:0.8; background:grey; border-radius:15%;"> 
+<div class="topdivmobile"> 
+<div class="seconddivmobile"> 
     <table style=" width:100%; background:grey;">
      <tbody>
       <tr>
        <th>
-        <h2 class="post" style="font-size: 95.5%; background: white; color: black; border-radius: 12px;" id="posterid">[OTIyMTc][nJ:B^))]</h2>
+        <h2 class="post postender" id="posterid">[OTIyMTc][nJ:B^))]</h2>
        </th>
        <th>
-        <h2 class="post" style="font-size: 95.5%; background: white; color: black; border-radius: 12px;" id="date">[4/26|2:59:PM]</h2>
+        <h2 class="post postender" id="date">[4/26|2:59:PM]</h2>
        </th>
       </tr>
      </tbody>
@@ -24,15 +24,15 @@
 <table id="buttons" style="margin:auto;">
 <tbody><tr>
 <th>
-   <button id="cycle" class="buttontry" onclick="cycle()" style="display: none; background: white none repeat scroll 0% 0%; opacity: 0.65; width: 100%; margin: auto; font-size: 9.5px;">CYCLE  </button> 
+   <button id="cycle" class="buttontry buttontrythree" onclick="cycle()" style="display: none;">CYCLE  </button> 
    </th><th>
-   <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: block; background: white none repeat scroll 0% 0%; opacity: 0.65; width: 100%; margin: auto; font-size: 9.5px;">SUBMIT</button>  
+   <button type="submit" id="subtry" class="buttontry buttontrythree" onclick="Clicked();" style="display: block;">SUBMIT</button>  
   </th><th>
-<button id="switcher" class="buttontry" onclick="switchd(); load(); checkID();" style="display:block;background:white; opacity:0.65;  width:100%;font-size:9.5px;"> SWITCH MODES</button>
+<button id="switcher" class="buttontry buttontrythree " onclick="switchd(); load(); checkID();" style="display:block;"> SWITCH MODES</button>
 </th></tr>
 
 </tbody></table>
-<button onclick="loadPosts()" id="posterload" class="buttontry" style="display: none; margin: auto; width: 75%; background: white none repeat scroll 0% 0%; opacity: 0.65; font-size: 9.5px;">See Identifiers Posts</button>
+<button onclick="loadPosts()" id="posterload" class="buttontry buttontrythreeend" >See Identifiers Posts</button>
  <!--
 unused so far plans to implement later it's a button that switched between submit and cycle functionality.
  <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
@@ -79,7 +79,7 @@ unused so far plans to implement later it's a button that switched between submi
 </th></tr>
 </tbody></table>
 <div id="director">
-<table style="width:75%; margin:auto; text-align:center; border:black solid 3px; border-radius:15px; background-color: white; font-size:16px; opacity: 0.75;">
+<table class="directorclass">
    <tbody><tr><th>
          <a href="about.html" style="margin:auto;">About</a>
       </th><th style="width:100%">
@@ -89,7 +89,7 @@ unused so far plans to implement later it's a button that switched between submi
    </th></tr></tbody>
 </table>
     </div>
-   <p id="Display" style="border: 3px solid black; display: block; text-align: center; margin: auto; background: white none repeat scroll 0% 0%; border-radius: 13px; font-size: 25px; width: 55.5%; opacity: 0.6;">
+   <p id="Display" class="displayclassmobile">
       PreviewText
    </p>
 
@@ -103,16 +103,16 @@ unused so far plans to implement later it's a button that switched between submi
       <textarea name="identity" type="text" id="identity"></textarea>
       <textarea name="confession" type="text" id="confession"> </textarea>
       <textarea name="date" type="text" id="currentdate"></textarea>
-      <p id="currentID">[OTIyMTc][nJ:B^))]</p>
-      <p id="currenttext">{https://xplosivex.github.io/ConfessionBooth/mobileindex.html} This user Identifer has not posted yet!</p>
+      <p id="currentID"></p>
+      <p id="currenttext"></p>
      </div>
  </form>
    </div>
     </div>
  
   <div id="displayandentry" style="padding-top: 3%;">
-   <p id="textinput" style="display: none; padding-bottom: 85%; width: 95%; font-weight: bold; overflow-wrap: break-word; border: 9px solid black; opacity: 0.82; overflow: auto; background: grey none repeat scroll 0% 0%; border-radius: 15px; font-size: 27.5pt; margin: auto; color: black; text-decoration: none;">{https://xplosivex.github.io/ConfessionBooth/mobileindex.html} This user Identifer has not posted yet!</p>
-   <textarea id="textsubmit" onchange="Contribute(); setcurrentDate();" minlength="20" maxlength="550" row="10" class="mobiletextarea" style="width: 95%; opacity: 0.82; padding-bottom:23.5%; background: grey none repeat scroll 0% 0%; height:auto; display: block;"></textarea>
+   <p id="textinput" class="pelemformobile" style="display:none"></p>
+   <textarea id="textsubmit" onchange="Contribute(); setcurrentDate();" minlength="20" maxlength="550" row="10" class="mobiletextarea tareamob" ></textarea>
   </div>
  </body>
  <div id="scripts">
