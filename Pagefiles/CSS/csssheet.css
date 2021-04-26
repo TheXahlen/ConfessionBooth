@@ -14,12 +14,20 @@
     font-family: Hero;
     font-size: 16pt;
 }
+.textaream {
+    width: 70%; 
+    opacity: 0.82; 
+    background: silver none repeat scroll 0% 0%;
+    height: 45%; 
+    display: block;
+    overflow: auto;   
+}
 .pelemtext {
     width: 75%;
     font-weight: bold;
     height: 65%;
     padding-top: 10px;
-    background: grey;
+    background: grey none repeat scroll 0% 0%;
     overflow-wrap: break-word;
     overflow: auto;
     border: 9px solid black;
