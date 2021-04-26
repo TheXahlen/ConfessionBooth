@@ -50,7 +50,7 @@ lengthofcurrentsub = lengthofcurrentsub.replaceAll(" ", "").length;
         return null;
         
     } else {
-        
+        setcurrentDate()
         document.getElementById("submit").click();
         document.getElementById("subtry").disabled = true;
         document.getElementById("subtry").backgroundColor = "grey";
