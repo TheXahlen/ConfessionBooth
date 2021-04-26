@@ -1,94 +1,105 @@
 * {
     box-sizing: border-box;
-
 }
-.postid{   
-text-align:center; 
-background:white; 
-font-size:20px;
-font-family:Ariel;     
+.postid {
+    text-align: center;
+    background: white;
+    font-size: 20px;
+    font-family: Ariel;
 }
-.buttontry{
- border:black solid 4px; 
- border-radius:10px; 
- opacity: 0.75; 
- font-family:Hero; 
- font-size: 16pt;   
-} 
-.mobilebuttontry{
- border:black solid 2px; 
- border-radius:10px; 
- opacity: 0.75; 
- font-family:Hero; 
- font-size: 13pt;   
-} 
- .selector{
-  border:black solid 4px;
-  border-radius:10px; 
-  width:38%;
-  opacity: 0.75;  
-  font-size: 16pt;
-     
+.buttontry {
+    border: black solid 4px;
+    border-radius: 10px;
+    opacity: 0.75;
+    font-family: Hero;
+    font-size: 16pt;
 }
-.textarea{
-    
-display: block; 
-margin-left: auto; 
-margin-right: auto; 
-border:black solid 9px; 
-border-radius:15px; 
-font-size: 35pt; 
-opacity: 0.75;    
-}   
-.mobiletextarea{
-    
-display: block; 
-margin-left: auto; 
-margin-right: auto; 
-border:black solid 4px; 
-border-radius:15px; 
-font-size: 20px; 
-opacity: 0.75;    
-}   
+.pelemtext {
+    width: 75%;
+    font-weight: bold;
+    height: 65%;
+    padding-top: 10px;
+    background: grey;
+    overflow-wrap: break-word;
+    overflow: auto;
+    border: 9px solid black;
+    border-radius: 2.5%;
+    font-size: 35px;
+    opacity: 0.82;
+    margin: auto;
+    display: block;
+    color: red;
+    text-decoration: none;
+    font-family: Ariel;
+}
+.mobilebuttontry {
+    border: black solid 2px;
+    border-radius: 10px;
+    opacity: 0.75;
+    font-family: Hero;
+    font-size: 13pt;
+}
+.selector {
+    border: black solid 4px;
+    border-radius: 10px;
+    width: 38%;
+    opacity: 0.75;
+    font-size: 16pt;
+}
+.textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: black solid 9px;
+    border-radius: 15px;
+    font-size: 35pt;
+    opacity: 0.75;
+}
+.mobiletextarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: black solid 4px;
+    border-radius: 15px;
+    font-size: 20px;
+    opacity: 0.75;
+}
 
 .column {
- margin: auto;
-float:right;
+    margin: auto;
+    float: right;
     width: 75%;
-    word-wrap:break-word;
-    height:35%;
-    
+    word-wrap: break-word;
+    height: 35%;
 }
 .column1 {
- margin: auto;
+    margin: auto;
     float: left;
-    text-align:center;
-    width: 32.00%;
+    text-align: center;
+    width: 32%;
     padding: 10px;
     height: 30%;
-    padding-top:10%;
-    padding-bottom:10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
-
 .row:after {
-
     content: "";
     display: table;
     clear: both;
 }
 .center {
- margin: auto;
-  width: 50%;
-  padding: 10px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }
- input[type=text] {
-        word-wrap: break-word;
-        word-break: break-all;
-        height: 80px;
-    }
+input[type="text"] {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
 
- /*
+/*
 #alertBox{
  border:black solid 4px; 
  border-radius:10px; 
@@ -97,14 +108,14 @@ background:white;
 color:black;
  font-size: 16pt;   
 }
-*/ 
+*/
 
 body {
-  background-image: url("https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/PageBackground.jpg");
+    background-image: url("https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/PageBackground.jpg");
 }
 @font-face {
-  font-family: Almond;
-  src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/AlmondCream.ttf);
+    font-family: Almond;
+    src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/AlmondCream.ttf);
 }
 @font-face {
     font-family: Hero;
@@ -114,3 +125,4 @@ body {
     font-family: Academy;
     src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Hero.ttf);
 }
+
