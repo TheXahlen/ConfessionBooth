@@ -113,7 +113,7 @@ unused so far plans to implement later it's a button that switched between submi
  
   <div id="displayandentry" style="padding-top: 3%;">
    <p id="textinput" style="display: block; padding-bottom: 85%; width: 95%; font-weight:bold; background: white; word-wrap:break-word; border: 9px solid black; opacity: 0.82; overflow:auto; background:grey; border-radius: 15px; font-size: 27.5pt; margin: auto; color: black; text-decoration: none;"></p>
-   <textarea onchange="Contribute(); setcurrentDate();" minlength="20" maxlength="550" class="mobiletextarea" style="width:95%; opacity: 0.82; background:grey;   display: none;"></textarea>
+   <textarea id="textsubmit" onchange="Contribute(); setcurrentDate();" minlength="20" maxlength="550" class="mobiletextarea" style="width:95%; opacity: 0.82; background:grey;   display: none;"></textarea>
   </div>
  </body>
  <div id="scripts">
@@ -163,12 +163,12 @@ unused so far plans to implement later it's a button that switched between submi
     document.getElementById("currentID").innerHTML = identity;
     document.getElementById("posterid").innerHTML = identity;
 
-    var cycledis = document.getElementById("cycle").style.display;
-    var subdis = document.getElementById("subtry").style.display;
-    var textdis = document.getElementById("textinput").style.display;
-    var selectdis = document.getElementById("selector").style.display;
-    var textsubdis = document.getElementById("textsubmit").style.display;
-    var viewdis = document.getElementById("posterload").style.display;
+   // var cycledis = document.getElementById("cycle").style.display;
+   // var subdis = document.getElementById("subtry").style.display;
+   // var textdis = document.getElementById("textinput").style.display;
+   // var selectdis = document.getElementById("selector").style.display;
+   // var textsubdis = document.getElementById("textsubmit").style.display;
+   // var viewdis = document.getElementById("posterload").style.display;
 
     if (cycledis == "none") {
      document.getElementById("posterload").style.display = "block";
