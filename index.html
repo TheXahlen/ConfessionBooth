@@ -8,15 +8,15 @@
 </head>
 
 <body id="bodyifallowed" onload="Mobile(); Loader();">
-<div style="padding-bottom:5%; padding-left:25.5%; padding-right:25.5%;">
-<div style="border:black solid 8px;  opacity:0.8; background:grey; border-radius:15%;">
-   <h2 class="postid" id="posterid" style="opacity:0.55;font-size:32px; border:black solid 3px; background:black; color:silver; border-radius:5%;">LOADING USER IDENTIFIER</h2>
+<div class="topdiv">
+<div class="seconddiv">
+   <h2 class="post" id="posterid">.LOADING ID.</h2>
 <table id="buttons" style="margin:auto;">
 <tbody><tr>
 <th>
-   <button id="cycle" class="buttontry" onclick="cycle()" style="display: block; width: 100%; margin: auto;">CYCLE  </button> 
+   <button id="cycle" class="buttontry" onclick="cycle()" style="display: none; width: 100%; margin: auto;">CYCLE  </button> 
    </th><th>
-   <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: none; width: 100%; margin: auto;">SUBMIT</button>  
+   <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: block; width: 100%; margin: auto;">SUBMIT</button>  
   </th><th>
 <button id="switcher" class="buttontry" onclick="switchd(); load(); checkID();" style="display:block; width:100%;"> SWITCH MODES</button>
 </th></tr>
@@ -29,7 +29,7 @@ possible dark mode not sure if I want to implement this button yet
 <button id="switcher" class="buttontry" onclick="nightMode()" style="display:block; width:15px;">[]</button>-->
    
 </tbody></table>
-<button onclick="loadPosts()" id="posterload" class="buttontry" style="display: block; margin:auto; width: 55%;">See Identifiers Posts</button>
+<button onclick="loadPosts()" id="posterload" class="buttontry" style="display: none; margin: auto; width: 55%;">See Identifiers Posts</button>
  <!--
 unused so far plans to implement later it's a button that switched between submit and cycle functionality.
  <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
@@ -37,7 +37,7 @@ unused so far plans to implement later it's a button that switched between submi
 <form name="submit-to-google-sheet"> 
  <table style="width:100%; margin:auto; text-align:center;">
 <tbody><tr><th> 
-<div id="selector" style="display: none;">
+<div id="selector" style="display: block;">
   
   <select name="color" id="color" class="selector" onchange="SelectedColor();">
      <option value="black" style="color:black;">Black</option>
@@ -83,24 +83,24 @@ unused so far plans to implement later it's a button that switched between submi
 </table>
    </div>
 
-   <p id="Display" style="border:solid 3px black;display:none; text-align:center; margin: auto; background:white; border-radius:15%;  font-size:35px; width:45%; opacity:0.6;">
+   <p id="Display" class="displayelem">
       PreviewText
    </p>
-   <div id="displayandentry">
-<p style="width: 90%; font-weight:bold; padding-bottom:30%; text-alight:center; background: grey; word-wrap:break-word; border: 9px solid black; border-radius: 2.5%; font-size: 27.5pt; opacity: 0.82; margin: auto; display: block; color: black; text-decoration: none;" id="textinput"></p>
-<textarea onchange="Contribute();" id="textsubmit" rows="10" type="text" class="textarea" style="width:70%; opacity: 0.82; background:grey; height:45%; display: none;">  </textarea>
+   <div id="displayandentry" style="padding-top:3%;">
+<p id="textinput" class="pelemtext" style="padding-bottom: 21.5%; color: black; text-decoration: line-through; font-family: monospace; font-size: 43px; display: none;">OHHH ISEEE !!!!!!!!!!!! COOOOOOOOOOOOOOOL</p>
+<textarea onchange="Contribute();" id="textsubmit" rows="10" type="text" class="textaream"></textarea>
    </div>
    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
    which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
    
-<div id="silentdata">
-   <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
-   <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
-   <textarea style="display:none;" type="text" id="confession" name="confession"> </textarea>
-   <button style="display:none;" id="submit"></button>
-   <p style="display:none;" id="currentID"></p>
-   <p style="display:none;" id="currenttext"><p>
-</div>
+<div id="silentdata" class="silentdata">
+   <textarea name="deletedate" type="text" id="deletedate"></textarea>
+   <textarea name="identity" type="text" id="identity"></textarea>
+   <textarea type="text" id="confession" name="confession"> </textarea>
+   <button id="submit"></button>
+   <p id="currentID"></p>
+   <p id="currenttext"></p><p>
+</p></div>
 </form>
 </div>
 </div>
@@ -118,7 +118,7 @@ unused so far plans to implement later it's a button that switched between submi
    <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/IdentityCheck.js"></script>
    <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Checksim.js"></script>
    <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
-   <script type="application/javascript" onload='localStorage.setItem("LOADED","TRUE");' src="https://api.ipify.org?format=jsonp&amp;callback=getIP"> </script>
+   <script type="application/javascript" onload="localStorage.setItem(&quot;LOADED&quot;,&quot;TRUE&quot;);" src="https://api.ipify.org?format=jsonp&amp;callback=getIP"> </script>
    <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
    <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
    <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
@@ -190,5 +190,6 @@ document.getElementById("Display").style.fontFamily = strUser;
    }} 
    </script>
 </div>
+
 
 </body></html>
