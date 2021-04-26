@@ -54,8 +54,8 @@ function cycle() {
     } else {
         editURL("identity", brenderlist[8], 0);
         document.getElementById("textinput").innerHTML = "";
-        document.getElementById("currenttext").innerHTML = confessionlist[1];
-        document.getElementById("textinput").innerHTML = confessionlist[1];
+        document.getElementById("currenttext").innerHTML = confessionlist[0];
+        document.getElementById("textinput").innerHTML = confessionlist[0];
         document.getElementById("textinput").style.color = brenderlist[2];
         document.getElementById("textinput").style.textDecoration = brenderlist[3];
         document.getElementById("textinput").style.fontFamily = brenderlist[4];
