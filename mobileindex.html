@@ -10,7 +10,18 @@
 <body id="bodyifallowed" onload="Loader();">
 <div style="padding-bottom:1.8%; padding-left:6.0%; padding-right:6.0%;"> 
 <div style="border:black solid 8px;  opacity:0.8; background:grey; border-radius:15%;"> 
-   <h2 class="postid" id="posterid" style="opacity:0.55;font-size:22px; border:black solid 3px; background:black; color:silver; border-radius:5%; font-size:11.5px;">LOADING USER IDENTIFIER</h2>
+    <table style=" width:100%; background:grey;">
+     <tbody>
+      <tr>
+       <th>
+        <h2 class="post" style="font-size: 160%; background: white; color: black; border-radius: 15px;" id="posterid">.LOADING ID.</h2>
+       </th>
+       <th>
+        <h2 class="post" style="font-size: 160%; background: white; color: black; border-radius: 15px;" id="date">.LOADING DATE</h2>
+       </th>
+      </tr>
+     </tbody>
+    </table>
 <table id="buttons" style="margin:auto;">
 <tbody><tr>
 <th>
@@ -33,16 +44,15 @@ unused so far plans to implement later it's a button that switched between submi
 <div id="selector" style="display:none;">
 
 <select name="color" id="color" class="selector" onchange="SelectedColor();">
-
-     <option value="black" style="color:black;">Black</option> 
-    <option value="blue" style="color:blue;">Blue</option>
-    <option value="red" style="color:red">Red</option>
-    <option value="green" style="color:green;">Green</option>
-    <option value="yellow" style="color:yellow;">Yellow</option>
-
-    <option value="cyan" style="color:cyan;">Cyan</option>
-    <option value="silver" style="color:silver;">Silver</option>
-    <option value="purple" style="color:purple;">purple</option>
+           <option value="black" style="color: black;">Black</option>
+           <option value="blue" style="color: blue;">Blue</option>
+           <option value="brown" style="color: brown;">Brown</option>
+           <option value="red" style="color: red;">Red</option>
+           <option value="green" style="color: green;">Green</option>
+           <option value="yellow" style="color: yellow;">Yellow</option>
+           <option value="cyan" style="color: cyan;">Cyan</option>
+           <option value="silver" style="color: silver;">Silver</option>
+           <option value="purple" style="color: purple;">purple</option>
   </select>
   <select name="decoration" id="decoration" class="selector" onchange="SelectedDecoration();">
     <option value="none" style="text-decoration:;">None</option>
@@ -51,9 +61,15 @@ unused so far plans to implement later it's a button that switched between submi
     <option value="underline overline" style="text-decoration:underline overline;">Underline Overline</option>
   </select>
   <select name="font" id="font" class="selector" onchange="SelectedFont();">
-    <option value="Ariel" style="font-family:ariel;">Ariel</option>
-    <option value="Brush Script MT" style="font-family:Brush Script MT;">Brush Script MT</option>
-    <option value="monospace" style="font-family:monospace;">Monospace</option>
+           <option value="Arial" style="font-family:Arial;">Arial</option>
+           <option value="monospace" style="font-family: monospace;">Monospace</option>
+           <option value="Hero" style="font-family: Hero;">Hero</option>
+           <option value="Academy" style="font-family: Academy;">Academy</option>
+           <option value="Antique" style="font-family: Antique;">Antique</option>
+           <option value="Broadway" style="font-family: Broadway;">Broadway</option>
+           <option value="Iniya" style="font-family: Iniya;">Iniya</option>
+           <option value="Magnilda" style="font-family: Magnilda;">Magnilda</option>
+           <option value="Mandor" style="font-family: Mandor;">Mandor</option>
   </select>
   <select name="size" id="size" class="selector"  onchange="SelectedSize();">
     <option value="35px" style="font-size:34px;">35PX</option>
@@ -65,7 +81,7 @@ unused so far plans to implement later it's a button that switched between submi
 </th></tr>
 </tbody></table>
 <div id="director">
-<table style="width:75%; margin:auto; text-align:center; border:black solid 9px; border-radius:15px; background-color: white; font-size:16px; opacity: 0.75;">
+<table style="width:75%; margin:auto; text-align:center; border:black solid 3px; border-radius:15px; background-color: white; font-size:16px; opacity: 0.75;">
    <tbody><tr><th>
          <a href="about.html" style="margin:auto;">About</a>
       </th><th style="width:100%">
@@ -75,7 +91,6 @@ unused so far plans to implement later it's a button that switched between submi
    </th></tr></tbody>
 </table>
     </div>
-</div>
    <p id="Display" style="border:solid 3px black;display:none; text-align:center; margin: auto; background:white; border-radius:15%;  font-size:35px; width:95%; opacity:0.6;">
       PreviewText
    </p>
@@ -94,10 +109,14 @@ unused so far plans to implement later it's a button that switched between submi
    <p style="display:none;" id="currentID"></p>
    <p style="display:none;" id="currenttext"></p>
 </div>
-   
-</form>
-
-
+ </form>
+   </div>
+  </div>
+  <div id="displayandentry" style="padding-top: 3%;">
+   <p id="textinput" class="pelemtext" style="display: block; padding-bottom: 85%; width: 95%; font-weight:bold; background: white; word-wrap:break-word; border: 9px solid black; opacity: 0.82; background:grey; border-radius: 15px; font-size: 27.5pt; margin: auto; color: black; text-decoration: none;"></p>
+   <textarea onchange="Contribute(); setcurrentDate();" minlength="20" maxlength="550" class="mobiletextarea" style="width:95%; opacity: 0.82; background:grey;   display: none;"></textarea>
+  </div>
+ </body>
 <div id="scripts">
       
 
@@ -118,63 +137,66 @@ unused so far plans to implement later it's a button that switched between submi
    <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
    
     <script>
-      function SelectedColor() {
-var e = document.getElementById("color");
-var strUser = e.options[e.selectedIndex].text;
-document.getElementById("Display").style.color = strUser;
-}
-function SelectedDecoration(){
-var e = document.getElementById("decoration");
-var strUser = e.options[e.selectedIndex].text;
-document.getElementById("Display").style.textDecoration = strUser;
-}
-function SelectedSize(){
-var e = document.getElementById("size");
-var strUser = e.options[e.selectedIndex].text;
-document.getElementById("Display").style.fontSize = strUser;
-}
-function SelectedFont(){
-var e = document.getElementById("font");
-var strUser = e.options[e.selectedIndex].text;
-document.getElementById("Display").style.fontFamily = strUser;
-}
-   </script>
-   <script>
-   function switchd(){
-   load()
-   checkID()
-   var identity = localStorage.getItem('browserid');
-   document.getElementById("currentID").innerHTML = identity;
-   document.getElementById('posterid').innerHTML =  identity;
-   
-   
-   var cycledis = document.getElementById("cycle").style.display
-   var subdis = document.getElementById("subtry").style.display
-   var textdis = document.getElementById("textinput").style.display
-   var selectdis =  document.getElementById("selector").style.display
-   var textsubdis = document.getElementById("textsubmit").style.display
-   var viewdis = document.getElementById("posterload").style.display
-   
-   if (cycledis == "none"){
-   document.getElementById("posterload").style.display = "block"
-   document.getElementById("cycle").style.display = "block"
-   document.getElementById("textinput").style.display = "block"
-   document.getElementById("subtry").style.display= "none"
-   document.getElementById("Display").style.display= "none"
-   document.getElementById("selector").style.display = "none"
-   document.getElementById("textsubmit").style.display = "none"
-   //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:block"> || View This Users Posts </button>')
-   }else{
-   document.getElementById("cycle").style.display = "none"
-   document.getElementById("textinput").style.display = "none"
-   document.getElementById("posterload").style.display = "none"
-   document.getElementById("Display").style.display= "block"
-   document.getElementById("textsubmit").style.display = "block"
-   document.getElementById("subtry").style.display = "block"
-   document.getElementById("selector").style.display= "block"
-   //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:none"> || View This Users Posts </button>')
-   }} 
+   function SelectedColor() {
+    var e = document.getElementById("color");
+    var strUser = e.options[e.selectedIndex].text;
+    document.getElementById("Display").style.color = strUser;
+   }
+   function SelectedDecoration() {
+    var e = document.getElementById("decoration");
+    var strUser = e.options[e.selectedIndex].text;
+    document.getElementById("Display").style.textDecoration = strUser;
+   }
+   function SelectedSize() {
+    var e = document.getElementById("size");
+    var strUser = e.options[e.selectedIndex].text;
+    document.getElementById("Display").style.fontSize = strUser;
+   }
+   function SelectedFont() {
+    var e = document.getElementById("font");
+    var strUser = e.options[e.selectedIndex].text;
+    document.getElementById("Display").style.fontFamily = strUser;
+   }
+  </script>
+  <script>
+   function switchd() {
+    load();
+    checkID();
+    setcurrentDate();
+    var identity = localStorage.getItem("browserid");
+    document.getElementById("currentID").innerHTML = identity;
+    document.getElementById("posterid").innerHTML = identity;
+
+    var cycledis = document.getElementById("cycle").style.display;
+    var subdis = document.getElementById("subtry").style.display;
+    var textdis = document.getElementById("textinput").style.display;
+    var selectdis = document.getElementById("selector").style.display;
+    var textsubdis = document.getElementById("textsubmit").style.display;
+    var viewdis = document.getElementById("posterload").style.display;
+
+    if (cycledis == "none") {
+     document.getElementById("posterload").style.display = "block";
+     document.getElementById("cycle").style.display = "block";
+     document.getElementById("textinput").style.display = "block";
+     document.getElementById("subtry").style.display = "none";
+     document.getElementById("Display").style.display = "none";
+     document.getElementById("selector").style.display = "none";
+     document.getElementById("textsubmit").style.display = "none";
+     //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:block"> || View This Users Posts </button>')
+    } else {
+     location.hash = "";
+
+     document.getElementById("cycle").style.display = "none";
+     document.getElementById("textinput").style.display = "none";
+     document.getElementById("posterload").style.display = "none";
+     document.getElementById("Display").style.display = "block";
+     document.getElementById("textsubmit").style.display = "block";
+     document.getElementById("subtry").style.display = "block";
+     document.getElementById("selector").style.display = "block";
+     //localStorage.setItem("buttonDescribe",'<button onclick="loadPosts()" class="postid" style="display:none"> || View This Users Posts </button>')
+    }
+   }
    </script>
 </div>
 
-</body></html>
+</html>
