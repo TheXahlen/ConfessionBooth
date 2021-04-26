@@ -21,8 +21,8 @@
 }
 
 .silentdata {
-    top::-1000000000000000000000000000000000px;
-    opacity:0.0;
+    top::1000000000000000000000000000000000px;
+    opacity:0;
     display:none;
     font-size:0.1px;
     background:white;
