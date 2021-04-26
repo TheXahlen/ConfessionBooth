@@ -38,17 +38,17 @@ function loadPosts(testspecific) {
     var listofposts = [];
     var completelist = [];
     for (var b = 0; b < amount; b++) {
-        var postindexed = brenderparsedvar[indexes[b] - 6];
-        var sizeoffont = brenderparsedvar[indexes[b] - 1] + "; ";
-        var fontfamily = brenderparsedvar[indexes[b] - 2] + "; ";
-        var textdecoration = brenderparsedvar[indexes[b] - 3] + "; ";
-        var textcolor = brenderparsedvar[indexes[b] - 4] + "; ";
+        var postindexed = brenderparsedvar[indexes[b] - 7];
+        var sizeoffont = brenderparsedvar[indexes[b] - 2] + "; ";
+        var fontfamily = brenderparsedvar[indexes[b] - 3] + "; ";
+        var textdecoration = brenderparsedvar[indexes[b] - 4] + "; ";
+        var textcolor = brenderparsedvar[indexes[b] - 5] + "; ";
         var numpos = '<b style="color:black;">[' + b + "]</b>";
         var postmodifer = '<p style="line-height:100%; font-size:' + sizeoffont + "font-family:" + fontfamily + "text-decoration:" + textdecoration + "color:" + textcolor + '"> ' + numpos;
         var pushable = postmodifer + postindexed + "</p><br>";
         var pushable = pushable.toString();
         listofposts.push(pushable);
-        completelist.push(brenderparsedvar[indexes[b] - 6]);
+        completelist.push(brenderparsedvar[indexes[b] - 7]);
     }
 
     if (testspecific == "TRUE") {
