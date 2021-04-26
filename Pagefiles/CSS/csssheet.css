@@ -8,6 +8,7 @@
     font-family: Ariel;
 }
 .post {
+    text-align: center;
     opacity: 0.55;
     font-size: 32px;
     border: black solid 3px;
