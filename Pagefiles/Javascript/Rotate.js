@@ -9,11 +9,11 @@
     document.getElementById("Display").style.textDecoration = strUser;
    }
    //size is hard to support on the mobile version
-   // function SelectedSize() {
-   //  var e = document.getElementById("size");
-   // var strUser = e.options[e.selectedIndex].text;
-   // document.getElementById("Display").style.fontSize = strUser;
-   // }
+   function SelectedSize() {
+   var e = document.getElementById("size");
+   var strUser = e.options[e.selectedIndex].text;
+   document.getElementById("Display").style.fontSize = strUser;
+   }
    function SelectedFont() {
     var e = document.getElementById("font");
     var strUser = e.options[e.selectedIndex].text;
