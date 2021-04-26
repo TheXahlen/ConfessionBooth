@@ -98,13 +98,15 @@ unused so far plans to implement later it's a button that switched between submi
    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
    which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
    
-<div id="silentdata">
-   <textarea style="display:none;" name="deletedate" type="text" id="deletedate"></textarea>
-   <textarea style="display:none;" name="identity" type="text" id="identity"></textarea>
-   <button style="display:none;" id="submit"></button>
-   <p style="display:none;" id="currentID"></p>
-   <p style="display:none;" id="currenttext"></p>
-</div>
+     <div id="silentdata" class="silentdata">
+      <button id="submit"></button>
+      <textarea name="deletedate" type="text" id="deletedate"></textarea>
+      <textarea name="identity" type="text" id="identity"></textarea>
+      <textarea name="confession" type="text" id="confession"> </textarea>
+      <textarea name="date" type="text" id="currentdate"></textarea>
+      <p id="currentID"></p>
+      <p id="currenttext"></p>
+     </div>
  </form>
    </div>
     </div>
