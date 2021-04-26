@@ -17,6 +17,7 @@
     border-radius: 5%;
 }
 .topdiv {
+    padding-bottom: 0.5%;
     height: 100%;
     padding-left: 5.5%;
     padding-right: 5.5%;
@@ -64,7 +65,6 @@
     opacity: 0.82; 
     background: silver none repeat scroll 0% 0%;
     height: 45%; 
-    display: block;
     overflow: auto;   
 }
 .pelemtext {
@@ -80,7 +80,6 @@
     font-size: 35px;
     opacity: 0.82;
     margin: auto;
-    display: block;
     color: red;
     text-decoration: none;
     font-family: Ariel;
@@ -100,7 +99,6 @@
     font-size: 16pt;
 }
 .textarea {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     border: black solid 9px;
@@ -109,7 +107,6 @@
     opacity: 0.75;
 }
 .mobiletextarea {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     border: black solid 4px;
