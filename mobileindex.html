@@ -1,4 +1,5 @@
-<html><head>
+<html>
+ <head>
 <title>Confesion Booth</title>
 <link rel="shortcut icon" type="image/x-icon" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/booth.ico">
    <meta name="Description" content="Computer Science project that uses google spreadsheets to index data.">
@@ -6,7 +7,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/CSS/csssheet.css">
 </head>
-
 <body id="bodyifallowed" onload="Loader();">
 <div style="padding-bottom:1.8%; padding-left:6.0%; padding-right:6.0%;"> 
 <div style="border:black solid 8px;  opacity:0.8; background:grey; border-radius:15%;"> 
@@ -42,7 +42,6 @@ unused so far plans to implement later it's a button that switched between submi
  <table style="width:100%; margin:auto; text-align:center;">
 <tbody><tr><th> 
 <div id="selector" style="display:none;">
-
 <select name="color" id="color" class="selector" onchange="SelectedColor();">
            <option value="black" style="color: black;">Black</option>
            <option value="blue" style="color: blue;">Blue</option>
@@ -117,25 +116,22 @@ unused so far plans to implement later it's a button that switched between submi
    <textarea onchange="Contribute(); setcurrentDate();" minlength="20" maxlength="550" class="mobiletextarea" style="width:95%; opacity: 0.82; background:grey;   display: none;"></textarea>
   </div>
  </body>
-<div id="scripts">
-      
-
-
-   <script type="application/javascript" src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script>
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/IdentityCheck.js"></script>
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Checksim.js"></script>
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
-   <script type="application/javascript" onload='localStorage.setItem("LOADED","TRUE");' src="https://api.ipify.org?format=jsonp&amp;callback=getIP"> </script>
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Disgen.js"></script>
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Cycle.js"></script>
-   <!-- this handles the submissons for the spreadsheet-->
-   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
-   
+ <div id="scripts">
+  <script type="application/javascript" src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/URLcheck.js"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/IdentityCheck.js"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Checksim.js"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
+  <script type="application/javascript" onload='localStorage.setItem("LOADED","TRUE");' src="https://api.ipify.org?format=jsonp&amp;callback=getIP"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Click.js"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Disgen.js"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Cycle.js"></script>
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Loader.js"></script>
+  <!-- this handles the submissons for the spreadsheet-->
+  <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/SubmitHandler.js"></script>
     <script>
    function SelectedColor() {
     var e = document.getElementById("color");
@@ -198,5 +194,4 @@ unused so far plans to implement later it's a button that switched between submi
    }
    </script>
 </div>
-
 </html>
