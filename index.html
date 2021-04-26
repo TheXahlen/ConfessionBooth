@@ -82,14 +82,13 @@ unused so far plans to implement later it's a button that switched between submi
    </th></tr></tbody>
 </table>
    </div>
-</div>
+
    <p id="Display" style="border:solid 3px black;display:none; text-align:center; margin: auto; background:white; border-radius:15%;  font-size:35px; width:45%; opacity:0.6;">
       PreviewText
    </p>
-   </div>
    <div id="displayandentry">
 <p style="width: 90%; font-weight:bold; padding-bottom:30%; text-alight:center; background: grey; word-wrap:break-word; border: 9px solid black; border-radius: 2.5%; font-size: 27.5pt; opacity: 0.82; margin: auto; display: block; color: black; text-decoration: none;" id="textinput"></p>
-<textarea name="confession" id="textsubmit" rows="10" type="text" class="textarea" style="width:70%; opacity: 0.82; background:grey; height:45%; display: none;">  </textarea>
+<textarea onchange="contribute();" name="confession" id="textsubmit" rows="10" type="text" class="textarea" style="width:70%; opacity: 0.82; background:grey; height:45%; display: none;">  </textarea>
    </div>
    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
    which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
@@ -100,7 +99,11 @@ unused so far plans to implement later it's a button that switched between submi
    <button style="display:none;" id="submit"></button>
    <p style="display:none;" id="currentID"></p>
    <p style="display:none;" id="currenttext"></p>
+</div>
 </form>
+</div>
+</div>
+
 
  <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
    which is then used as their identifier. -->
