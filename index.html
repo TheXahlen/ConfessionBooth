@@ -174,6 +174,7 @@ unused so far plans to implement later it's a button that switched between submi
         function switchd() {
           load();
           checkID();
+          setcurrentDate()
           var identity = localStorage.getItem("browserid");
           document.getElementById("currentID").innerHTML = identity;
           document.getElementById("posterid").innerHTML = identity;
