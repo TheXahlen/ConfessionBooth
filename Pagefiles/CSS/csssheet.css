@@ -171,6 +171,32 @@ body {
 }
 @font-face {
     font-family: Academy;
-    src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Hero.ttf);
+    src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Academy.ttf);
 }
+
+@font-face {
+    font-family: Antique;
+    src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Antique.otf);
+}
+
+@font-face {
+    font-family: Broadway;
+    src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Broadway.ttf);
+}
+
+@font-face {
+    font-family: Iniya;
+    src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Iniya.otf);
+}
+
+@font-face {
+    font-family: Magnilda;
+    src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Magnilda.ttf);
+}
+
+@font-face {
+    font-family: Mandor;
+    src: url(https://xplosivex.github.io/ConfessionBooth/Pagefiles/Fonts/Mandor.otf);
+}
+
 
