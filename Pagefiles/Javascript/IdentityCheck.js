@@ -1,6 +1,11 @@
 
 function checkID() {
+    if(localStorage.getItem("browserid") == null){
+    getIP()
+    checkID()
+    }else{
     var idtocheck = localStorage.getItem("browserid");
+    }
     function failCheck(errormessage) {
         var errormes = "The ID {" + idtocheck + "} is invalid due to : " + errormessage + " : //GENERATING  NEW ID//";
         alert(errormes);
