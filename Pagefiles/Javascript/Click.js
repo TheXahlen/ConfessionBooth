@@ -22,11 +22,12 @@
 //testforsim = parseInt(testforsim);
 //if(testforsim > 0.70){
 //alert("Please don't submit other peoples messages, or things you just cycled through thanks!")
-
+function contribute() {
+ var transfer = document.getElementById("textsubmit").value;
+ document.getElementById("confession").value = transfer;    
+}
 
 function Clicked() {
-    //var transfer = document.getElementById("textsubmit").value;
-    //document.getElementById("confession").value = transfer;
     checkID();
     load();
 
