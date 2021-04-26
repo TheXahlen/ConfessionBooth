@@ -7,6 +7,29 @@
     font-size: 20px;
     font-family: Ariel;
 }
+.post {
+    opacity: 0.55;
+    font-size: 32px;
+    border: black solid 3px;
+    background: black;
+    color: silver;
+    border-radius: 5%;
+}
+.topdiv {
+    padding-bottom: 0.5%;
+    height: 100%;
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+}
+
+.seconddiv {
+    border: black solid 8px;
+    opacity: 0.8;
+    background: grey;
+    border-radius: 15%;
+}
+
+
 
 .displayelem {
     border: 3px solid black;
