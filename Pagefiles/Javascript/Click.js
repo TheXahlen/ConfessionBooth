@@ -21,29 +21,39 @@
 //if(testforsim > 0.70){
 //alert("Please don't submit other peoples messages, or things you just cycled through thanks!")
 function Contribute() {
-    var lengthofcurrentsub = document.getElementById("textsubmit").value;
-    lengthofcurrentsub = lengthofcurrentsub.replaceAll(" ", "").length;
     var transfer = document.getElementById("textsubmit").value;
     document.getElementById("confession").value = transfer;
 }
-
 function Clicked() {
+var lengthofcurrentsub = document.getElementById("textsubmit").value;
+lengthofcurrentsub = lengthofcurrentsub.replaceAll(" ", "").length;
+    
     checkID();
     load();
+    
     var returned = checkSim();
+    
     if (returned == "TRUE") {
+        
         return null;
+        
     } else if (lengthofcurrentsub < 30) {
+        
         var lengthleft = 30 - lengthofcurrentsub;
         var aler = "This post doesn't meet the minium amount of characters it has {" + lengthofcurrentsub + "} you need {" + lengthleft + "} the minimum is 30";
         alert(aler);
         return null;
+        
     } else if (document.getElementById("subtry").style.display == "none") {
+        
         console.log("submission was attempted although the submit button is not visible so action was aborted");
         return null;
+        
     } else {
+        
         document.getElementById("submit").click();
         document.getElementById("subtry").disabled = true;
         document.getElementById("subtry").backgroundColor = "grey";
+        
     }
 }
