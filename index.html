@@ -26,10 +26,10 @@
      <tbody>
       <tr>
        <th>
-        <button id="cycle" class="buttontry" onclick="cycle()" style="display: none; width: 100%; margin: auto;">CYCLE</button>
+        <button id="cycle" class="buttontry" onclick="cycle()" style="display: block; width: 100%; margin: auto;">CYCLE</button>
        </th>
        <th>
-        <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: block; width: 100%; margin: auto;">SUBMIT</button>
+        <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: none; width: 100%; margin: auto;">SUBMIT</button>
        </th>
        <th>
         <button id="switcher" class="buttontry" onclick="switchd(); load(); checkID();" style="display: block; width: 100%;">SWITCH MODES</button>
@@ -45,7 +45,7 @@ possible dark mode not sure if I want to implement this button yet
 -->
      </tbody>
     </table>
-    <button onclick="loadPosts()" id="posterload" class="buttontry" style="display: none; margin: auto; width: 55%;">See Identifiers Posts</button>
+    <button onclick="loadPosts()" id="posterload" class="buttontry" style="display: block; margin: auto; width: 55%;">See Identifiers Posts</button>
     <!--
 //UPDATE THIS WAS IMPLEMENTED TURNS OUT YOU NEED IN BODY JAVASCRIPT TO DO THIS //
 unused so far plans to implement later it's a button that switched between submit and cycle functionality.
@@ -56,7 +56,7 @@ unused so far plans to implement later it's a button that switched between submi
       <tbody>
        <tr>
         <th>
-         <div id="selector" style="display: block;">
+         <div id="selector" style="display: none;">
           <select name="color" id="color" class="selector" onchange="SelectedColor();">
            <option value="black" style="color: black;">Black</option>
            <option value="blue" style="color: blue;">Blue</option>
@@ -115,7 +115,7 @@ unused so far plans to implement later it's a button that switched between submi
       </table>
      </div>
 
-     <p id="Display" style="background: white; color: black; border-radius: 15px;" class="displayelem">
+     <p id="Display" style="background: white; color: black; border-radius: 15px; display:none;" class="displayelem">
       PreviewText
      </p>
      <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
@@ -134,8 +134,8 @@ unused so far plans to implement later it's a button that switched between submi
    </div>
   </div>
   <div id="displayandentry" style="padding-top: 3%;">
-   <p id="textinput" class="pelemtext" style="display: none;"></p>
-   <textarea onchange="Contribute(); setcurrentDate();" id="textsubmit" rows="10" type="text" class="textaream textarea" style="display: block;"></textarea>
+   <p id="textinput" class="pelemtext" style="display: block;"></p>
+   <textarea onchange="Contribute(); setcurrentDate();" id="textsubmit" rows="10" type="text" class="textaream textarea" style="display: none;"></textarea>
   </div>
  </body>
  <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
