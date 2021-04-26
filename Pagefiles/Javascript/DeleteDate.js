@@ -7,7 +7,7 @@ function setdeleteDate() {
     document.getElementById("deletedate").value = deleteDate;
 }
 
-function setdeleteDate() {
+function setcurrentDate() {
     let date = new Date();
     let options = {
         month: "numeric",
