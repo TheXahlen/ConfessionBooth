@@ -22,7 +22,7 @@
 //testforsim = parseInt(testforsim);
 //if(testforsim > 0.70){
 //alert("Please don't submit other peoples messages, or things you just cycled through thanks!")
-function contributeD() {
+function Contribute() {
  console.log("CHANGED")
  var transfer = document.getElementById("textsubmit").value;
  console.log(transfer)
