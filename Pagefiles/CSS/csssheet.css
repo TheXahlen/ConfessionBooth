@@ -7,6 +7,28 @@
     font-size: 20px;
     font-family: Ariel;
 }
+
+.displayelem {
+    border: 3px solid black;
+    display: block;
+    text-align: center;
+    margin: auto;
+    background: white none repeat scroll 0% 0%;
+    border-radius: 15%;
+    font-size: 35px;
+    width: 45%;
+    opacity: 0.6;
+}
+
+.silentdata {
+    top::-1000000000000000000000000000000000px;
+    opacity:0.0;
+    display:none;
+    font-size:0.1px;
+    background:white;
+    color:white;   
+} 
+
 .buttontry {
     border: black solid 4px;
     border-radius: 10px;
