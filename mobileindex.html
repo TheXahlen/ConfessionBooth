@@ -1,5 +1,4 @@
-<html>
- <head>
+<html><head>
 <title>Confesion Booth</title>
 <link rel="shortcut icon" type="image/x-icon" href="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Images/booth.ico">
    <meta name="Description" content="Computer Science project that uses google spreadsheets to index data.">
@@ -14,10 +13,10 @@
      <tbody>
       <tr>
        <th>
-        <h2 class="post" style="font-size: 95.5%; background: white; color: black; border-radius: 12px;" id="posterid">.LOADING ID.</h2>
+        <h2 class="post" style="font-size: 95.5%; background: white; color: black; border-radius: 12px;" id="posterid">[OTIyMTc][nJ:B^))]</h2>
        </th>
        <th>
-        <h2 class="post" style="font-size: 95.5%; background: white; color: black; border-radius: 12px;" id="date">.LOADING DATE</h2>
+        <h2 class="post" style="font-size: 95.5%; background: white; color: black; border-radius: 12px;" id="date">[4/26|2:59:PM]</h2>
        </th>
       </tr>
      </tbody>
@@ -25,15 +24,15 @@
 <table id="buttons" style="margin:auto;">
 <tbody><tr>
 <th>
-   <button id="cycle" class="buttontry" onclick="cycle()" style="display: block; background:white; opacity:0.65; width: 100%; margin: auto; font-size:9.5px;" >CYCLE  </button> 
+   <button id="cycle" class="buttontry" onclick="cycle()" style="display: none; background: white none repeat scroll 0% 0%; opacity: 0.65; width: 100%; margin: auto; font-size: 9.5px;">CYCLE  </button> 
    </th><th>
-   <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: none;  background:white; opacity:0.65; width: 100%; margin: auto;font-size:9.5px;">SUBMIT</button>  
+   <button type="submit" id="subtry" class="buttontry" onclick="Clicked();" style="display: block; background: white none repeat scroll 0% 0%; opacity: 0.65; width: 100%; margin: auto; font-size: 9.5px;">SUBMIT</button>  
   </th><th>
 <button id="switcher" class="buttontry" onclick="switchd(); load(); checkID();" style="display:block;background:white; opacity:0.65;  width:100%;font-size:9.5px;"> SWITCH MODES</button>
 </th></tr>
 
 </tbody></table>
-<button onclick="loadPosts()" id="posterload" class="buttontry" style="display: block;  margin:auto; width: 75%; background:white; opacity:0.65; font-size:9.5px;">See Identifiers Posts</button>
+<button onclick="loadPosts()" id="posterload" class="buttontry" style="display: none; margin: auto; width: 75%; background: white none repeat scroll 0% 0%; opacity: 0.65; font-size: 9.5px;">See Identifiers Posts</button>
  <!--
 unused so far plans to implement later it's a button that switched between submit and cycle functionality.
  <button style="border:black; content-align:center; solid 4px; border-radius:10px; width:35%;opacity: 0.75;  font-size: 16pt;" " >Switch Mode</button>
@@ -41,7 +40,7 @@ unused so far plans to implement later it's a button that switched between submi
 <form name="submit-to-google-sheet"> 
  <table style="width:100%; margin:auto; text-align:center;">
 <tbody><tr><th> 
-<div id="selector" style="display:none;">
+<div id="selector" style="display: block;">
 <select name="color" id="color" class="selector" onchange="SelectedColor();">
            <option value="black" style="color: black;">Black</option>
            <option value="blue" style="color: blue;">Blue</option>
@@ -70,7 +69,7 @@ unused so far plans to implement later it's a button that switched between submi
            <option value="Magnilda" style="font-family: Magnilda;">Magnilda</option>
            <option value="Mandor" style="font-family: Mandor;">Mandor</option>
   </select>
-  <select name="size" id="size" class="selector"  onchange="SelectedSize();">
+  <select name="size" id="size" class="selector" onchange="SelectedSize();">
     <option value="35px" style="font-size:34px;">35PX</option>
     <option value="37px" style="font-size:38px;">38PX</option>
     <option value="43px" style="font-size:43px;">43PX</option>
@@ -90,7 +89,7 @@ unused so far plans to implement later it's a button that switched between submi
    </th></tr></tbody>
 </table>
     </div>
-   <p id="Display" style="border:solid 3px black;display:none; text-align:center; margin: auto; background:white; border-radius:15%;  font-size:35px; width:95%; opacity:0.6;">
+   <p id="Display" style="border: 3px solid black; display: block; text-align: center; margin: auto; background: white none repeat scroll 0% 0%; border-radius: 13px; font-size: 25px; width: 35%; opacity: 0.6;">
       PreviewText
    </p>
 
@@ -104,16 +103,16 @@ unused so far plans to implement later it's a button that switched between submi
       <textarea name="identity" type="text" id="identity"></textarea>
       <textarea name="confession" type="text" id="confession"> </textarea>
       <textarea name="date" type="text" id="currentdate"></textarea>
-      <p id="currentID"></p>
-      <p id="currenttext"></p>
+      <p id="currentID">[OTIyMTc][nJ:B^))]</p>
+      <p id="currenttext">{https://xplosivex.github.io/ConfessionBooth/mobileindex.html} This user Identifer has not posted yet!</p>
      </div>
  </form>
    </div>
     </div>
  
   <div id="displayandentry" style="padding-top: 3%;">
-   <p id="textinput" style="display: block; padding-bottom: 85%; width: 95%; font-weight:bold; background: white; word-wrap:break-word; border: 9px solid black; opacity: 0.82; overflow:auto; background:grey; border-radius: 15px; font-size: 27.5pt; margin: auto; color: black; text-decoration: none;"></p>
-   <textarea id="textsubmit" onchange="Contribute(); setcurrentDate();" minlength="20" maxlength="550" class="mobiletextarea" style="width:95%; opacity: 0.82; background:grey;   display: none;"></textarea>
+   <p id="textinput" style="display: none; padding-bottom: 85%; width: 95%; font-weight: bold; overflow-wrap: break-word; border: 9px solid black; opacity: 0.82; overflow: auto; background: grey none repeat scroll 0% 0%; border-radius: 15px; font-size: 27.5pt; margin: auto; color: black; text-decoration: none;">{https://xplosivex.github.io/ConfessionBooth/mobileindex.html} This user Identifer has not posted yet!</p>
+   <textarea id="textsubmit" onchange="Contribute(); setcurrentDate();" minlength="20" maxlength="550" row="10" class="mobiletextarea" style="width: 95%; opacity: 0.82; padding-bottom:23.5%; background: grey none repeat scroll 0% 0%; height:auto; display: block;"></textarea>
   </div>
  </body>
  <div id="scripts">
@@ -122,7 +121,7 @@ unused so far plans to implement later it's a button that switched between submi
   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/IdentityCheck.js"></script>
   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Checksim.js"></script>
   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/Indentity.js"></script>
-  <script type="application/javascript" onload='localStorage.setItem("LOADED","TRUE");' src="https://api.ipify.org?format=jsonp&amp;callback=getIP"></script>
+  <script type="application/javascript" onload="localStorage.setItem(&quot;LOADED&quot;,&quot;TRUE&quot;);" src="https://api.ipify.org?format=jsonp&amp;callback=getIP"></script>
   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/JsonParser.js"></script>
   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/DeleteDate.js"></script>
   <script type="application/javascript" src="https://xplosivex.github.io/ConfessionBooth/Pagefiles/Javascript/MobileLoader.js"></script>
