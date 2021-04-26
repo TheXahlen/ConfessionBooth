@@ -14,10 +14,11 @@ function setcurrentDate() {
         day: "numeric",
         hour: "2-digit",
         minute: "2-digit",
+        
     };
 
     var dateVal = date.toLocaleTimeString("en-us", options);
-    dateVal = dateVal.replaceAll(",", "").replaceAll(" ", "-");
-    var completedDate = "{" + dateVal + "}";
+    dateVal = dateVal.replaceAll(",", "").replaceAll(" ", "-").replace("-","|").replace("-",":");
+    var completedDate = '[' + dateVal + ']'
     document.getElementById("currentdate").value = completedDate;
 }
