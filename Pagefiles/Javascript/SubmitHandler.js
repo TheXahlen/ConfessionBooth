@@ -19,8 +19,10 @@ function failed(res) {
 }
 
 const form = document.forms["submit-to-google-sheet"];
+console.log(form)
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    console.log(e.preventDefault())
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
         .then((response) => success(response))
         .catch((error) => failed(error.message));
