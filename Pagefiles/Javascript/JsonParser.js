@@ -20,7 +20,7 @@ async function load() {
 		var confessioncomp = confessionentry
 		//uncomment to debug the size of submissions.
 		//console.log(confessioncomp.length, confessioncomp
-		if(confessioncomp == "identity" || confessioncomp == "font" || confessioncomp == "confession" || confessioncomp == "deletedate" || confessioncomp == "color" || confessioncomp == "decoration" || confessioncomp == "size"){
+		if(confessioncomp == "identity" || confessioncomp == "date" || confessioncomp == "font" || confessioncomp == "confession" || confessioncomp == "deletedate" || confessioncomp == "color" || confessioncomp == "decoration" || confessioncomp == "size"){
 			 console.log("filtered collumn header: ", confessioncomp)
 		}else{
 			if(confessioncomp.length < 25){
