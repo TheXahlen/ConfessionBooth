@@ -86,10 +86,6 @@ unused so far plans to implement later it's a button that switched between submi
    <p id="Display" class="displayelem">
       PreviewText
    </p>
-   <div id="displayandentry" style="padding-top:3%;">
-<p id="textinput" class="pelemtext" style="padding-bottom: 21.5%; color: black; text-decoration: line-through; font-family: monospace; font-size: 43px; display: none;">OHHH ISEEE !!!!!!!!!!!! COOOOOOOOOOOOOOOL</p>
-<textarea onchange="Contribute();" id="textsubmit" rows="10" type="text" class="textaream"></textarea>
-   </div>
    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
    which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
    
@@ -104,7 +100,10 @@ unused so far plans to implement later it's a button that switched between submi
 </form>
 </div>
 </div>
-
+<div id="displayandentry" style="padding-top:3%;">
+<p id="textinput" class="pelemtext" style="padding-bottom: 21.5%; color: black; text-decoration: line-through; font-family: monospace; font-size: 43px; display: none;">OHHH ISEEE !!!!!!!!!!!! COOOOOOOOOOOOOOOL</p>
+<textarea onchange="Contribute();" id="textsubmit" rows="10" type="text" class="textaream"></textarea>
+</div>
 
  <!-- this is preloading for all the script, they all redirect to the raw paste data of the script on the github page. The bottom scripts are a link to an api to get the ip of the user,
    which is then used as their identifier. -->
