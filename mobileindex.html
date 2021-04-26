@@ -93,11 +93,8 @@ unused so far plans to implement later it's a button that switched between submi
    <p id="Display" style="border:solid 3px black;display:none; text-align:center; margin: auto; background:white; border-radius:15%;  font-size:35px; width:95%; opacity:0.6;">
       PreviewText
    </p>
-   </div>
-   <div id="displayandentry">
-<p style="padding-bottom: 85%; width: 95%; font-weight:bold; background: white; word-wrap:break-word; border: 9px solid black; opacity: 0.82; background:grey; border-radius: 15px; font-size: 27.5pt; margin: auto; display: block; color: black; text-decoration: none;" id="textinput"></p>
-<textarea name="confession" id="textsubmit" rows="10" type="text" minlength="20" maxlength="550" class="mobiletextarea" style="width:95%; opacity: 0.82; background:grey;   display: none;">  </textarea>
-   </div>
+
+   
    <!-- these are invisible to the user, they submit the delete date and auto fill their submission content on page load. This could be changed using developer tools 
    which would be bad, although I doubt it would happen. These just silently pass data so the user doesn't need to. Also if you are reading this hi <3. -->
    
@@ -110,7 +107,8 @@ unused so far plans to implement later it's a button that switched between submi
 </div>
  </form>
    </div>
-  </div>
+    </div>
+ 
   <div id="displayandentry" style="padding-top: 3%;">
    <p id="textinput" class="pelemtext" style="display: block; padding-bottom: 85%; width: 95%; font-weight:bold; background: white; word-wrap:break-word; border: 9px solid black; opacity: 0.82; background:grey; border-radius: 15px; font-size: 27.5pt; margin: auto; color: black; text-decoration: none;"></p>
    <textarea onchange="Contribute(); setcurrentDate();" minlength="20" maxlength="550" class="mobiletextarea" style="width:95%; opacity: 0.82; background:grey;   display: none;"></textarea>
