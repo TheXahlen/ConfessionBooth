@@ -11,7 +11,7 @@ function Loader() {
 
     document.getElementById("subtry").disabled = true;
     document.getElementById("subtry").backgroundColor = "grey";
-
+    setcurrentDate();
     load();
     localStorage.setItem("FIRSTRUN", "TRUE");
     localStorage.setItem("LOADED", "FALSE");
