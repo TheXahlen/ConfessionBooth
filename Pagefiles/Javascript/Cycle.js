@@ -32,7 +32,7 @@ function cycle() {
             localStorage.setItem("numbergenned", x);
             document.getElementById("textinput").value = "";
             var indexinbren = brenderlist.indexOf(confessionlist[x]);
-            editURL("identity", brenderlist[indexinbren + 6], x);
+            editURL("identity", brenderlist[indexinbren + 7], x);
             document.getElementById("currenttext").innerHTML = confessionlist[x];
             document.getElementById("textinput").innerHTML = confessionlist[x];
             document.getElementById("textinput").style.color = brenderlist[indexinbren + 2];
@@ -52,7 +52,7 @@ function cycle() {
         //if generated list has more than one object then run a random number generator.
         genNum();
     } else {
-        editURL("identity", brenderlist[6], 0);
+        editURL("identity", brenderlist[7], 0);
         document.getElementById("textinput").innerHTML = "";
         document.getElementById("currenttext").innerHTML = confessionlist[0];
         document.getElementById("textinput").innerHTML = confessionlist[0];
