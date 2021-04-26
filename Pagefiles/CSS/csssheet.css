@@ -35,7 +35,7 @@
     display: block;
     text-align: center;
     margin: auto;
-    background: white none repeat scroll 0% 0%;
+    background: grey none repeat scroll 0% 0%;
     border-radius: 15%;
     font-size: 35px;
     width: 45%;
@@ -61,7 +61,7 @@
 .textaream {
     width: 70%; 
     opacity: 0.82; 
-    background: silver none repeat scroll 0% 0%;
+    background: grey none repeat scroll 0% 0%;
     height: 45%; 
     overflow: auto;   
 }
