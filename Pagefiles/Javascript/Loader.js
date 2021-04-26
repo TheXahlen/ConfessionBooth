@@ -59,9 +59,9 @@ if (testfordata1.charAt(0) == "h") {
     document.getElementById("textinput").style.textDecoration = brenderlist[indexinbren + 3];
     document.getElementById("textinput").style.fontFamily = brenderlist[indexinbren + 4];
     document.getElementById("textinput").style.fontSize = brenderlist[indexinbren + 5];
-    document.getElementById("textinput").style.paddingBottom = parseInt(brenderlist[indexinbren + 5].replace("px", "")) / 2 + "%";
-    document.getElementById("posterid").innerHTML = brenderlist[indexinbren + 6];
-    document.getElementById("currentID").innerHTML = brenderlist[indexinbren + 6];
+    document.getElementById("date").innerHTML = brenderlist[indexinbren + 6];
+    document.getElementById("posterid").innerHTML = brenderlist[indexinbren + 7];
+    document.getElementById("currentID").innerHTML = brenderlist[indexinbren + 7];
 } else {
     //pass
 }
