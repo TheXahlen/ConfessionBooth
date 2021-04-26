@@ -21,4 +21,5 @@ function setcurrentDate() {
     dateVal = dateVal.replaceAll(",", "").replaceAll(" ", "-").replace("-","|").replace("-",":");
     var completedDate = '[' + dateVal + ']'
     document.getElementById("currentdate").value = completedDate;
+    document.getElementById("date").innerHTML = completedDate;
 }
