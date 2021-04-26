@@ -45,7 +45,7 @@ function loadPosts(testspecific) {
         var textdecoration = brenderparsedvar[indexes[b] - 4] + "; ";
         var textcolor = brenderparsedvar[indexes[b] - 5] + "; ";
         var numpos = '<b style="color:black;">[' + b + "]</b>";
-        var postpostedwhen = '<b style="color:black;"> {Posted: ' dateforpost + ' }</b>'
+        var postpostedwhen = '<b style="color:black; font-size:15px;"> {Posted: ' dateforpost + ' }</b>'
         var postmodifer = '<p style="line-height:100%; font-size:' + sizeoffont + "font-family:" + fontfamily + "text-decoration:" + textdecoration + "color:" + textcolor + '"> ' + numpos;
         var pushable = postmodifer + postindexed + postpostedwhen +  "</p><br>";
         var pushable = pushable.toString();
