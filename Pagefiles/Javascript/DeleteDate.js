@@ -8,14 +8,16 @@ function setdeleteDate() {
 }
 
 function setdeleteDate() {
-    let date = new Date();  
-    let options = {  
-     month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit"  
-    };  
+    let date = new Date();
+    let options = {
+        month: "numeric",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+    };
 
-    var dateVal = date.toLocaleTimeString("en-us", options); 
-    dateVal = dateVal.replaceAll(",","").replaceAll(" ","-")
-    var completedDate = "{" + dateVal + "}"
+    var dateVal = date.toLocaleTimeString("en-us", options);
+    dateVal = dateVal.replaceAll(",", "").replaceAll(" ", "-");
+    var completedDate = "{" + dateVal + "}";
     document.getElementById("currentdate").value = completedDate;
 }
-
