@@ -21,19 +21,15 @@
 //if(testforsim > 0.70){
 //alert("Please don't submit other peoples messages, or things you just cycled through thanks!")
 function Contribute() {
-    var transfer = document.getElementById("textsubmit").value;
+    let transfer = document.getElementById("textsubmit").value;
     document.getElementById("confession").value = transfer;
 }
 function Clicked() {
-var lengthofcurrentsub = document.getElementById("textsubmit").value;
-lengthofcurrentsub = lengthofcurrentsub.replaceAll(" ", "").length;
-    
+var lengthofcurrentsub = document.getElementById("textsubmit").value.replaceAll(" ", "").length;
     checkID();
     load();
     
-    var returned = checkSim();
-    
-    if (returned == "TRUE") {
+    if (checkSim(); == "TRUE") {
         
         return null;
         
