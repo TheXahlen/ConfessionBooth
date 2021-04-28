@@ -7,7 +7,7 @@ function cycle() {
         load();
         localStorage.setItem("numcycled", 0);
     } else {
-        var numcycleft = 5 - numcyc;
+        let numcycleft = 5 - numcyc;
         console.log("the site will allow {", numcycleft, '} this limit is stored inside the "maxrefreshes variable" more cycles before it refreshes the datalist.');
         localStorage.setItem("numcycled", numcyc + 1);
     }
@@ -31,7 +31,7 @@ function cycle() {
         } else {
             localStorage.setItem("numbergenned", x);
             document.getElementById("textinput").value = "";
-            var indexinbren = brenderlist.indexOf(confessionlist[x]);
+            let indexinbren = brenderlist.indexOf(confessionlist[x]);
             editURL("identity", brenderlist[indexinbren + 7], x);
             document.getElementById("currenttext").innerHTML = confessionlist[x];
             document.getElementById("textinput").innerHTML = confessionlist[x];
