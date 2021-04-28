@@ -29,7 +29,7 @@ var lengthofcurrentsub = document.getElementById("textsubmit").value.replaceAll(
     checkID();
     load();
     
-    if (checkSim(); == "TRUE") {
+    if (checkSim() == "TRUE") {
         
         return null;
         
