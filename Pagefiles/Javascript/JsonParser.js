@@ -6,17 +6,13 @@ async function apicall(){
 	resolve(obj.json())
 })}
 async function load() {
-	var loadcount = localStorage.getItem("dataload")
-	var loadcount = parseInt(loadcount)
-	loadcount = loadcount + 1;
-	var loadcount = localStorage.setItem("dataload",loadcount)
 	var confessionlist = []
 	var brenderlist = []
-	var anything = await apicall()
-	var textjs = anything.feed.entry
+	let anything = await apicall()
+	let textjs = anything.feed.entry
 	var yes = textjs["id"]
 	for (let i = 1; i < textjs.length; i++) {
-		var confessionentry = textjs[i].content.$t
+		let confessionentry = textjs[i].content.$t
 		var confessioncomp = confessionentry
 		//uncomment to debug the size of submissions.
 		//console.log(confessioncomp.length, confessioncomp
@@ -33,6 +29,6 @@ localStorage.setItem("brenderlist", JSON.stringify(brenderlist));
 localStorage.setItem("confessions", JSON.stringify(confessionlist));
 console.log("BRENDER META DATA LIST LOADED with {", brenderlist.length, "} Items" )
 console.log("CONFESSIONLIST LOADED with {", confessionlist.length, "}items here it is mutiplied by 6 {", confessionlist.length * 6,"} if this is within an offset of 15 from the BRENDER meta data above everything is in correct index!")
-console.log("new list structure loaded with out complaint! this is the {" + parseInt(localStorage.getItem("dataload")) + "} time a new data set has been loaded since page was opened")
+console.log("new list structure loaded with out complaint!")
 }
 
