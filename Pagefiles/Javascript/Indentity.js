@@ -2,14 +2,14 @@
 function getIP(json) {
  function makeid(total) {
     var result = [];
-    var letters = 'abcdefghijklmnopqrstuvwxy'
-    var lettercapitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var symbols = ':-+)(*^$@!.,/';
+    let letters = 'abcdefghijklmnopqrstuvwxy'
+    let lettercapitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let symbols = ':-+)(*^$@!.,/';
     var letterLength = letters.length;
     var lettercapitalLength = lettercapitals.length;
     var symbolLength = symbols.length;
     total
-    for ( var i = 0; i < total; i++ ) {
+    for (let i = 0; i < total; i++ ) {
     if(i < 1){
         result.push(letters.charAt(Math.floor(Math.random() * letterLength)));
     }
