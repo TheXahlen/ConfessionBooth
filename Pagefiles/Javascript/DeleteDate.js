@@ -1,5 +1,5 @@
 function setdeleteDate() {
-    var curDelete = new Date();
+    let curDelete = new Date();
     var deleteDate = curDelete.getDate() + 15;
     if (deleteDate > 30) {
         deleteDate = deleteDate - 30;
