@@ -1,29 +1,29 @@
  function SelectedColor() {
-    var e = document.getElementById("color");
-    var strUser = e.options[e.selectedIndex].text;
+    let e = document.getElementById("color");
+    let strUser = e.options[e.selectedIndex].text;
     document.getElementById("Display").style.color = strUser;
    }
    function SelectedDecoration() {
-    var e = document.getElementById("decoration");
-    var strUser = e.options[e.selectedIndex].text;
+    let e = document.getElementById("decoration");
+    let strUser = e.options[e.selectedIndex].text;
     document.getElementById("Display").style.textDecoration = strUser;
    }
    //size is hard to support on the mobile version
    function SelectedSize() {
-   var e = document.getElementById("size");
-   var strUser = e.options[e.selectedIndex].text;
+   let e = document.getElementById("size");
+   let strUser = e.options[e.selectedIndex].text;
    document.getElementById("Display").style.fontSize = strUser;
    }
    function SelectedFont() {
-    var e = document.getElementById("font");
-    var strUser = e.options[e.selectedIndex].text;
+    let e = document.getElementById("font");
+    let strUser = e.options[e.selectedIndex].text;
     document.getElementById("Display").style.fontFamily = strUser;
    }
    function switchd() {
     load();
     checkID();
     setcurrentDate();
-    var identity = localStorage.getItem("browserid");
+    let identity = localStorage.getItem("browserid");
     document.getElementById("currentID").innerHTML = identity;
     document.getElementById("posterid").innerHTML = identity;
 
