@@ -16,10 +16,7 @@ function setcurrentDate() {
         minute: "2-digit",
         
     };
-
-    var dateVal = date.toLocaleTimeString("en-us", options);
-    dateVal = dateVal.replaceAll(",", "").replaceAll(" ", "-").replace("-","|").replace("-",":");
-    var completedDate = '[' + dateVal + ']'
+   let completedDate = '[' + date.toLocaleTimeString("en-us", options).replaceAll(",", "").replaceAll(" ", "-").replace("-","|").replace("-",":") + ']'
     document.getElementById("currentdate").value = completedDate;
     document.getElementById("date").innerHTML = completedDate;
 }
