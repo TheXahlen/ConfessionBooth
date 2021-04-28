@@ -28,7 +28,7 @@ function loadPosts(testspecific) {
 
     var indexes = [],
         i;
-    for (i = 0; i < brenderparsedvar.length; i++) {
+    for (let i = 0; i < brenderparsedvar.length; i++) {
         if (brenderparsedvar[i] === currentuserID) {
             indexes.push(i);
         }
@@ -37,7 +37,7 @@ function loadPosts(testspecific) {
     var postindexed;
     var listofposts = [];
     var completelist = [];
-    for (var b = 0; b < amount; b++) {
+    for (let b = 0; b < amount; b++) {
         var postindexed = brenderparsedvar[indexes[b] - 7];
         var dateforpost = brenderparsedvar[indexes[b] - 1];
         var sizeoffont = brenderparsedvar[indexes[b] - 2] + "; ";
@@ -47,9 +47,9 @@ function loadPosts(testspecific) {
         var numpos = '<b style="color:black; font-family:arial;">[' + b + "]</b>";
         var postpostedwhen = '<b style="color:black; font-size:15px; font-family:arial;"> {Posted: ' + dateforpost + ' }</b>'
         var postmodifer = '<p style="line-height:100%; font-size:' + sizeoffont + "font-family:" + fontfamily + "text-decoration:" + textdecoration + "color:" + textcolor + '"> ' + numpos;
-        var pushable = postmodifer + postindexed + postpostedwhen +  "</p><br>";
-        var pushable = pushable.toString();
-        listofposts.push(pushable);
+        let pushable = postmodifer + postindexed + postpostedwhen +  "</p><br>";
+        var pushed = pushable.toString();
+        listofposts.push(pushed);
         completelist.push(brenderparsedvar[indexes[b] - 7]);
     }
 
@@ -64,9 +64,9 @@ function loadPosts(testspecific) {
         listofposts.unshift('<div style="word-wrap: break-word; line-height:5%;" id="postsfromuserid">');
     }
     listofposts.push("</div>");
-    console.log(listofposts);
+    //console.log(listofposts);
     var telned = listofposts.join(" ");
-    console.log(telned);
+    //console.log(telned);
     if (indexes.length == 0) {
         console.log("no posts from id: " + currentuserID);
         document.getElementById("textinput").innerHTML = "{" + currentuserID + "} This user Identifer has not posted yet!";
