@@ -39,8 +39,8 @@ lengthofcurrentsub = lengthofcurrentsub.replaceAll(" ", "").length;
         
     } else if (lengthofcurrentsub < 30) {
         
-        var lengthleft = 30 - lengthofcurrentsub;
-        var aler = "This post doesn't meet the minium amount of characters it has {" + lengthofcurrentsub + "} you need {" + lengthleft + "} the minimum is 30";
+        let lengthleft = 30 - lengthofcurrentsub;
+        let aler = "This post doesn't meet the minium amount of characters it has {" + lengthofcurrentsub + "} you need {" + lengthleft + "} the minimum is 30";
         alert(aler);
         return null;
         
