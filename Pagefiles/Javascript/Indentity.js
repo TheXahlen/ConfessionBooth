@@ -48,7 +48,7 @@ if(localStorage.getItem("LOADED") !== "TRUE"){
      var extensionadd = makeid(7);
      
      jsonip = jsonip.toString()
-     jsonip.replaceALL(""","")
+     jsonip.replaceAll('"',"")
      jsonip = jsonip.split(".").join("")
      var b64 = btoa(jsonip); 
      b64 = b64.substring(0,7)
