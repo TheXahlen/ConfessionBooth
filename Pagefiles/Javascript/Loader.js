@@ -14,7 +14,6 @@ function Loader() {
     setcurrentDate();
     load();
     localStorage.setItem("FIRSTRUN", "TRUE");
-    localStorage.setItem("LOADED", "FALSE");
     localStorage.setItem("numbergenned", 0);
     localStorage.setItem("numcycled", 0);
     localStorage.setItem("dataload", 0);
@@ -35,12 +34,7 @@ function Loader() {
     document.getElementById("subtry").backgroundColor = "white";
     //pass
     localStorage.setItem("FIRSTRUN", "FALSE");
-}
-function detect() {
-    if (localStorage.getItem("LOADED") == "FALSE") {
-        getIP("DEBUG");
-    }
-}
+
 var numtestlist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var parsedint = parseInt(testfordata[0]);
 
@@ -65,7 +59,12 @@ if (testfordata1.charAt(0) == "h") {
 } else {
     //pass
 }
-
+    function detect() {
+    if (localStorage.getItem("LOADED") !== "TRUE") {
+        getIP("DEBUG");
+    }
+}
+}
 
 
 ////////////
