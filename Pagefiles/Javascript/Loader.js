@@ -1,8 +1,9 @@
 // anything that needs to happen on load happens in here
 var testfordata = retPARAM();
+localStorage.removeItem("brenderlist");
 var testfordata1 = testfordata[0];
 var testfordata2 = testfordata[1];
-function Loader() {
+function Loader("LOADED") {
     document.getElementById("cycle").disabled = true;
     document.getElementById("cycle").backgroundColor = "grey";
 
@@ -60,7 +61,7 @@ if (testfordata1.charAt(0) == "h") {
 }
     function detect() {
     if (localStorage.getItem("LOADED") !== "TRUE") {
-        getIP("DEBUG");
+        getIP();
     }
 }
 }
