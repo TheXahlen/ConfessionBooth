@@ -24,10 +24,11 @@
    return result.join('');
  }
 
-function getIP(json,passed,ip){
-if(passed !== "TRUE"){
+function getIP(json){
+if(localStorage.getItem("LOADED") !== "TRUE"){
    var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))
    //var sediplength = ip.length - 3;
+   console.log(ip)
    var extensionadd = makeid(7);
    ip = ip.toString()
    ip = ip.split(".").join("")
@@ -59,7 +60,6 @@ if(passed !== "TRUE"){
   // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
  //explample blew of how to black list a user
  //var blacklist = ["sASfdsfgb","dsfsAAAA","DSAFDSAaaaa"]
- var testforload = localStorage.getItem("LOADED") 
  if (localStorage.getItem('browserid') !== null){
      var identity = localStorage.getItem("browserid")
      document.getElementById("currentID").innerHTML = identity;
@@ -67,14 +67,9 @@ if(passed !== "TRUE"){
      console.log("ID FOUND AND LOADED: " + identity)
      
  }else{
-     console.log("YOU HAVE NO USER ID GENERATING")
-     if(testforload == "FALSE"){
-     console.log("somesort of ad block or anti tracking installed using propietry method to generate an identifier")
-     generateIP("TRUE")
-     }else{
-     generateIP()
-     }
+    getIP()  
  }
+ 
  document.getElementById('identity').value =  identity;
  console.log("your identifier is: {" + identity + "}")
  document.getElementById('posterid').innerHTML =  identity;
