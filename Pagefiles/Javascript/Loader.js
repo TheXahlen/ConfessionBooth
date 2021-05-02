@@ -6,7 +6,7 @@ var testfordata2 = testfordata[1];
 function Loader() {
     
         function detect() {
-    if (localStorage.getItem("LOADED") !== null){
+    if (localStorage.getItem("broswerid") !== null){
     //pass    
     }else{
         console.log("created and logged of e")
