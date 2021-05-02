@@ -18,9 +18,8 @@ function Loader() {
     localStorage.setItem("numcycled", 0);
     localStorage.setItem("dataload", 0);
     setdeleteDate();
-    setTimeout(detect(), 1500);
-    checkID();
-    var identity = localStorage.getItem("browserid");
+    setTimeout(detect(), 1500);checkID();
+   var identity = localStorage.getItem("browserid");
     document.getElementById("currentID").innerHTML = identity;
     document.getElementById("posterid").innerHTML = identity;
 
