@@ -1,9 +1,9 @@
 // anything that needs to happen on load happens in here
 var testfordata = retPARAM();
-localStorage.removeItem("brenderlist");
+localStorage.removeItem("LOADED");
 var testfordata1 = testfordata[0];
 var testfordata2 = testfordata[1];
-function Loader("LOADED") {
+function Loader() {
     document.getElementById("cycle").disabled = true;
     document.getElementById("cycle").backgroundColor = "grey";
 
