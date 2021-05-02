@@ -1,5 +1,5 @@
 
-function getIP(json) {
+//function getIP(json) {
  function makeid(total) {
     var result = [];
     let letters = 'abcdefghijklmnopqrstuvwxy'
@@ -24,8 +24,8 @@ function getIP(json) {
    return result.join('');
  }
 
-function generateIP(passed,ip){
-if(passed == "TRUE"){
+function getIP(json,passed,ip){
+if(passed !== "TRUE"){
    var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))
    //var sediplength = ip.length - 3;
    var extensionadd = makeid(7);
@@ -55,7 +55,7 @@ if(passed == "TRUE"){
      var identity = identfirst + identlast
      console.log("USER ID GENERATED: " + identity);
      localStorage.setItem("browserid", identity);
-}}
+}
   // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
  //explample blew of how to black list a user
  //var blacklist = ["sASfdsfgb","dsfsAAAA","DSAFDSAaaaa"]
@@ -75,6 +75,11 @@ if(passed == "TRUE"){
      generateIP()
      }
  }
+ document.getElementById('identity').value =  identity;
+ console.log("your identifier is: {" + identity + "}")
+ document.getElementById('posterid').innerHTML =  identity;
+ console.log("document has updated the user identity")
+ }
  //var blacklist = [""]
 // var testif = blacklist.includes(identity);
 //if(testif == true){
@@ -93,8 +98,3 @@ if(passed == "TRUE"){
 //document.getElementById('posterid').innerHTML =  identity;
 // console.log("document has updated the user identity")
 //}
-document.getElementById('identity').value =  identity;
- console.log("your identifier is: {" + identity + "}")
- document.getElementById('posterid').innerHTML =  identity;
- console.log("document has updated the user identity")
-}
