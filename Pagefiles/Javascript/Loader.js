@@ -9,6 +9,7 @@ function Loader() {
     if (localStorage.getItem("LOADED") !== null){
     //pass    
     }else{
+        console.log("created and logged of e")
         getIP();
     }
 }
