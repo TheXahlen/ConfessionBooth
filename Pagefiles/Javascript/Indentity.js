@@ -48,9 +48,8 @@ if(localStorage.getItem("LOADED") !== "TRUE"){
      var extensionadd = makeid(7);
      
      jsonip = jsonip.toString()
-     jsonip.replaceAll('"',"")
      jsonip = jsonip.split(".").join("")
-     var b64 = btoa(jsonip); 
+     var b64 = btoa(jsonip.replaceAll('"',"")); 
      b64 = b64.substring(0,7)
      var identfirst = "[" + b64 + "]"
      var identlast = "[" + extensionadd + "]"
