@@ -25,6 +25,7 @@
  }
 
 function getIP(json){
+if(localStorage.getItem("browserid") == null){
 if(localStorage.getItem("LOADED") !== "TRUE"){
    var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))
    //var sediplength = ip.length - 3;
@@ -56,17 +57,17 @@ if(localStorage.getItem("LOADED") !== "TRUE"){
      var identity = identfirst + identlast
      console.log("USER ID GENERATED: " + identity);
      localStorage.setItem("browserid", identity);
-}
+}}else{
   // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
  //explample blew of how to black list a user
  //var blacklist = ["sASfdsfgb","dsfsAAAA","DSAFDSAaaaa"]
- if (localStorage.getItem('browserid') !== null){
      var identity = localStorage.getItem("browserid")
      document.getElementById("currentID").innerHTML = identity;
      document.getElementById('posterid').innerHTML =  identity;
      console.log("ID FOUND AND LOADED: " + identity)
      
  }else{
+    localStorage.removeItem("browserid")
     getIP()  
  }
  
