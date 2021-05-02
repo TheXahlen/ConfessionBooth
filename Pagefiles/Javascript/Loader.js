@@ -4,6 +4,14 @@ localStorage.removeItem("LOADED");
 var testfordata1 = testfordata[0];
 var testfordata2 = testfordata[1];
 function Loader() {
+    
+        function detect() {
+    if (localStorage.getItem("LOADED") !== null){
+    //pass    
+    }else{
+        getIP();
+    }
+}
     document.getElementById("cycle").disabled = true;
     document.getElementById("cycle").backgroundColor = "grey";
 
@@ -58,13 +66,7 @@ if (testfordata1.charAt(0) == "h") {
     document.getElementById("currentID").innerHTML = brenderlist[indexinbren + 7];
 } else {
     //pass
-}
-    function detect() {
-    if (localStorage.getItem("LOADED") !== "TRUE") {
-        getIP();
-    }
-}
-}
+}}
 
 
 ////////////
