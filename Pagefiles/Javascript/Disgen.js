@@ -14,6 +14,7 @@
 
 
 function loadPosts(testspecific) {
+setcurrentDate()
     if (testspecific == "TRUE") {
         var brenderparsedvar = JSON.parse(localStorage.getItem("brenderlist"));
         var currentuserID = localStorage.getItem("browserid");
