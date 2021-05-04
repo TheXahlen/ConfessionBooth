@@ -29,6 +29,9 @@ if (localStorage.getItem("browserid") !== null) {
   var identity = localStorage.getItem("browserid")
   document.getElementById("currentID").innerHTML = identity;
   document.getElementById('posterid').innerHTML =  identity;
+
+document.getElementById("identity").value = identity;
+
   console.log("ID FOUND AND LOADED: " + identity)
 } else {
 if(localStorage.getItem("LOADED") !== "TRUE"){
@@ -45,8 +48,10 @@ if(localStorage.getItem("LOADED") !== "TRUE"){
    var identity = identfirst + identlast
    console.log("USER ID GENERATED: " + identity)
    localStorage.setItem("browserid", identity);
-   document.getElementById("currentID").innerHTML = identity;
-   document.getElementById('posterid').innerHTML =  identity;
+     document.getElementById("currentID").innerHTML = identity;
+  document.getElementById('posterid').innerHTML =  identity;
+
+document.getElementById("identity").value = identity;
 }else{
      var jsonip = JSON.stringify(json.ip)
      //var iplength = jsonip.length - 3;
@@ -62,6 +67,12 @@ if(localStorage.getItem("LOADED") !== "TRUE"){
      var identity = identfirst + identlast
      console.log("USER ID GENERATED: " + identity);
      localStorage.setItem("browserid", identity);
+
+  document.getElementById("currentID").innerHTML = identity;
+  document.getElementById('posterid').innerHTML =  identity;
+
+document.getElementById("identity").value = identity;
+
 }}}
   // THIS IS THE bLACKLIST FOR USERS WHO SHOULDNT USE IT//
  //explample blew of how to black list a user
