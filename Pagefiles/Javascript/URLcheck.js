@@ -14,6 +14,11 @@ function retPARAM() {
     } else {
         return [suboftotal, identityforSEARCH];
     }
+    if (identityforSEARCH == "https://xplosivex.github.io/ConfessionBooth/mobileindex.html") {
+        return ["", ""];
+    } else {
+        return [suboftotal, identityforSEARCH];
+    }
     //console.log(suboftotal)
     //console.log(identityforSEARCH)
 }
