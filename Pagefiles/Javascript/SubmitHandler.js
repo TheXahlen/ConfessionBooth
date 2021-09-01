@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbyhferKoM3lawXmfUHRrnjQC1vEexIbDdcYgLl-xY0tH2cjdKBjLNFExw/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycby4dRsGIdFRRwuNh6lLSoSrGEUhvSmJ53TjqQ7fUL36yXD2OG9b10RfbjBsZWnTvZV4fg/exec";
 
 function success(res) {
     var cursubmission = document.getElementById("textsubmit").value;
